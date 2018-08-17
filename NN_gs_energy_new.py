@@ -22,7 +22,7 @@ from keras.layers.core import Lambda
 
 
 
-def input_file_1(file_path,raw_data,cd_line,ce_line,dens_line,energy_line):
+def input_file_1(file_path,raw_data,cd_line,ce_line,dens_line,snm_line,pnm_line):
     count = len(open(file_path,'rU').readlines())
     with open(file_path,'r') as f_1:
         data =  f_1.readlines()
@@ -35,10 +35,11 @@ def input_file_1(file_path,raw_data,cd_line,ce_line,dens_line,energy_line):
                 raw_data[loop2][0] = float(temp_1[cd_line])
                 raw_data[loop2][1] = float(temp_1[ce_line])
                 raw_data[loop2][2] = float(temp_1[dens_line])
-                raw_data[loop2][3] = float(temp_1[energy_line])
+                raw_data[loop2][3] = float(temp_1[snm_line])
+                raw_data[loop2][4] = float(temp_1[pnm_line])
                 loop2 = loop2 + 1
             loop1 = loop1 + 1
-        print loop2  
+        print (str(loop2))  
 
 def input_file_2(file_path,raw_data):
     count = len(open(file_path,'rU').readlines())
@@ -79,10 +80,10 @@ def input_raw_data_count(file_path):
 
 def NN_all(input_path,output_path,data_num,monitor,min_delta,patience,epochs,input_dim,output_dim,interpol_count):
     #max_nmax_fit = 14
-    raw_data = np.zeros((data_num,4),dtype = np.float)
+    raw_data = np.zeros((data_num,5),dtype = np.float)
 
     
-    input_file_1(input_path,raw_data,cd_line,ce_line,dens_line,energy_line)
+    input_file_1(input_path,raw_data,cd_line,ce_line,dens_line,snm_line,pnm_line)
    
 
  
@@ -92,25 +93,32 @@ def NN_all(input_path,output_path,data_num,monitor,min_delta,patience,epochs,inp
     # interpolation for second colum
     # kind can be 'slinear', 'quadratic' and 'cubic' refer to a spline interpolation     of first, second or third order)  
 #    kind = "quadratic"
-    X = []
-    Y = []
+    X  = []
+    Y1 = []
+    Y2 = []
     for i in range(0,raw_data.shape[0],5):
         dens = raw_data[i:i+5,2]
-        temp = raw_data[i:i+5,3]
-        spl_ccdt = interpolate.UnivariateSpline(dens,temp,k=4)
+        temp_snm = raw_data[i:i+5,3]
+        temp_pnm = raw_data[i:i+5,4]
+        spl_ccdt_snm = interpolate.UnivariateSpline(dens,temp_snm,k=4)
+        spl_ccdt_pnm = interpolate.UnivariateSpline(dens,temp_pnm,k=4)
         spldens = np.linspace(dens[0],dens[len(dens)-1],num=interpol_count)
-        interp = spl_ccdt(spldens)
+        interp_snm = spl_ccdt_snm(spldens)
+        interp_pnm = spl_ccdt_pnm(spldens)
 
         for j in range(0,spldens.size):
             X.append([raw_data[i,0],raw_data[i,1],spldens[j]])
-            Y.append(interp[j])
+            Y1.append(interp_snm[j])
+            Y2.append(interp_pnm[j])
 
-    npX = np.array(X)
-    npY = np.array(Y)
+    npX  = np.array(X)
+    npY1 = np.array(Y1)
+    npY2 = np.array(Y2)
 
-    data_interpolation = np.append(npX,np.transpose([npY]),1)
-    print "npY"+str(npY)
-    print "data_interpolation="+str(data_interpolation)
+    data_interpolation = np.append(npX,np.transpose([npY1]),1)
+    data_interpolation = np.append(data_interpolation,np.transpose([npY2]),1)
+    #print ("npY1"+str(npY1))
+    print ("data_interpolation="+str(data_interpolation))
 
 #    nmax_count = (nmax_max-nmax_min)/2 + 1
 #    x_new = np.zeros((nmax_count,interpol_count))
@@ -144,8 +152,8 @@ def NN_all(input_path,output_path,data_num,monitor,min_delta,patience,epochs,inp
     #
     # shuffle the data
     #
-#    np.random.shuffle(data_interpolation)
-#    np.random.shuffle(raw_data)
+    np.random.shuffle(data_interpolation)
+    np.random.shuffle(raw_data)
     
     #print len(raw_data)
     #print raw_data
@@ -157,11 +165,11 @@ def NN_all(input_path,output_path,data_num,monitor,min_delta,patience,epochs,inp
     
     #raw_data_new  = raw_data[np.where(raw_data[:,1]<11)]
 #    raw_data_new = data_interpolation[np.where(data_interpolation[:,1]<=max_nmax_fit)]
-    data_new = data_interpolation[0:72000,:]
+    data_new = data_interpolation#[0:72000,:]
     #print "raw_data_new="+str(raw_data_new)
        
     x_train = data_new[:,0:3]
-    y_train = data_new[:,3]
+    y_train = data_new[:,3:5]
     
     #print "x_train = "+str(x_train)
     #print "y_train = "+str(y_train)
@@ -176,39 +184,39 @@ def NN_all(input_path,output_path,data_num,monitor,min_delta,patience,epochs,inp
     predictions = Dense(output_dim)(x)
    
 
-   # model = Model(inputs= input_data, outputs = predictions)
-   # 
-   # adam = optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-08)
-   # 
-   # model.compile(optimizer='adam',loss='mse',metrics=['accuracy'])
-   # 
-   # early_stopping = EarlyStopping(monitor=monitor,min_delta = min_delta , patience=patience, verbose=0, mode='min')
-   # 
-   # history = model.fit(x_train,y_train, epochs = epochs, validation_split = 0.01 , shuffle = 1, callbacks=[early_stopping])
-   # loss = history.history['loss'][len(history.history['loss'])-1]
-   # val_loss = history.history['val_loss'][len(history.history['val_loss'])-1]
-   # 
-   # fig4 = plt.figure('fig4')
-   # plt.plot(history.history['loss'])
-   # plt.plot(history.history['val_loss'])
-   # plt.savefig('loss_val_loss.eps')
-   # plt.close('all')
+    model = Model(inputs= input_data, outputs = predictions)
+    
+    adam = optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-08)
+    
+    model.compile(optimizer='adam',loss='mse',metrics=['accuracy'])
+    
+    early_stopping = EarlyStopping(monitor=monitor,min_delta = min_delta , patience=patience, verbose=0, mode='min')
+    
+    history = model.fit(x_train,y_train, epochs = epochs, validation_split = 0.01 , shuffle = 1, callbacks=[early_stopping])
+    loss = history.history['loss'][len(history.history['loss'])-1]
+    val_loss = history.history['val_loss'][len(history.history['val_loss'])-1]
+    
+    fig4 = plt.figure('fig4')
+    plt.plot(history.history['loss'])
+    plt.plot(history.history['val_loss'])
+    plt.savefig('loss_val_loss.eps')
+    plt.close('all')
 
 
-   # model_path = 'test.h5' 
-   # model.save(model_path)
+    model_path = 'test.h5' 
+    model.save(model_path)
    
-    #
-    # load model
-    #
-    model = load_model('test.h5') 
+   #
+   # load model
+   #
+   # model = load_model('test.h5') 
     
     
     
-    count = len(range(4,204,1))*len(range(5,121,1))
-    x_test = np.zeros((count,2),dtype = np.float)
+    #count = len(range(4,204,1))*len(range(5,121,1))
+    #x_test = np.zeros((count,2),dtype = np.float)
     
-    loop3 = 0
+    #loop3 = 0
     
     
    #for loop1 in range(0,1,0.1):
@@ -231,7 +239,7 @@ def NN_all(input_path,output_path,data_num,monitor,min_delta,patience,epochs,inp
     y_list_1 = raw_data[:,3]
     #print "x_list_1"+str(x_list_1)
     #print "y_list_1"+str(y_list_1)
-    print "size()="+str(len(data_interpolation))
+    print ("size()="+str(len(data_interpolation)))
     
 #    raw_predic_data_4 = raw_predic_data[np.where(raw_predic_data[:,1]==4)]
 #    raw_predic_data_8 = raw_predic_data[np.where(raw_predic_data[:,1]==8)]
@@ -412,25 +420,24 @@ def NN_all(input_path,output_path,data_num,monitor,min_delta,patience,epochs,inp
 #
 # all NN parameters
 #
-nuclei = 'He4'
-target_option = 'gs'
-input_path = 'cE0.2-1cd2.0-4.0.dat'
+input_path = 'cD-3.00-3.00_cE-1.00-1.00.dat'
 #output_path = './result/gs/'
 data_num = input_raw_data_count(input_path)
-print 'data_num='+str(data_num)
+print ('data_num='+str(data_num))
 # earlystopping parameters
 monitor  = 'loss'
 min_delta = 0.00001
 patience = 10
 epochs = 10000
 input_dim = 3 
-output_dim = 1
+output_dim = 2
 # interpolation setting
 interpol_count = 1000
 cd_line = 0
 ce_line = 1
-dens_line = 3
-energy_line = 7
+dens_line = 2
+snm_line = 3
+pnm_line = 4
 run_times_start = 1 
 run_times_end   = 1
 
