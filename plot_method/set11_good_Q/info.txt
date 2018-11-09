@@ -1,0 +1,46 @@
+[-0.74       -0.49       -0.65        0.96       -0.33874291 -0.33807919
+ -0.33755749 -0.24394787  2.49406126  0.76237712 -0.94721245 -0.93894404
+ -0.12767643  0.81431796  0.44340203  0.20061523 -0.07957418]
+nucleon_scattering_total_loss = 1015551.1967044516    nucleon_scattering_average_residual = 60.44056467844345
+pnm = 16.2017728977  snm_dens = 0.19375375375375375  snm = -16.66457195845627
+
+
+
+H2 BINDING ENERGY        =     -2.207886088 MeV
+           target        =     -2.224575000 MeV
+            error        =      2.224575000 MeV
+          residual       =      0.007502068
+H2 STRUCT RADIUS         =      1.975590466 fm
+           target        =      1.975350000 fm
+            error        =      1.975350000 fm
+          residual       =      0.000121733
+H2 QUADRUPOLE MOMENT     =      0.265502907 fm2
+           target        =      0.270000000 fm2
+            error        =      0.270000000 fm2
+          residual       =     -0.016655901
+H2 D-STATE PROBABILITY   =      3.136825269 %
+H3 BINDING ENERGY        =     -8.481861780 MeV
+           target        =     -8.480000000 MeV
+            error        =      0.050880000 MeV
+          residual       =     -0.036591598
+H3 POINT-P RADIUS        =      1.588236498  fm
+           target        =      1.587000000  fm
+            error        =      0.009522000  fm
+          residual       =      0.129856936
+He3 BINDING ENERGY       =     -7.726084543 MeV
+           target        =     -7.718000000 MeV
+            error        =      0.046308000 MeV
+          residual       =     -0.174581984
+He3 POINT-P RADIUS       =      1.771971098  fm
+           target        =      1.770000000  fm
+            error        =      0.010620000  fm
+          residual       =      0.185602485
+He4 BINDING ENERGY       =    -28.300300544 MeV
+           target        =    -28.300000000 MeV
+            error        =      0.169800000 MeV
+          residual       =     -0.001769991
+He4 POINT-P RADIUS       =      1.459986163 fm
+           target        =      1.455000000 fm
+            error        =      0.008730000 fm
+          residual       =      0.571152649
+
