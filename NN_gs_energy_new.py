@@ -3,6 +3,7 @@ import numpy as np
 import re
 import os
 import matplotlib.pyplot as plt
+from matplotlib.gridspec import GridSpec
 
 from matplotlib.ticker import MultipleLocator, FormatStrFormatter
 from keras.models import Sequential
@@ -62,7 +63,6 @@ def input_file_2(file_path,raw_data):
 
 
 
-
 def input_raw_data_count(file_path):
     count = len(open(file_path,'rU').readlines())
     with open(file_path,'r') as f_1:
@@ -78,7 +78,7 @@ def input_raw_data_count(file_path):
 
 
 
-def NN_all(input_path,output_path,data_num,monitor,min_delta,patience,epochs,input_dim,output_dim,interpol_count):
+def NN_all(input_path,output_path,data_num,monitor,min_delta,patience,epochs,input_dim,output_dim):
     #max_nmax_fit = 14
     raw_data = np.zeros((data_num,5),dtype = np.float)
 
@@ -86,7 +86,7 @@ def NN_all(input_path,output_path,data_num,monitor,min_delta,patience,epochs,inp
     input_file_1(input_path,raw_data,cd_line,ce_line,dens_line,snm_line,pnm_line)
    
 
- 
+
     #
     # To get more data, we do interpolation for the data
     #
@@ -119,6 +119,10 @@ def NN_all(input_path,output_path,data_num,monitor,min_delta,patience,epochs,inp
     data_interpolation = np.append(data_interpolation,np.transpose([npY2]),1)
     #print ("npY1"+str(npY1))
     print ("data_interpolation="+str(data_interpolation))
+    data_interpolation_backup = data_interpolation.copy()
+
+
+
 
 #    nmax_count = (nmax_max-nmax_min)/2 + 1
 #    x_new = np.zeros((nmax_count,interpol_count))
@@ -153,7 +157,7 @@ def NN_all(input_path,output_path,data_num,monitor,min_delta,patience,epochs,inp
     # shuffle the data
     #
     np.random.shuffle(data_interpolation)
-    np.random.shuffle(raw_data)
+#    np.random.shuffle(raw_data)
     
     #print len(raw_data)
     #print raw_data
@@ -226,9 +230,11 @@ def NN_all(input_path,output_path,data_num,monitor,min_delta,patience,epochs,inp
    #        loop3 = loop3 + 1
     
     #print x_test
-    x_test = data_interpolation[:,0:3] 
+    x_test = data_interpolation_backup[:,0:3] 
     y_test = model.predict(x_test)
-    
+    y_test1 = y_test[:,0]   
+    y_test2 = y_test[:,1]   
+
     raw_predic_data = np.concatenate((x_test,y_test),axis=1)
     
     #print "raw_predic_data="+str(raw_predic_data)
@@ -237,6 +243,8 @@ def NN_all(input_path,output_path,data_num,monitor,min_delta,patience,epochs,inp
     
     x_list_1 = raw_data[:,2] 
     y_list_1 = raw_data[:,3]
+
+    y_list_2 = raw_data[:,4]
     #print "x_list_1"+str(x_list_1)
     #print "y_list_1"+str(y_list_1)
     print ("size()="+str(len(data_interpolation)))
@@ -273,9 +281,11 @@ def NN_all(input_path,output_path,data_num,monitor,min_delta,patience,epochs,inp
 #    y_list_7 = raw_predic_data_60[:,0]
     
     
-    fig1 = plt.figure('fig1')
-   # ax = plt.subplot(111)
-    l1=plt.scatter(x_list_1[0:5],y_list_1[0:5],color='k',linestyle='--',s = 10, marker = 'x', label='CC_calculation')
+    fig1 = plt.figure('fig1',figsize=(5,8))
+    #gs = GridSpec(4, 60) 
+
+    plt.subplot(212)
+    l1=plt.scatter(x_list_1[0  :  5],y_list_1[  0:  5],color='k',linestyle='--',s = 10, marker = 'x', label='CC_calculation')
     l1=plt.scatter(x_list_1[100:105],y_list_1[100:105],color='k',linestyle='--',s = 10, marker = 'x', label='CC_calculation')
     l1=plt.scatter(x_list_1[200:205],y_list_1[200:205],color='k',linestyle='--',s = 10, marker = 'x', label='CC_calculation')
     l1=plt.scatter(x_list_1[300:305],y_list_1[300:305],color='k',linestyle='--',s = 10, marker = 'x', label='CC_calculation')
@@ -283,14 +293,33 @@ def NN_all(input_path,output_path,data_num,monitor,min_delta,patience,epochs,inp
     l1=plt.scatter(x_list_1[400:405],y_list_1[400:405],color='k',linestyle='--',s = 10, marker = 'x', label='CC_calculation')
     l1=plt.scatter(x_list_1[440:445],y_list_1[440:445],color='k',linestyle='--',s = 10, marker = 'x', label='CC_calculation')
     l1=plt.scatter(x_list_1[470:475],y_list_1[470:475],color='k',linestyle='--',s = 10, marker = 'x', label='CC_calculation')
-    l2=plt.plot(x_test[0:1000,2],y_test[0:1000],color='y',linestyle='--',label='NN_Nmax_4')
-    l2=plt.plot(x_test[20000:21000,2],y_test[20000:21000],color='g',linestyle='--',label='NN_Nmax_4')
-    l2=plt.plot(x_test[40000:41000,2],y_test[40000:41000],color='b',linestyle='--',label='NN_Nmax_4')
-    l2=plt.plot(x_test[60000:61000,2],y_test[60000:61000],color='r',linestyle='--',label='NN_Nmax_4')
-    l2=plt.plot(x_test[72000:73000,2],y_test[72000:73000],color='c',linestyle='--',label='NN_Nmax_4')
-    l2=plt.plot(x_test[80000:81000,2],y_test[80000:81000],color='c',linestyle='--',label='NN_Nmax_4')
-    l2=plt.plot(x_test[88000:89000,2],y_test[88000:89000],color='c',linestyle='--',label='NN_Nmax_4')
-    l2=plt.plot(x_test[94000:95000,2],y_test[94000:95000],color='c',linestyle='--',label='NN_Nmax_4')
+    l2=plt.plot(x_test[0    :1000, 2],y_test1[0    :1000 ],color='y',linestyle='--',label='NN_Nmax_4')
+    l2=plt.plot(x_test[20000:21000,2],y_test1[20000:21000],color='g',linestyle='--',label='NN_Nmax_4')
+    l2=plt.plot(x_test[40000:41000,2],y_test1[40000:41000],color='b',linestyle='--',label='NN_Nmax_4')
+    l2=plt.plot(x_test[60000:61000,2],y_test1[60000:61000],color='r',linestyle='--',label='NN_Nmax_4')
+    l2=plt.plot(x_test[72000:73000,2],y_test1[72000:73000],color='c',linestyle='--',label='NN_Nmax_4')
+    l2=plt.plot(x_test[80000:81000,2],y_test1[80000:81000],color='c',linestyle='--',label='NN_Nmax_4')
+    l2=plt.plot(x_test[88000:89000,2],y_test1[88000:89000],color='c',linestyle='--',label='NN_Nmax_4')
+    l2=plt.plot(x_test[94000:95000,2],y_test1[94000:95000],color='c',linestyle='--',label='NN_Nmax_4')
+
+
+    plt.subplot(211)
+    l3=plt.scatter(x_list_1[0  :  5],y_list_2[  0:  5],color='k',linestyle='--',s = 10, marker = 'x', label='CC_calculation')
+    l3=plt.scatter(x_list_1[100:105],y_list_2[100:105],color='k',linestyle='--',s = 10, marker = 'x', label='CC_calculation')
+    l3=plt.scatter(x_list_1[200:205],y_list_2[200:205],color='k',linestyle='--',s = 10, marker = 'x', label='CC_calculation')
+    l3=plt.scatter(x_list_1[300:305],y_list_2[300:305],color='k',linestyle='--',s = 10, marker = 'x', label='CC_calculation')
+    l3=plt.scatter(x_list_1[360:365],y_list_2[360:365],color='k',linestyle='--',s = 10, marker = 'x', label='CC_calculation')
+    l3=plt.scatter(x_list_1[400:405],y_list_2[400:405],color='k',linestyle='--',s = 10, marker = 'x', label='CC_calculation')
+    l3=plt.scatter(x_list_1[440:445],y_list_2[440:445],color='k',linestyle='--',s = 10, marker = 'x', label='CC_calculation')
+    l3=plt.scatter(x_list_1[470:475],y_list_2[470:475],color='k',linestyle='--',s = 10, marker = 'x', label='CC_calculation')
+    l4=plt.plot(x_test[    0: 1000,2],y_test2[    0: 1000],color='y',linestyle='--',label='NN_Nmax_4')
+    l4=plt.plot(x_test[20000:21000,2],y_test2[20000:21000],color='g',linestyle='--',label='NN_Nmax_4')
+    l4=plt.plot(x_test[40000:41000,2],y_test2[40000:41000],color='b',linestyle='--',label='NN_Nmax_4')
+    l4=plt.plot(x_test[60000:61000,2],y_test2[60000:61000],color='r',linestyle='--',label='NN_Nmax_4')
+    l4=plt.plot(x_test[72000:73000,2],y_test2[72000:73000],color='c',linestyle='--',label='NN_Nmax_4')
+    l4=plt.plot(x_test[80000:81000,2],y_test2[80000:81000],color='c',linestyle='--',label='NN_Nmax_4')
+    l4=plt.plot(x_test[88000:89000,2],y_test2[88000:89000],color='c',linestyle='--',label='NN_Nmax_4')
+    l4=plt.plot(x_test[94000:95000,2],y_test2[94000:95000],color='c',linestyle='--',label='NN_Nmax_4')
 
 
 #    l3=plt.plot(x_list_3,y_list_3,color='r',linestyle='--',label='NN_Nmax_8')
@@ -335,6 +364,47 @@ def NN_all(input_path,output_path,data_num,monitor,min_delta,patience,epochs,inp
     plt.savefig(plot_path)
 #    plt.close('all')
     fig1.show()
+
+####################################################
+####################################################
+###### find the satration point for each cD cE (detail scan)
+####################################################
+####################################################
+    x_test_scan = np.zeros((interpol_count,3))
+    spldens = np.linspace(density_min,density_max,num=interpol_count)
+    with open(output_path+'/different_cD_cE.txt','w') as f_5:
+        f_5.write('  cD      cE     saturation_density     saturation_snm      symmetry_energy \n')
+        for loop1 in range(int((cD_max-cD_min)/cD_scan_gap)+1):
+            for loop2 in range(int((cE_max-cE_min)/cE_scan_gap)+1):
+                cE = cE_min + cE_scan_gap * loop2
+                cD = cD_min + cD_scan_gap * loop1
+                for loop3 in range(interpol_count):
+                    x_test_scan[loop3,0] = cD
+                    x_test_scan[loop3,1] = cE
+                    x_test_scan[loop3,2] = spldens[loop3]
+                y_test_scan       = model.predict(x_test_scan)
+                saturation_energy = np.min(y_test_scan[:,0])
+                #print ('dens='+str(spldens))
+                #print ('snm='+str(y_test_scan[:,0])+' , len_of_snm= '+str(len(y_test_scan)))
+                saturation_density = spldens[np.where(y_test_scan[:,0]==saturation_energy)]
+                y_test_scan_pnm    = y_test_scan[:,1]
+                symmetry_energy    = y_test_scan_pnm[np.where(y_test_scan[:,0]==saturation_energy)] - saturation_energy
+                #print ('saturation_energy='+str(saturation_energy))
+                #if (len(saturation_density) > 1 ):
+                #    print ('More than one minimum in cD = %.2f, cE= %.2f' %(cD, cE))
+                f_5.write('%.2f   %.2f           %.5f           %.5f          %.5f' % (cD,cE,saturation_density[0],saturation_energy,symmetry_energy[0])+'\n') 
+
+            #f_5.write('%.2f    %.2f ' % (raw_predic_data[loop1*5][]) )
+        
+     
+
+
+####################################################
+####################################################
+####################################################
+
+
+
     
     
 #    file_path = "gs_NN_prediction.txt"
@@ -345,7 +415,7 @@ def NN_all(input_path,output_path,data_num,monitor,min_delta,patience,epochs,inp
 #            f_1.write('{:>10}'.format(x_test[loop1,1])+'\n')
 #    os.system('cp '+file_path+' '+output_path)        
     os.system('cp '+model_path+' '+output_path) 
-    os.system('cp '+'gs.eps'+' '+output_path) 
+    os.system('cp '+'test.eps'+' '+output_path) 
 #    os.system('cp '+'loss_val_loss.eps'+' '+output_path) 
 ##
 ## plot different_hw.eps and lowest_each_Nmax.eps
@@ -413,21 +483,21 @@ def NN_all(input_path,output_path,data_num,monitor,min_delta,patience,epochs,inp
 #   # import plot_gs as plot
 #    os.system('cp '+'different_hw.eps'+' '+output_path) 
 #    os.system('cp '+'lowest_each_Nmax.eps'+' '+output_path) 
-    #return gs_converge,loss,val_loss
+    return loss,val_loss
 
 
 
 #
 # all NN parameters
 #
-input_path = 'cD-3.00-3.00_cE-1.00-1.00.dat'
+input_path = 'cD-3.00-3.00_cE-1.00-1.00_c2_-0.59.dat'
 #output_path = './result/gs/'
 data_num = input_raw_data_count(input_path)
 print ('data_num='+str(data_num))
 # earlystopping parameters
 monitor  = 'loss'
 min_delta = 0.00001
-patience = 10
+patience = 50
 epochs = 10000
 input_dim = 3 
 output_dim = 2
@@ -439,41 +509,53 @@ dens_line = 2
 snm_line = 3
 pnm_line = 4
 run_times_start = 1 
-run_times_end   = 1
+run_times_end   = 10
+#nuclear matter
+particle_num = 28
+cE_min = -1
+cE_max = 1 
+cE_gap = 0.25
+cE_count = int( (cE_max - cE_min) / cE_gap + 1 ) 
+cD_min = -3
+cD_max = 3 
+cD_gap = 0.5 
+cD_count = int( (cD_max - cD_min) / cD_gap + 1 ) 
+density_min = 0.12
+density_max = 0.20
+density_gap = 0.02
+density_count = int( (density_max - density_min) / density_gap +1 )
+
+cD_scan_gap = 0.05
+cE_scan_gap = 0.05
+
+
+
 
 
 gs_converge_all = np.zeros(run_times_end)
 loss_all = np.zeros(run_times_end)
 val_loss_all = np.zeros(run_times_end)
 
-output_path = "./result"
-NN_all(input_path=input_path,output_path=output_path,data_num=data_num,monitor=monitor,min_delta=min_delta,patience=patience,epochs=epochs,input_dim=input_dim,output_dim=output_dim,interpol_count=interpol_count)
+#output_path = "./result"
+#NN_all(input_path=input_path,output_path=output_path,data_num=data_num,monitor=monitor,min_delta=min_delta,patience=patience,epochs=epochs,input_dim=input_dim,output_dim=output_dim)
 
+file_path_detail = 'N=%d_'%(particle_num)+input_path
+os.system('mkdir '+file_path_detail)
 
-#os.system('mkdir '+nuclei)
-#os.system('mkdir '+nuclei+'/'+target_option)        
-
-
-#for max_nmax_fit in range(18,19,2):
-#    os.system('mkdir '+nuclei+'/'+target_option+'/gs-nmax4-'+str(max_nmax_fit))
-#    with open(nuclei+'/'+target_option+'/gs-nmax4-'+str(max_nmax_fit)+'/'+'gs_NN_info.txt','a') as f_3:
-#        #f_3.read()
-#        f_3.write('#############################################'+'\n')
-#        f_3.write('# loop   gs_energy       loss       val_loss'+'\n')
-#   for loop_all in range(run_times_start-1,run_times_end):
-#        os.system('mkdir '+nuclei+'/'+target_option+'/gs-nmax4-'+str(max_nmax_fit)+'/'+str(loop_all+1))
-#        output_path = nuclei+'/'+target_option+'/gs-nmax4-'+str(max_nmax_fit)+'/'+str(loop_all+1)
-#        gs_converge_all[loop_all],loss_all[loop_all],val_loss_all[loop_all] = NN_all(input_path=input_path,output_path=output_path,data_num=data_num,monitor=monitor,min_delta=min_delta,patience=patience,epochs=epochs,input_dim=input_dim,output_dim=output_dim,interpol_count=interpol_count,max_nmax_fit=max_nmax_fit)
-#        with open(nuclei+'/'+target_option+'/gs-nmax4-'+str(max_nmax_fit)+'/'+'gs_NN_info.txt','a') as f_3:
-#            #f_3.read()
-#            f_3.write('{:>5}'.format(loop_all+1)+'   ')
-#            f_3.write('{:>-10.5f}'.format(gs_converge_all[loop_all])+'   ')
-#            f_3.write('{:>-10.5f}'.format(loss_all[loop_all])+'   ')
-#            f_3.write('{:>-10.5f}'.format(val_loss_all[loop_all])+'\n')
+with open(file_path_detail+'/NN_info.txt','a') as f_3:
+    #f_3.read()
+    f_3.write('#############################################'+'\n')
+    f_3.write('# loop       loss       val_loss'+'\n')
+for loop_all in range(run_times_start-1,run_times_end):
+    os.system('mkdir '+file_path_detail+'/'+str(loop_all+1))
+    output_path = file_path_detail+'/'+ str(loop_all+1)
+    loss_all[loop_all],val_loss_all[loop_all] = NN_all(input_path=input_path,output_path=output_path,data_num=data_num,monitor=monitor,min_delta=min_delta,patience=patience,epochs=epochs,input_dim=input_dim,output_dim=output_dim)
+    with open(file_path_detail+'/NN_info.txt','a') as f_3:
+        f_3.write('{:>5}'.format(loop_all+1)+'   ')
+        f_3.write('{:>-10.5f}'.format(loss_all[loop_all])+'   ')
+        f_3.write('{:>-10.5f}'.format(val_loss_all[loop_all])+'\n')
 #
 #
 #    
 #print 'gs_converge_all='+str(gs_converge_all)
 
-
-input()
