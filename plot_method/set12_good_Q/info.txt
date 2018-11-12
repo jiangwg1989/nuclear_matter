@@ -51,4 +51,7 @@ CCSD, Lambda-CCSD(T)   -391.0903255415546        -418.0008775510312
 
 
 Full expectation value <0|(1+Lambda)Obar|0>:      6.501431942
+Full expectation value <0|(1+Lambda)Obar|0>:      11.60759354
 
+         2 +    3.873107        3.879800
+         2 +    5.068118        5.068681
