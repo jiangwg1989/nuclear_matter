@@ -21,7 +21,7 @@ def input_file_2(file_path,raw_data):
                 raw_data[loop2][2] = float(temp_1[4])
                 loop2 = loop2 + 1 
             loop1 = loop1 + 1 
-        print loop2
+       # print (loop2)
 
 def input_file_count(file_path):
     count = len(open(file_path,'rU').readlines())
@@ -34,7 +34,7 @@ def input_file_count(file_path):
             if ( re.match('#', data[loop1],flags=0) == wtf):
                 loop2 = loop2 + 1 
             loop1 = loop1 + 1 
-        print ('data_num='+str(loop2))
+       # print ('data_num='+str(loop2))
         return loop2
 
 file_path  = "N_132.txt"
@@ -177,7 +177,7 @@ def cD_cE_area():
                 raw_data[loop2][3] = float(temp_1[3])
                 loop2 = loop2 + 1 
             loop1 = loop1 + 1 
-        print loop2
+        #print loop2
 
 
 
@@ -210,9 +210,9 @@ def cD_cE_area():
     y_list = saturation_point_1[:,1]
     
     
-    saturation_point_2 = np.zeros((len(raw_data_2)/density_count,2))
+    saturation_point_2 = np.zeros((int(len(raw_data_2)/density_count),2))
 #    print ('raw_data_2='+str(raw_data_2))
-    for loop1 in range(len(raw_data_2)/density_count):
+    for loop1 in range(int(len(raw_data_2)/density_count)):
         x_2 = raw_data_2[loop1*density_count:loop1*density_count+density_count,2]
         y_2 = raw_data_2[loop1*density_count:loop1*density_count+density_count,3]
         spldens_2 = np.linspace(density_min,density_max,num=interpol_count_)

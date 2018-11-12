@@ -44,3 +44,15 @@ He4 POINT-P RADIUS       =      1.459986163 fm
             error        =      0.008730000 fm
           residual       =      0.571152649
 
+
+
+CCSD, Lambda-CCSD(T)   -119.2415989314103        -126.3466022179582
+CCSD, Lambda-CCSD(T)   -159.9668899333022        -170.5555071913096
+CCSD, Lambda-CCSD(T)   -317.0743378560167        -340.2914754723145
+CCSD, Lambda-CCSD(T)   -391.5172954753762        -418.4375952300305
+
+O16 radius : Full expectation value <0|(1+Lambda)Obar|0>:      6.507888317
+Ca40 radius: Full expectation value <0|(1+Lambda)Obar|0>:      11.6269311
+
+O24 2p     :   2 +    4.038841        4.040181
+Ca48 2p    :   2 +    5.206511        5.207018
