@@ -1,5 +1,8 @@
 import numpy as np
+import matplotlib
+matplotlib.use('PS')
 import matplotlib.pyplot as plt 
+
 import re
 
 from scipy import interpolate
