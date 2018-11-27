@@ -279,7 +279,7 @@ l44 = plt.scatter(x_list_4_p,y_list_4_p,color = 'k',s = 10, marker = 'x')
 #l5  = plt.scatter(x_list,y_list,color = 'b', s = 20, marker='.')
 
 plt.legend(loc='lower right')
-plt.ylim((-18,-8))
+plt.ylim((-20,-10))
 plt.ylabel('snm E/A (MeV)',fontsize=14)
 plt.xlabel(r"$\rho$ (fm$^{-3}$)",fontsize=14)
 
