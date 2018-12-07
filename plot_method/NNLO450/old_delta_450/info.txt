@@ -8,45 +8,43 @@ H3_BE = -8.531617306    H3_R = 1.573359131    He3_BE = -7.730926004    He3_R = 1
 He4_BE = -28.289246936    He4_R = 1.45389761
 K0 = 253.13808225971104    ddf = 815.2245034965176
 
-
-H2 BINDING ENERGY        =     -2.210297970 MeV
+H2 BINDING ENERGY        =     -2.159407192 MeV
            target        =     -2.224575000 MeV
             error        =      2.224575000 MeV
-          residual       =      0.006417869
-H2 STRUCT RADIUS         =      1.976820144 fm
+          residual       =      0.029294498
+H2 STRUCT RADIUS         =      1.981959405 fm
            target        =      1.975350000 fm
             error        =      1.975350000 fm
-          residual       =      0.000744245
-H2 QUADRUPOLE MOMENT     =      0.265992073 fm2
+          residual       =      0.003345941
+H2 QUADRUPOLE MOMENT     =      0.277297961 fm2
            target        =      0.270000000 fm2
             error        =      0.270000000 fm2
-          residual       =     -0.014844174
-H2 D-STATE PROBABILITY   =      3.146574259 %
-H3 BINDING ENERGY        =     -8.477953958 MeV
+          residual       =      0.027029486
+H2 D-STATE PROBABILITY   =      3.735704901 %
+H3 BINDING ENERGY        =     -8.531617930 MeV
            target        =     -8.481795000 MeV
             error        =      0.050890770 MeV
-          residual       =      0.075476210
-H3 POINT-P RADIUS        =      1.589734962  fm
+          residual       =     -0.979017023
+H3 POINT-P RADIUS        =      1.573359098  fm
            target        =      1.587000000  fm
             error        =      0.009522000  fm
-          residual       =      0.287225612
-He3 BINDING ENERGY       =     -7.719565797 MeV
+          residual       =     -1.432566886
+He3 BINDING ENERGY       =     -7.730926811 MeV
            target        =     -7.718040000 MeV
             error        =      0.046308240 MeV
-          residual       =     -0.032948704
-He3 POINT-P RADIUS       =      1.773016253  fm
+          residual       =     -0.278283332
+He3 POINT-P RADIUS       =      1.759035268  fm
            target        =      1.770000000  fm
             error        =      0.010620000  fm
-          residual       =      0.284016323
-He4 BINDING ENERGY       =    -28.286201945 MeV
+          residual       =     -1.032460596
+He4 BINDING ENERGY       =    -28.289248812 MeV
            target        =    -28.295660000 MeV
             error        =      0.169773960 MeV
-          residual       =      0.055709693
-He4 POINT-P RADIUS       =      1.458749205 fm
+          residual       =      0.037763079
+He4 POINT-P RADIUS       =      1.453897582 fm
            target        =      1.455000000 fm
             error        =      0.008730000 fm
-          residual       =      0.429462220
-
+          residual       =     -0.126279212
 
 
 
