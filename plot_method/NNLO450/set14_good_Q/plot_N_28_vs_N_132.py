@@ -132,13 +132,33 @@ print ('pnm='+str(N_132_saturation_pnm))
 saturation_energy_132 = N_132_saturation_pnm- N_132_saturation_snm
 print ('saturation_energy='+str(saturation_energy_132))
 
-#df_132 = np.diff(N_132_interpolation[:,1])/np.diff(N_132_interpolation[:,0])
-#ddf_132 = np.diff(df_132) /np.diff(N_132_interpolation[1:len(N_132_interpolation),0])
-#temp3 = ddf_132[np.where(N_132_interpolation[:,1]==N_132_saturation_snm)]
-#ddf_saturation_dens_132 = temp3[0]
-#
-#K0 = 9* pow(N_132_saturation_dens,2)*ddf_saturation_dens_132
-#print ('K0_132=',K0)
+
+df_132 = np.diff(N_132_interpolation[:,1])/np.diff(N_132_interpolation[:,0])
+ddf_132 = np.diff(df_132) /np.diff(N_132_interpolation[1:len(N_132_interpolation),0])
+temp3 = ddf_132[np.where(N_132_interpolation[:,1]==N_132_saturation_snm)]
+ddf_saturation_dens_132 = temp3[0]
+
+K0 = 9* pow(N_132_saturation_dens,2)*ddf_saturation_dens_132
+print ('K0_132=',K0)
+
+S = N_132_interpolation[:,2] - N_132_interpolation[:,1]
+u = N_132_interpolation[:,0] / N_132_saturation_dens
+ds = np.diff(S) 
+du = np.diff(u)
+#u_0 is the position of saturation point
+u_0 = np.where(u[:]== 1)
+print('test='+str(u[688]))
+
+print('u_0'+str(u_0))
+L = 3 * u[u_0]*ds[u_0]/du[u_0]
+
+print('L='+str(L)) 
+
+#print('x='+str(len(N_132_interpolation[:,1])))
+#print('S='+str(S)) 
+#print('u='+str(u)) 
+
+
 
 
 
