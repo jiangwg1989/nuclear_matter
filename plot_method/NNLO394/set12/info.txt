@@ -9,3 +9,12 @@ CCSD, Lambda-CCSD(T)   -118.7839367707358        -124.5834964509936
 CCSD, Lambda-CCSD(T)   -159.5361143338074        -168.1331291454983
 CCSD, Lambda-CCSD(T)   -320.0886060260158        -339.4852379033074
 CCSD, Lambda-CCSD(T)   -397.1254101834634        -419.4262507975905
+
+
+
+
+
+Ca48         2 +    5.552883        5.552827
+
+Full expectation value <0|(1+Lambda)Obar|0>:      6.539557934
+Full expectation value <0|(1+Lambda)Obar|0>:      11.61858559
