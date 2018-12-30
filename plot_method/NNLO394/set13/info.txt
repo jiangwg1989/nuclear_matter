@@ -21,3 +21,9 @@ pnm = 21.0032301963  snm_dens = 0.20022022022022024  snm = -17.24401236138431
  CCSD, Lambda-CCSD(T)   -159.6393523558738        -168.2757018105032
  CCSD, Lambda-CCSD(T)   -320.1448969525488        -339.6769093203442
  CCSD, Lambda-CCSD(T)   -397.2870026294122        -419.7076594031238
+
+Full expectation value <0|(1+Lambda)Obar|0>:      6.539906502
+Full expectation value <0|(1+Lambda)Obar|0>:      11.62291908
+
+            2 +    3.877452        3.877968
+            2 +    5.604322        5.604259
