@@ -1,4 +1,4 @@
-#  cD     cE       density     E/A_snm       E/A_pnm     snm_converge_flag
+#  cD     cE       density     E/A_snm       E/A_pnm     snm_converge_flag 
  0.83    0.00     0.14    -15.82328642     14.27382049         1
  0.83    0.00     0.16    -16.62247311     16.65633559         1
  0.83    0.00     0.18    -17.12380286     19.24580400         1
