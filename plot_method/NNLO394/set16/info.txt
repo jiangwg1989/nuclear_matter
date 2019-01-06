@@ -5,3 +5,12 @@ nucleon_scattering_total_loss = 833093.9871938981    nucleon_scattering_average_
 pnm = 22.0009952396  snm_dens = 0.20022022022022024  snm = -17.3165526480792
 
 
+
+
+
+
+
+ CCSD, Lambda-CCSD(T)   -119.0153560696338        -124.7184914040568
+ CCSD, Lambda-CCSD(T)   -160.4218124822642        -168.7441589476065
+ CCSD, Lambda-CCSD(T)   -320.4802053344099        -339.5436419148252
+ CCSD, Lambda-CCSD(T)   -398.7679046032075        -420.4015782804825
