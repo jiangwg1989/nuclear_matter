@@ -1,0 +1,56 @@
+[-0.74       -0.49       -0.65        0.96       -0.33931796 -0.33899039
+ -0.33830626 -0.25146749  2.50718215  0.71272108 -0.96152121 -0.88713745
+ -0.25705287  0.93536541  0.4361534  -0.51083311 -0.20161927]
+nucleon_scattering_total_loss = 716203.3960557883    nucleon_scattering_average_residual = 50.75698187278052
+pnm = 17.3015793232  snm_dens = 0.18692692692692692  snm = -16.528481746444246
+
+H2 BINDING ENERGY        =     -2.227921554 MeV
+           target        =     -2.224575000 MeV
+            error        =      2.224575000 MeV
+          residual       =     -0.001504357
+H2 STRUCT RADIUS         =      1.984377121 fm
+           target        =      1.975350000 fm
+            error        =      1.975350000 fm
+          residual       =      0.004569884
+H2 QUADRUPOLE MOMENT     =      0.268527930 fm2
+           target        =      0.270000000 fm2
+            error        =      0.270000000 fm2
+          residual       =     -0.005452112
+H2 D-STATE PROBABILITY   =      3.181553328 %
+H3 BINDING ENERGY        =     -8.481231471 MeV
+           target        =     -8.481795000 MeV
+            error        =      0.050890770 MeV
+          residual       =      0.011073312
+H3 POINT-P RADIUS        =      1.605886512  fm
+           target        =      1.587000000  fm
+            error        =      0.009522000  fm
+          residual       =      1.983460635
+He3 BINDING ENERGY       =     -7.719284195 MeV
+           target        =     -7.718040000 MeV
+            error        =      0.046308240 MeV
+          residual       =     -0.026867670
+He3 POINT-P RADIUS       =      1.786485338  fm
+           target        =      1.770000000  fm
+            error        =      0.010620000  fm
+          residual       =      1.552291757
+He4 BINDING ENERGY       =    -28.297407688 MeV
+           target        =    -28.295660000 MeV
+            error        =      0.169773960 MeV
+          residual       =     -0.010294205
+He4 POINT-P RADIUS       =      1.473341727 fm
+           target        =      1.455000000 fm
+            error        =      0.008730000 fm
+          residual       =      2.100999673
+
+
+ CCSD, Lambda-CCSD(T)  -120.14921849072365       -126.47172559808197
+ CCSD, Lambda-CCSD(T)  -158.49517910600474       -167.79047733091750
+ CCSD, Lambda-CCSD(T)  -321.43686200900862       -342.07461283891735
+ CCSD, Lambda-CCSD(T)  -392.66908033442473       -416.50083172109294
+
+
+Full expectation value <0|(1+Lambda)Obar|0>:      6.533839226
+Full expectation value <0|(1+Lambda)Obar|0>:      11.34825802
+
+           2 +   3.63415980       3.63652468
+           2 +   4.54212427       4.54179764
