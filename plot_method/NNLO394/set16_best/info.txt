@@ -6,17 +6,32 @@ pnm = 22.0009952396  snm_dens = 0.20022022022022024  snm = -17.3165526480792
 
 
 
-
-
-
-
+Nmax=10
  CCSD, Lambda-CCSD(T)   -119.0153560696338        -124.7184914040568
  CCSD, Lambda-CCSD(T)   -160.4218124822642        -168.7441589476065
  CCSD, Lambda-CCSD(T)   -320.4802053344099        -339.5436419148252
  CCSD, Lambda-CCSD(T)   -398.7679046032075        -420.4015782804825
+
 
 Full expectation value <0|(1+Lambda)Obar|0>:      6.523094654
 Full expectation value <0|(1+Lambda)Obar|0>:      11.59355450
 
             2 +    4.260584        4.262344
             2 +    5.773056        5.779463
+
+
+Nmax=14
+
+ CCSD, Lambda-CCSD(T)  -119.04747004878793       -124.75318362906074
+ CCSD, Lambda-CCSD(T)  -160.78085898422125       -169.07223310515855
+ CCSD, Lambda-CCSD(T)  -320.94923219476323       -340.07509499072319
+ CCSD, Lambda-CCSD(T)  -399.59953670094200       -421.37144400802163
+
+
+Full expectation value <0|(1+Lambda)Obar|0>:      6.535869122
+Full expectation value <0|(1+Lambda)Obar|0>:      11.33480358
+
+
+           2 +   4.76911163       4.76936197
+           2 +   5.50568199       5.50843954
+
