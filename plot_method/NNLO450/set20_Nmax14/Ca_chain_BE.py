@@ -27,8 +27,8 @@ def input_file_2(file_path,raw_data):
             loop1 = loop1 + 1 
 
 
-file_path    = "O_chain.txt"
-data_num     =  4
+file_path    = "Ca_chain.txt"
+data_num     =  5
 O_chain_data = np.zeros((data_num,3),dtype = np.float)
 input_file_2(file_path,O_chain_data)
 
@@ -37,12 +37,12 @@ input_file_2(file_path,O_chain_data)
 fig_1 = plt.figure('fig_1')
 matplotlib.rcParams['xtick.direction'] = 'in'
 matplotlib.rcParams['ytick.direction'] = 'in'
-plt.tick_params(top=True,bottom=True,left=True,right=False)
+plt.tick_params(top=True,bottom=True,left=True,right=True)
 #start_line = 40
 
-x_list_DNNLO450 = O_chain_data[:,0]  # A of the O isotopes
-x_list_exp      = O_chain_data[0:3,0]  # A of the O isotopes
-y_list_exp      = O_chain_data[0:3,1]  # experiment binding energy
+x_list_DNNLO450 = O_chain_data[:,0].astype(np.int32)  # A of the O isotopes
+x_list_exp      = O_chain_data[0:4,0].astype(np.int32)  # A of the O isotopes
+y_list_exp      = O_chain_data[0:4,1]  # experiment binding energy
 y_list_DNNLO450 = O_chain_data[:,2]  # delta nnlo 450 calculation
 
 
@@ -51,15 +51,14 @@ l_DNNLO450      = plt.plot(x_list_DNNLO450,y_list_DNNLO450,color='b', linestyle 
 
 plt.ylabel(r'$E_{\rm{g.s.}}$(MeV)',fontsize=16)
 plt.xlabel('$A$',fontsize=16)
-plt.yticks(np.arange(-170,-125,10),fontsize = 12)
-plt.xticks(np.arange(16,28.5,2),fontsize = 13)
-plt.legend(loc=2, bbox_to_anchor=(1.63,0.5),borderaxespad = 0.)
+plt.yticks(np.arange(-460,-339,20),fontsize = 12)
+plt.xticks(np.arange(40,61.5,2),fontsize = 13)
+#plt.legend(loc=2, bbox_to_anchor=(1.63,0.5),borderaxespad = 0.)
 
-plt.title('Ground-state energies of oxygen')
-plot_path = 'O_chain.eps'
+plt.title('Ground-state energies of calcium')
+plot_path = 'Ca_chain.eps'
 plt.savefig(plot_path)
 plt.show()
 plt.close("all")
 
 
-print('O_exp='+str(O_chain_data[:,2]))
