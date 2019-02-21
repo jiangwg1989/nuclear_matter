@@ -51,6 +51,15 @@ He4 POINT-P RADIUS       =      1.479304463 fm
 Full expectation value <0|(1+Lambda)Obar|0>:      6.577783585
 Full expectation value <0|(1+Lambda)Obar|0>:      11.42579556
 
+radii 
+
+       rp^2              Rch(without so)   Rch(with so)
+Ca40  11.42579556          3.4805031        3.4805031 
+Ca48  11.51529503          3.4933367        3.4788075
+Ca52  11.89130402          3.5467464        3.5300439
+Ca54  12.08723450          3.5742609        3.5600619
+
+
            2 +   3.51834559       3.51703596
            2 +   4.44671106       4.44642401
 

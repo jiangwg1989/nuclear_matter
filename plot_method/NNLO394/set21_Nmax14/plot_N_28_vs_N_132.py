@@ -40,13 +40,13 @@ def input_file_count(file_path):
        # print ('data_num='+str(loop2))
         return loop2
 
-file_path  = "N_132_NNLO450.txt"
+file_path  = "N_132.txt"
 data_num   = input_file_count(file_path)
 N_132_data = np.zeros((data_num,3),dtype = np.float)
 N_28_data  = np.zeros((data_num,3),dtype = np.float)
 input_file_2(file_path,N_132_data)
 
-file_path  = "N_28_NNLO450.txt"
+file_path  = "N_28.txt"
 input_file_2(file_path,N_28_data)
 interpol_count = 1000
 
@@ -246,22 +246,20 @@ x_list_2_p = N_132_data[:,0]
 y_list_2_p = N_132_data[:,2]
 
 #y_list_2   = N_132_data[:,2]
-fig1 = plt.figure('fig1',figsize=(15,6))
-plt.subplot(122)
-#l1 = plt.plot(x_list_1,y_list_1,color = 'b',linestyle='--',label='N=14')
-l2 = plt.plot(x_list_2,y_list_2,color = 'b',linestyle='-.',linewidth=3,alpha=0.7,  label='DNNLO(450)$_{new}$',zorder=1)
-#l11 = plt.scatter(x_list_1_p,y_list_1_p,color = 'k',s = 10, marker = 'x')
-l22 = plt.scatter(x_list_2_p,y_list_2_p,color = 'k',marker = 'o',zorder=2)
+fig1 = plt.figure('fig1',figsize=(5,8))
+plt.subplot(211)
+l1 = plt.plot(x_list_1,y_list_1,color = 'b',linestyle='--',label='N=14')
+l2 = plt.plot(x_list_2,y_list_2,color = 'r',linestyle='--',label='N=66')
+l11 = plt.scatter(x_list_1_p,y_list_1_p,color = 'k',s = 10, marker = 'x')
+l22 = plt.scatter(x_list_2_p,y_list_2_p,color = 'k',s = 10, marker = 'x')
 
-plt.yticks(np.arange(10,21,2),fontsize = 13)
-plt.xticks(np.arange(0.12,0.205,0.01),fontsize = 13)
 
-#plt.title('A=132: pnm_E/A=%.2f  snm_E/A=%.2f\nsaturation_dens=%.4f  saturation_energy=%.2f\n\
-#A=28: pnm_E/A=%.2f  snm_E/A=%.2f\nsaturation_dens=%.4f  saturation_energy=%.2f\
-#'% (N_132_saturation_pnm,N_132_saturation_snm,N_132_saturation_dens,saturation_energy_132,N_28_saturation_pnm,N_28_saturation_snm,N_28_saturation_dens,saturation_energy_28))
-plt.legend(loc='lower right',fontsize = 13)
-plt.ylabel('$E/A$ [MeV]',fontsize=18)
-plt.xlabel(r"$\rho$ [fm$^{-3}$]",fontsize=18)
+plt.title('A=132: pnm_E/A=%.2f  snm_E/A=%.2f\nsaturation_dens=%.4f  saturation_energy=%.2f\n\
+A=28: pnm_E/A=%.2f  snm_E/A=%.2f\nsaturation_dens=%.4f  saturation_energy=%.2f\
+'% (N_132_saturation_pnm,N_132_saturation_snm,N_132_saturation_dens,saturation_energy_132,N_28_saturation_pnm,N_28_saturation_snm,N_28_saturation_dens,saturation_energy_28))
+plt.legend(loc='lower right')
+plt.ylabel('pnm E/A (MeV)',fontsize=14)
+plt.xlabel(r"$\rho$ (fm$^{-3}$)",fontsize=14)
 #plt.xlim((0.1,0.22))
 #plt.ylim((-25,-10))
 
@@ -273,37 +271,21 @@ x_list_3_p = N_28_data[:,0]
 y_list_3_p = N_28_data[:,1]
 x_list_4_p = N_132_data[:,0]
 y_list_4_p = N_132_data[:,1]
-x_list_5_p   = [0.1687]
-y_list_5_p   = [-15.82]
 
-plt.subplot(121)
-
-
-
-
-#l3 = plt.plot(x_list_3,y_list_3,color = 'b',linestyle='--',label='A=28')
-l4 = plt.plot(x_list_4,y_list_4,color = 'b',linestyle='-.',label='DNNLO(450)$_{new}$',linewidth=3,alpha=0.5, zorder=1)
-
-#l33 = plt.scatter(x_list_3_p,y_list_3_p,color = 'k',s = 10, marker = 'x')
-l44 = plt.scatter(x_list_4_p,y_list_4_p,color = 'k', marker = 'o',zorder=2)
+plt.subplot(212)
+l3 = plt.plot(x_list_3,y_list_3,color = 'b',linestyle='--',label='A=28')
+l4 = plt.plot(x_list_4,y_list_4,color = 'r',linestyle='--',label='A=132')
+l33 = plt.scatter(x_list_3_p,y_list_3_p,color = 'k',s = 10, marker = 'x')
+l44 = plt.scatter(x_list_4_p,y_list_4_p,color = 'k',s = 10, marker = 'x')
 #l5  = plt.scatter(x_list,y_list,color = 'b', s = 20, marker='.')
-rect = plt.Rectangle((0.15,-16.5), 0.02, 1, fill=False, edgecolor = 'k',linewidth=3,zorder=0)
-ax = plt.gca()# plt.gca() means get the current subplot 
-ax.add_patch(rect)
+
+plt.legend(loc='lower right')
+plt.ylim((-20,-10))
+plt.ylabel('snm E/A (MeV)',fontsize=14)
+plt.xlabel(r"$\rho$ (fm$^{-3}$)",fontsize=14)
 
 
-l_saturation = plt.scatter(x_list_5_p,y_list_5_p,s=70, marker = 'D', linewidths=2, c='w',edgecolors='b',zorder=3)
-
-plt.yticks(np.arange(-20,-9,2),fontsize = 13)
-plt.xticks(np.arange(0.12,0.205,0.01),fontsize = 13)
-
-plt.legend(loc='lower right',fontsize=13)
-#plt.ylim((-20,-10))
-plt.ylabel('$E/A$ [MeV]',fontsize=18)
-plt.xlabel(r"$\rho$ [fm$^{-3}$]",fontsize=18)
-
-
-plot_path = 'nuclear_matter.eps'
+plot_path = 'n_28vsn_132.eps'
 plt.savefig(plot_path)
 plt.show()
 

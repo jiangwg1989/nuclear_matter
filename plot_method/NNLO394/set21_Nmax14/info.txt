@@ -4,3 +4,64 @@
 nucleon_scattering_total_loss = 910838.4051283402    nucleon_scattering_average_residual = 57.23982128509335
 pnm = 19.0027748164  snm_dens = 0.19917917917917918  snm = -17.248975000167807
 
+
+H2 BINDING ENERGY        =     -2.234429265 MeV
+           target        =     -2.224575000 MeV
+            error        =      2.224575000 MeV
+          residual       =     -0.004429729
+H2 STRUCT RADIUS         =      1.976874783 fm
+           target        =      1.975350000 fm
+            error        =      1.975350000 fm
+          residual       =      0.000771905
+H2 QUADRUPOLE MOMENT     =      0.263960154 fm2
+           target        =      0.270000000 fm2
+            error        =      0.270000000 fm2
+          residual       =     -0.022369802
+H2 D-STATE PROBABILITY   =      2.907989261 %
+H3 BINDING ENERGY        =     -8.479551857 MeV
+           target        =     -8.481795000 MeV
+            error        =      0.050890770 MeV
+          residual       =      0.044077607
+H3 POINT-P RADIUS        =      1.599483237  fm
+           target        =      1.587000000  fm
+            error        =      0.009522000  fm
+          residual       =      1.310989020
+He3 BINDING ENERGY       =     -7.712772413 MeV
+           target        =     -7.718040000 MeV
+            error        =      0.046308240 MeV
+          residual       =      0.113750525
+He3 POINT-P RADIUS       =      1.780358503  fm
+           target        =      1.770000000  fm
+            error        =      0.010620000  fm
+          residual       =      0.975376921
+He4 BINDING ENERGY       =    -28.297863320 MeV
+           target        =    -28.295660000 MeV
+            error        =      0.169773960 MeV
+          residual       =     -0.012977961
+He4 POINT-P RADIUS       =      1.457311444 fm
+           target        =      1.455000000 fm
+            error        =      0.008730000 fm
+          residual       =      0.264770188
+
+
+
+ CCSD, Lambda-CCSD(T)  -118.96407864147577       -124.16314937965983
+ CCSD, Lambda-CCSD(T)  -158.12893848183865       -165.91776119827983
+ CCSD, Lambda-CCSD(T)  -322.26835327373237       -339.66658543196445
+ CCSD, Lambda-CCSD(T)  -396.45527898022220       -416.63877216214917
+
+radii 
+      rp^2              Rch(withou so)           Rch(with so)
+Ca40  11.36667538      3.47199965869814        3.471999659
+Ca48  11.39651871      3.47629471708024        3.461693944   
+Ca52  11.76993275      3.52959473594349        3.512810698
+Ca54  11.96869850      3.55764033454760        3.543374769
+
+
+Full expectation value <0|(1+Lambda)Obar|0>:      6.568147182
+Full expectation value <0|(1+Lambda)Obar|0>:      11.36667538
+
+
+           2 +   3.87431192       3.87508345
+           2 +   4.82270670       4.82234192
+

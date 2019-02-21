@@ -46,14 +46,14 @@ y_list_exp      = O_chain_data[0:3,1]  # experiment binding energy
 y_list_DNNLO450 = O_chain_data[:,2]  # delta nnlo 450 calculation
 
 
-l_exp           = plt.plot(x_list_exp,y_list_exp,color='k', linestyle = '-.',linewidth=3,marker='o', markersize=10)
-l_DNNLO450      = plt.plot(x_list_DNNLO450,y_list_DNNLO450,color='b', linestyle = '-',linewidth=3,marker='^', markersize=10,alpha=0.7)
+l_exp           = plt.plot(x_list_exp,y_list_exp,color='k', linestyle = '-.',linewidth=2,marker='o', markersize=8,zorder=2,label='Expt.')
+l_DNNLO450      = plt.plot(x_list_DNNLO450,y_list_DNNLO450,color='b', linestyle = '-',linewidth=2,marker='^', markersize=8,alpha=0.7,zorder = 1 ,label='DNNLO$_{450}$')
 
 plt.ylabel(r'$E_{\rm{g.s.}}$(MeV)',fontsize=16)
 plt.xlabel('$A$',fontsize=16)
-plt.yticks(np.arange(-170,-125,10),fontsize = 12)
+plt.yticks(np.arange(-175,-120,10),fontsize = 12)
 plt.xticks(np.arange(16,28.5,2),fontsize = 13)
-plt.legend(loc=2, bbox_to_anchor=(1.63,0.5),borderaxespad = 0.)
+plt.legend(loc=3)
 
 plt.title('Ground-state energies of oxygen')
 plot_path = 'O_chain.eps'
