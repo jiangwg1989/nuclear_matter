@@ -42,55 +42,94 @@ def input_file_count(file_path):
 
 file_path  = "N_132_NNLO450.txt"
 data_num   = input_file_count(file_path)
-N_132_data = np.zeros((data_num,3),dtype = np.float)
-N_28_data  = np.zeros((data_num,3),dtype = np.float)
-input_file_2(file_path,N_132_data)
+N_132_data_nnlo450 = np.zeros((data_num,3),dtype = np.float)
+N_28_data_nnlo450  = np.zeros((data_num,3),dtype = np.float)
+input_file_2(file_path,N_132_data_nnlo450)
 
 file_path  = "N_28_NNLO450.txt"
-input_file_2(file_path,N_28_data)
+input_file_2(file_path,N_28_data_nnlo450)
+
+
+file_path  = "N_132_NNLO394.txt"
+data_num   = input_file_count(file_path)
+N_132_data_nnlo394 = np.zeros((data_num,3),dtype = np.float)
+#N_28_data_nnlo394  = np.zeros((data_num,3),dtype = np.float)
+input_file_2(file_path,N_132_data_nnlo394)
+
+#file_path  = "N_28_NNLO394.txt"
+#input_file_2(file_path,N_28_data_nnlo394)
+#interpol_count = 1000
+
+
+
+
 interpol_count = 1000
-
-
 X  = []
 Y1 = []
 Y2 = []
-for i in range(0,N_132_data.shape[0],5):
-    dens = N_132_data[i:i+5,0]
-    temp_snm = N_132_data[i:i+5,1]
-    temp_pnm = N_132_data[i:i+5,2]
-    spl_ccdt_snm = interpolate.UnivariateSpline(dens,temp_snm,k=4)
-    spl_ccdt_pnm = interpolate.UnivariateSpline(dens,temp_pnm,k=4)
+Y3 = []
+Y4 = []
+for i in range(0,N_132_data_nnlo450.shape[0],5):
+    dens = N_132_data_nnlo450[i:i+5,0]
+    temp_snm_450 = N_132_data_nnlo450[i:i+5,1]
+    temp_pnm_450 = N_132_data_nnlo450[i:i+5,2]
+    temp_snm_394 = N_132_data_nnlo394[i:i+5,1]
+    temp_pnm_394 = N_132_data_nnlo394[i:i+5,2]
+    
+    spl_ccdt_snm_450 = interpolate.UnivariateSpline(dens,temp_snm_450,k=4)
+    spl_ccdt_pnm_450 = interpolate.UnivariateSpline(dens,temp_pnm_450,k=4)
+    spl_ccdt_snm_394 = interpolate.UnivariateSpline(dens,temp_snm_394,k=4)
+    spl_ccdt_pnm_394 = interpolate.UnivariateSpline(dens,temp_pnm_394,k=4)
+ 
+
+
     spldens = np.linspace(dens[0],dens[len(dens)-1],num=interpol_count)
-    interp_snm = spl_ccdt_snm(spldens)
-    interp_pnm = spl_ccdt_pnm(spldens)
+    interp_snm     = spl_ccdt_snm_450(spldens)
+    interp_pnm     = spl_ccdt_pnm_450(spldens)
+    interp_snm_394 = spl_ccdt_snm_394(spldens)
+    interp_pnm_394 = spl_ccdt_pnm_394(spldens)
+ 
+
     for j in range(0,spldens.size):
             X.append(spldens[j])
             Y1.append(interp_snm[j])
             Y2.append(interp_pnm[j])
+            Y3.append(interp_snm_394[j])
+            Y4.append(interp_pnm_394[j])
+
+
+
 npX  = np.array(X)
 npY1 = np.array(Y1)
 npY2 = np.array(Y2)
+npY3 = np.array(Y3)
+npY4 = np.array(Y4)
 
 
-N_132_interpolation = np.append(np.transpose([npX]),np.transpose([npY1]),1)
-N_132_interpolation = np.append(N_132_interpolation,np.transpose([npY2]),1)
+
+N_132_interpolation_450 = np.append(np.transpose([npX]),np.transpose([npY1]),1)
+N_132_interpolation_450 = np.append(N_132_interpolation_450,np.transpose([npY2]),1)
 #print ("npY1"+str(npY1))
-print ("data_interpolation="+str(N_132_interpolation))
+N_132_interpolation_394 = np.append(np.transpose([npX]),np.transpose([npY3]),1)
+N_132_interpolation_394 = np.append(N_132_interpolation_394,np.transpose([npY4]),1)
+
+
+#print ("data_interpolation="+str(N_132_interpolation_450))
 #data_interpolation_backup = data_interpolation.copy()
 
 
 X  = []
 Y1 = []
 Y2 = []
-for i in range(0,N_28_data.shape[0],5):
-    dens = N_28_data[i:i+5,0]
-    temp_snm = N_28_data[i:i+5,1]
-    temp_pnm = N_28_data[i:i+5,2]
-    spl_ccdt_snm = interpolate.UnivariateSpline(dens,temp_snm,k=4)
-    spl_ccdt_pnm = interpolate.UnivariateSpline(dens,temp_pnm,k=4)
+for i in range(0,N_28_data_nnlo450.shape[0],5):
+    dens = N_28_data_nnlo450[i:i+5,0]
+    temp_snm_450 = N_28_data_nnlo450[i:i+5,1]
+    temp_pnm_450 = N_28_data_nnlo450[i:i+5,2]
+    spl_ccdt_snm_450 = interpolate.UnivariateSpline(dens,temp_snm_450,k=4)
+    spl_ccdt_pnm_450 = interpolate.UnivariateSpline(dens,temp_pnm_450,k=4)
     spldens = np.linspace(dens[0],dens[len(dens)-1],num=interpol_count)
-    interp_snm = spl_ccdt_snm(spldens)
-    interp_pnm = spl_ccdt_pnm(spldens)
+    interp_snm = spl_ccdt_snm_450(spldens)
+    interp_pnm = spl_ccdt_pnm_450(spldens)
     for j in range(0,spldens.size):
             X.append(spldens[j])
             Y1.append(interp_snm[j])
@@ -121,10 +160,10 @@ saturation_energy_28 = N_28_saturation_pnm - N_28_saturation_snm
 #K0 = 9* pow(N_28_saturation_dens,2)*ddf_saturation_dens_28
 #print ('K0_28=',K0)
 
-N_132_saturation_snm = np.min(N_132_interpolation[:,1])
-temp1 = N_132_interpolation[np.where(N_132_interpolation[:,1]==N_132_saturation_snm),0]
+N_132_saturation_snm = np.min(N_132_interpolation_450[:,1])
+temp1 = N_132_interpolation_450[np.where(N_132_interpolation_450[:,1]==N_132_saturation_snm),0]
 N_132_saturation_dens = temp1[0]
-temp2 = N_132_interpolation[np.where(N_132_interpolation[:,1]==N_132_saturation_snm),2]
+temp2 = N_132_interpolation_450[np.where(N_132_interpolation_450[:,1]==N_132_saturation_snm),2]
 N_132_saturation_pnm = temp2[0]
 print ('snm='+str(N_132_saturation_snm))
 print ('dens='+str(N_132_saturation_dens))
@@ -132,9 +171,9 @@ print ('pnm='+str(N_132_saturation_pnm))
 saturation_energy_132 = N_132_saturation_pnm- N_132_saturation_snm
 print ('saturation_energy='+str(saturation_energy_132))
 
-#df_132 = np.diff(N_132_interpolation[:,1])/np.diff(N_132_interpolation[:,0])
-#ddf_132 = np.diff(df_132) /np.diff(N_132_interpolation[1:len(N_132_interpolation),0])
-#temp3 = ddf_132[np.where(N_132_interpolation[:,1]==N_132_saturation_snm)]
+#df_132 = np.diff(N_132_interpolation_450[:,1])/np.diff(N_132_interpolation_450[:,0])
+#ddf_132 = np.diff(df_132) /np.diff(N_132_interpolation_450[1:len(N_132_interpolation_450),0])
+#temp3 = ddf_132[np.where(N_132_interpolation_450[:,1]==N_132_saturation_snm)]
 #ddf_saturation_dens_132 = temp3[0]
 #
 #K0 = 9* pow(N_132_saturation_dens,2)*ddf_saturation_dens_132
@@ -233,27 +272,43 @@ def cD_cE_area():
     
 
 
-
-#x_list,y_list = cD_cE_area() 
+# start plotting!
 
 x_list_1   = N_28_interpolation[:,0]
 y_list_1   = N_28_interpolation[:,2]
-x_list_2   = N_132_interpolation[:,0]
-y_list_2   = N_132_interpolation[:,2]
-x_list_1_p = N_28_data[:,0]
-y_list_1_p = N_28_data[:,2]
-x_list_2_p = N_132_data[:,0]
-y_list_2_p = N_132_data[:,2]
 
-#y_list_2   = N_132_data[:,2]
+x_list_2   = N_132_interpolation_450[:,0]
+y_list_2   = N_132_interpolation_450[:,2]
+
+x_list_1_p = N_28_data_nnlo450[:,0]
+y_list_1_p = N_28_data_nnlo450[:,2]
+
+x_list_2_p = N_132_data_nnlo450[:,0]
+y_list_2_p = N_132_data_nnlo450[:,2]
+
+
+x_list_2_394   = N_132_interpolation_394[:,0]
+y_list_2_394   = N_132_interpolation_394[:,2]
+
+x_list_2_p_394 = N_132_data_nnlo394[:,0]
+y_list_2_p_394 = N_132_data_nnlo394[:,2]
+
+
+
+
+
+#y_list_2   = N_132_data_nnlo450[:,2]
 fig1 = plt.figure('fig1',figsize=(15,6))
 plt.subplot(122)
-#l1 = plt.plot(x_list_1,y_list_1,color = 'b',linestyle='--',label='N=14')
-l2 = plt.plot(x_list_2,y_list_2,color = 'b',linestyle='-.',linewidth=3,alpha=0.7,  label='DNNLO(450)$_{new}$',zorder=1)
-#l11 = plt.scatter(x_list_1_p,y_list_1_p,color = 'k',s = 10, marker = 'x')
+l2 = plt.plot(x_list_2,y_list_2,color = 'b',linestyle='-.',linewidth=3,alpha=0.7,  label=r'$\Delta$NNLO(450)$_{\rm{go}}$',zorder=1)
 l22 = plt.scatter(x_list_2_p,y_list_2_p,color = 'k',marker = 'o',zorder=2)
 
-plt.yticks(np.arange(10,21,2),fontsize = 13)
+l2_394  = plt.plot(x_list_2_394,y_list_2_394,color = 'g',linestyle='-.',linewidth=3,alpha=0.7,  label=r'$\Delta$NNLO(394)$_{\rm{go}}$',zorder=1)
+l22_394 = plt.scatter(x_list_2_p_394,y_list_2_p_394,color = 'k',marker = 'o',zorder=2)
+
+
+
+plt.yticks(np.arange(8,24,2),fontsize = 13)
 plt.xticks(np.arange(0.12,0.205,0.01),fontsize = 13)
 
 #plt.title('A=132: pnm_E/A=%.2f  snm_E/A=%.2f\nsaturation_dens=%.4f  saturation_energy=%.2f\n\
@@ -267,33 +322,44 @@ plt.xlabel(r"$\rho$ [fm$^{-3}$]",fontsize=18)
 
 x_list_3   = N_28_interpolation[:,0]
 y_list_3   = N_28_interpolation[:,1]
-x_list_4   = N_132_interpolation[:,0]
-y_list_4   = N_132_interpolation[:,1]
-x_list_3_p = N_28_data[:,0]
-y_list_3_p = N_28_data[:,1]
-x_list_4_p = N_132_data[:,0]
-y_list_4_p = N_132_data[:,1]
+x_list_4   = N_132_interpolation_450[:,0]
+y_list_4   = N_132_interpolation_450[:,1]
+x_list_3_p = N_28_data_nnlo450[:,0]
+y_list_3_p = N_28_data_nnlo450[:,1]
+x_list_4_p = N_132_data_nnlo450[:,0]
+y_list_4_p = N_132_data_nnlo450[:,1]
 x_list_5_p   = [0.1687]
 y_list_5_p   = [-15.82]
+
+x_list_4_394   = N_132_interpolation_394[:,0]
+y_list_4_394   = N_132_interpolation_394[:,1]
+x_list_4_p_394 = N_132_data_nnlo394[:,0]
+y_list_4_p_394 = N_132_data_nnlo394[:,1]
+x_list_5_p_394   = [0.1663]
+y_list_5_p_394   = [-15.53]
+
+
+
 
 plt.subplot(121)
 
 
 
 
-#l3 = plt.plot(x_list_3,y_list_3,color = 'b',linestyle='--',label='A=28')
-l4 = plt.plot(x_list_4,y_list_4,color = 'b',linestyle='-.',label='DNNLO(450)$_{new}$',linewidth=3,alpha=0.5, zorder=1)
-
-#l33 = plt.scatter(x_list_3_p,y_list_3_p,color = 'k',s = 10, marker = 'x')
+l4 = plt.plot(x_list_4,y_list_4,color = 'b',linestyle='-.',label=r'$\Delta$NNLO(450)$_{\rm{go}}$',linewidth=3,alpha=0.5, zorder=1)
 l44 = plt.scatter(x_list_4_p,y_list_4_p,color = 'k', marker = 'o',zorder=2)
-#l5  = plt.scatter(x_list,y_list,color = 'b', s = 20, marker='.')
+
+l4_394  = plt.plot(x_list_4_394,y_list_4_394,color = 'g',linestyle='-.',label=r'$\Delta$NNLO(394)$_{\rm{go}}$',linewidth=3,alpha=0.5, zorder=1)
+l44_394 = plt.scatter(x_list_4_p_394,y_list_4_p_394,color = 'k', marker = 'o',zorder=2)
+
+
 rect = plt.Rectangle((0.15,-16.5), 0.02, 1, fill=False, edgecolor = 'k',linewidth=3,zorder=0)
 ax = plt.gca()# plt.gca() means get the current subplot 
 ax.add_patch(rect)
 
 
 l_saturation = plt.scatter(x_list_5_p,y_list_5_p,s=70, marker = 'D', linewidths=2, c='w',edgecolors='b',zorder=3)
-
+l_saturation_394 = plt.scatter(x_list_5_p_394,y_list_5_p_394,s=70, marker = 'D', linewidths=2, c='w',edgecolors='g',zorder=3)
 plt.yticks(np.arange(-20,-9,2),fontsize = 13)
 plt.xticks(np.arange(0.12,0.205,0.01),fontsize = 13)
 
