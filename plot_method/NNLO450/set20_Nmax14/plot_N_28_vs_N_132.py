@@ -40,13 +40,13 @@ def input_file_count(file_path):
        # print ('data_num='+str(loop2))
         return loop2
 
-file_path  = "N_132.txt"
+file_path  = "N_132_NNLO394.txt"
 data_num   = input_file_count(file_path)
 N_132_data = np.zeros((data_num,3),dtype = np.float)
 N_28_data  = np.zeros((data_num,3),dtype = np.float)
 input_file_2(file_path,N_132_data)
 
-file_path  = "N_28.txt"
+file_path  = "N_28_NNLO394.txt"
 input_file_2(file_path,N_28_data)
 interpol_count = 1000
 
@@ -132,13 +132,33 @@ print ('pnm='+str(N_132_saturation_pnm))
 saturation_energy_132 = N_132_saturation_pnm- N_132_saturation_snm
 print ('saturation_energy='+str(saturation_energy_132))
 
-#df_132 = np.diff(N_132_interpolation[:,1])/np.diff(N_132_interpolation[:,0])
-#ddf_132 = np.diff(df_132) /np.diff(N_132_interpolation[1:len(N_132_interpolation),0])
-#temp3 = ddf_132[np.where(N_132_interpolation[:,1]==N_132_saturation_snm)]
-#ddf_saturation_dens_132 = temp3[0]
-#
-#K0 = 9* pow(N_132_saturation_dens,2)*ddf_saturation_dens_132
-#print ('K0_132=',K0)
+
+df_132 = np.diff(N_132_interpolation[:,1])/np.diff(N_132_interpolation[:,0])
+ddf_132 = np.diff(df_132) /np.diff(N_132_interpolation[1:len(N_132_interpolation),0])
+temp3 = ddf_132[np.where(N_132_interpolation[:,1]==N_132_saturation_snm)]
+ddf_saturation_dens_132 = temp3[0]
+
+K0 = 9* pow(N_132_saturation_dens,2)*ddf_saturation_dens_132
+print ('K0_132=',K0)
+
+S = N_132_interpolation[:,2] - N_132_interpolation[:,1]
+u = N_132_interpolation[:,0] / N_132_saturation_dens
+ds = np.diff(S) 
+du = np.diff(u)
+#u_0 is the position of saturation point
+u_0 = np.where(u[:]== 1)
+print('test='+str(u[688]))
+
+print('u_0'+str(u_0))
+L = 3 * u[u_0]*ds[u_0]/du[u_0]
+
+print('L='+str(L)) 
+
+#print('x='+str(len(N_132_interpolation[:,1])))
+#print('S='+str(S)) 
+#print('u='+str(u)) 
+
+
 
 
 
@@ -250,8 +270,8 @@ fig1 = plt.figure('fig1',figsize=(5,8))
 plt.subplot(211)
 l1 = plt.plot(x_list_1,y_list_1,color = 'b',linestyle='--',label='N=14')
 l2 = plt.plot(x_list_2,y_list_2,color = 'r',linestyle='--',label='N=66')
-l11 = plt.scatter(x_list_1_p,y_list_1_p,color = 'k',s = 10, marker = 'x')
-l22 = plt.scatter(x_list_2_p,y_list_2_p,color = 'k',s = 10, marker = 'x')
+#l11 = plt.scatter(x_list_1_p,y_list_1_p,color = 'k',s = 10, marker = 'x')
+#l22 = plt.scatter(x_list_2_p,y_list_2_p,color = 'k',s = 10, marker = 'x')
 
 
 plt.title('A=132: pnm_E/A=%.2f  snm_E/A=%.2f\nsaturation_dens=%.4f  saturation_energy=%.2f\n\
@@ -275,8 +295,8 @@ y_list_4_p = N_132_data[:,1]
 plt.subplot(212)
 l3 = plt.plot(x_list_3,y_list_3,color = 'b',linestyle='--',label='A=28')
 l4 = plt.plot(x_list_4,y_list_4,color = 'r',linestyle='--',label='A=132')
-l33 = plt.scatter(x_list_3_p,y_list_3_p,color = 'k',s = 10, marker = 'x')
-l44 = plt.scatter(x_list_4_p,y_list_4_p,color = 'k',s = 10, marker = 'x')
+#l33 = plt.scatter(x_list_3_p,y_list_3_p,color = 'k',s = 10, marker = 'x')
+#l44 = plt.scatter(x_list_4_p,y_list_4_p,color = 'k',s = 10, marker = 'x')
 #l5  = plt.scatter(x_list,y_list,color = 'b', s = 20, marker='.')
 
 plt.legend(loc='lower right')
@@ -285,7 +305,7 @@ plt.ylabel('snm E/A (MeV)',fontsize=14)
 plt.xlabel(r"$\rho$ (fm$^{-3}$)",fontsize=14)
 
 
-plot_path = 'n_28vsn_132.eps'
+plot_path = 'n_28vsn_132_.eps'
 plt.savefig(plot_path)
 plt.show()
 
