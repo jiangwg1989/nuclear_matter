@@ -65,3 +65,19 @@ Full expectation value <0|(1+Lambda)Obar|0>:      11.36667538
            2 +   3.87431192       3.87508345
            2 +   4.82270670       4.82234192
 
+three body e3max converge
+
+e3max14
+Ca40  CCSD, Lambda-CCSD(T)  -321.41043045661604       -338.68164066197926
+Ca48  CCSD, Lambda-CCSD(T)  -394.41495382906476       -414.37718600812281
+Ca52  CCSD, Lambda-CCSD(T)  -413.02957000308481       -435.54502609726620
+Ca54  CCSD, Lambda-CCSD(T)  -418.60564805824026       -441.73945639278060
+Ca60  CCSD, Lambda-CCSD(T)  -425.84015230895250       -449.30788657724537
+
+
+
+
+
+
+
+
