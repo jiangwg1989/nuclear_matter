@@ -8,7 +8,7 @@ H2 BINDING ENERGY        =     -2.235835278 MeV
            target        =     -2.224575000 MeV
             error        =      2.224575000 MeV
           residual       =     -0.005061766
-H2 STRUCT RADIUS         =      1.984502367 fm
+H2 STRUCT RADIUS         =      1.984502367 fm      Rch = 2.1508965327575855
            target        =      1.975350000 fm
             error        =      1.975350000 fm
           residual       =      0.004633289
@@ -21,7 +21,7 @@ H3 BINDING ENERGY        =     -8.480887720 MeV
            target        =     -8.481795000 MeV
             error        =      0.050890770 MeV
           residual       =      0.017827984
-H3 POINT-P RADIUS        =      1.611159080  fm
+H3 POINT-P RADIUS        =      1.611159080  fm    Rch = 1.7801797187549482
            target        =      1.587000000  fm
             error        =      0.009522000  fm
           residual       =      2.537185435
@@ -29,7 +29,7 @@ He3 BINDING ENERGY       =     -7.716242656 MeV
            target        =     -7.718040000 MeV
             error        =      0.046308240 MeV
           residual       =      0.038812619
-He3 POINT-P RADIUS       =      1.792028465  fm
+He3 POINT-P RADIUS       =      1.792028465  fm    Rch = 2.003589845594716
            target        =      1.770000000  fm
             error        =      0.010620000  fm
           residual       =      2.074243416
@@ -37,7 +37,7 @@ He4 BINDING ENERGY       =    -28.297521590 MeV
            target        =    -28.295660000 MeV
             error        =      0.169773960 MeV
           residual       =     -0.010965112
-He4 POINT-P RADIUS       =      1.479304463 fm
+He4 POINT-P RADIUS       =      1.479304463 fm     Rch = 1.696009417500893
            target        =      1.455000000 fm
             error        =      0.008730000 fm
           residual       =      2.784016430
