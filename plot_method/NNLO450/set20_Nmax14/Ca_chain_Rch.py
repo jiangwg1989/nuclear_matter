@@ -72,6 +72,9 @@ y_list_DNNLO450 = Ca_chain_r_data[:,1]  # delta nnlo 450 calculation
 x_list_NNLOsat  = Ca_chain_r_data[:,0]  # A of the O isotopes
 y_list_NNLOsat  = Ca_chain_r_data[:,3]  # nnlosat calculation
 
+print(x_list_NNLOsat)
+print(y_list_NNLOsat)
+
 x_list_magic    = Ca_chain_r_data[:,0]  # A of the O isotopes
 y_list_magic    = Ca_chain_r_data[:,4]  # magic 1.8/2.0 calculation
 
