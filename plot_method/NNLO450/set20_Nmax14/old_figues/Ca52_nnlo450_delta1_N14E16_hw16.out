@@ -1,0 +1,1581 @@
+ hf-formatstandard                                                                                            
+ sp-energy filesp_energy_nnlo450_delta_N10E16_hw16_Ca52A52.dat                                                     
+ kinetic-energy filekinetic_nnlo450_delta_N10E16_hw16_Ca52A52.dat                                                       
+ neutron_total orbits          120
+ proton_total orbits           120
+ occupation p,n           6           8
+    1    0    0    1   -1 -0.47172165E+02  hole      
+    2    0    0    1    1 -0.51204926E+02  hole      
+    3    0    1    3   -1 -0.32212105E+02  hole      
+    4    0    1    3    1 -0.35654190E+02  hole      
+    5    0    1    1   -1 -0.29711748E+02  hole      
+    6    0    1    1    1 -0.31846708E+02  hole      
+    7    0    2    5   -1 -0.17417892E+02  hole      
+    8    0    2    5    1 -0.20088625E+02  hole      
+    9    1    0    1   -1 -0.11877663E+02  hole      
+   10    1    0    1    1 -0.14808686E+02  hole      
+   11    0    2    3   -1 -0.12677032E+02  hole      
+   12    0    2    3    1 -0.14307141E+02  hole      
+   13    0    3    7    1 -0.59120722E+01  hole      
+   14    1    1    3    1 -0.15284742E+01  hole      
+   15    0    3    7   -1 -0.26431832E+01  particle  
+   16    1    1    3   -1  0.20102925E+01  particle  
+   17    1    1    1   -1  0.28513432E+01  particle  
+   18    1    1    1    1 -0.62071942E-01  particle  
+   19    0    3    5   -1  0.30759065E+01  particle  
+   20    0    3    5    1  0.11425549E+01  particle  
+   21    0    4    9   -1  0.93850813E+01  particle  
+   22    0    4    9    1  0.63694787E+01  particle  
+   23    1    2    5   -1  0.98546944E+01  particle  
+   24    1    2    5    1  0.62312965E+01  particle  
+   25    2    0    1   -1  0.95592308E+01  particle  
+   26    2    0    1    1  0.56690955E+01  particle  
+   27    0    4    7   -1  0.13909654E+02  particle  
+   28    0    4    7    1  0.11183315E+02  particle  
+   29    1    2    3   -1  0.10953986E+02  particle  
+   30    1    2    3    1  0.74926310E+01  particle  
+   31    0    5   11   -1  0.19388952E+02  particle  
+   32    0    5   11    1  0.15738830E+02  particle  
+   33    0    5    9   -1  0.22376972E+02  particle  
+   34    0    5    9    1  0.19130630E+02  particle  
+   35    1    3    7   -1  0.17193521E+02  particle  
+   36    1    3    7    1  0.13157236E+02  particle  
+   37    1    3    5   -1  0.19318331E+02  particle  
+   38    1    3    5    1  0.15709299E+02  particle  
+   39    2    1    3   -1  0.17914047E+02  particle  
+   40    2    1    3    1  0.13719359E+02  particle  
+   41    2    1    1   -1  0.18785200E+02  particle  
+   42    2    1    1    1  0.14938443E+02  particle  
+   43    0    6   13   -1  0.26839550E+02  particle  
+   44    0    6   13    1  0.23001740E+02  particle  
+   45    0    6   11   -1  0.28491383E+02  particle  
+   46    0    6   11    1  0.24946108E+02  particle  
+   47    1    4    9   -1  0.23376429E+02  particle  
+   48    1    4    9    1  0.19442070E+02  particle  
+   49    1    4    7   -1  0.27309002E+02  particle  
+   50    1    4    7    1  0.24078053E+02  particle  
+   51    2    2    5   -1  0.25407303E+02  particle  
+   52    2    2    5    1  0.21356062E+02  particle  
+   53    2    2    3   -1  0.26966795E+02  particle  
+   54    2    2    3    1  0.23334204E+02  particle  
+   55    3    0    1   -1  0.26240976E+02  particle  
+   56    3    0    1    1  0.22116110E+02  particle  
+   57    0    7   15   -1  0.36021835E+02  particle  
+   58    0    7   15    1  0.32063171E+02  particle  
+   59    0    7   13   -1  0.37511326E+02  particle  
+   60    0    7   13    1  0.33852093E+02  particle  
+   61    1    5   11   -1  0.34502708E+02  particle  
+   62    1    5   11    1  0.30558752E+02  particle  
+   63    1    5    9   -1  0.40305332E+02  particle  
+   64    1    5    9    1  0.37063328E+02  particle  
+   65    2    3    7   -1  0.38080151E+02  particle  
+   66    2    3    7    1  0.33798565E+02  particle  
+   67    2    3    5   -1  0.40924992E+02  particle  
+   68    2    3    5    1  0.37049618E+02  particle  
+   69    3    1    3   -1  0.40518284E+02  particle  
+   70    3    1    3    1  0.35967846E+02  particle  
+   71    3    1    1   -1  0.41940083E+02  particle  
+   72    3    1    1    1  0.37566616E+02  particle  
+   73    0    8   17   -1  0.42356602E+02  particle  
+   74    0    8   17    1  0.38401089E+02  particle  
+   75    0    8   15   -1  0.43317326E+02  particle  
+   76    0    8   15    1  0.39591602E+02  particle  
+   77    1    6   13   -1  0.43204727E+02  particle  
+   78    1    6   13    1  0.39307590E+02  particle  
+   79    1    6   11   -1  0.48883656E+02  particle  
+   80    1    6   11    1  0.45560661E+02  particle  
+   81    2    4    9   -1  0.46483765E+02  particle  
+   82    2    4    9    1  0.42226299E+02  particle  
+   83    2    4    7   -1  0.50903931E+02  particle  
+   84    2    4    7    1  0.46942982E+02  particle  
+   85    3    2    5   -1  0.50286819E+02  particle  
+   86    3    2    5    1  0.45623501E+02  particle  
+   87    3    2    3   -1  0.52258495E+02  particle  
+   88    3    2    3    1  0.47918472E+02  particle  
+   89    4    0    1   -1  0.51776306E+02  particle  
+   90    4    0    1    1  0.47098137E+02  particle  
+   91    0    9   19   -1  0.54761738E+02  particle  
+   92    0    9   19    1  0.50465858E+02  particle  
+   93    0    9   17   -1  0.55921253E+02  particle  
+   94    0    9   17    1  0.52077480E+02  particle  
+   95    1    7   15   -1  0.58694660E+02  particle  
+   96    1    7   15    1  0.54574173E+02  particle  
+   97    1    7   13   -1  0.65152412E+02  particle  
+   98    1    7   13    1  0.61614361E+02  particle  
+   99    2    5   11   -1  0.63781265E+02  particle  
+  100    2    5   11    1  0.59338375E+02  particle  
+  101    2    5    9   -1  0.71028908E+02  particle  
+  102    2    5    9    1  0.66803452E+02  particle  
+  103    3    3    7   -1  0.70378044E+02  particle  
+  104    3    3    7    1  0.65417564E+02  particle  
+  105    3    3    5   -1  0.73935799E+02  particle  
+  106    3    3    5    1  0.69262360E+02  particle  
+  107    4    1    3   -1  0.73749428E+02  particle  
+  108    4    1    3    1  0.68577095E+02  particle  
+  109    4    1    1   -1  0.75919655E+02  particle  
+  110    4    1    1    1  0.70693680E+02  particle  
+  111    0   10   21   -1  0.61438614E+02  particle  
+  112    0   10   21    1  0.57423454E+02  particle  
+  113    0   10   19   -1  0.62125736E+02  particle  
+  114    0   10   19    1  0.58402267E+02  particle  
+  115    1    8   17   -1  0.67953453E+02  particle  
+  116    1    8   17    1  0.63772823E+02  particle  
+  117    1    8   15   -1  0.73126945E+02  particle  
+  118    1    8   15    1  0.69511818E+02  particle  
+  119    2    6   13   -1  0.72863075E+02  particle  
+  120    2    6   13    1  0.68463387E+02  particle  
+  121    2    6   11   -1  0.81015648E+02  particle  
+  122    2    6   11    1  0.76870338E+02  particle  
+  123    3    4    9   -1  0.79980331E+02  particle  
+  124    3    4    9    1  0.75141953E+02  particle  
+  125    3    4    7   -1  0.85162888E+02  particle  
+  126    3    4    7    1  0.80484352E+02  particle  
+  127    4    2    5   -1  0.85183006E+02  particle  
+  128    4    2    5    1  0.79923546E+02  particle  
+  129    4    2    3   -1  0.88131142E+02  particle  
+  130    4    2    3    1  0.82927231E+02  particle  
+  131    5    0    1   -1  0.87796677E+02  particle  
+  132    5    0    1    1  0.82495377E+02  particle  
+  133    0   11   23   -1  0.79488358E+02  particle  
+  134    0   11   23    1  0.75030624E+02  particle  
+  135    0   11   21   -1  0.80617142E+02  particle  
+  136    0   11   21    1  0.76828354E+02  particle  
+  137    1    9   19   -1  0.89878540E+02  particle  
+  138    1    9   19    1  0.84493019E+02  particle  
+  139    1    9   17   -1  0.97165245E+02  particle  
+  140    1    9   17    1  0.93151314E+02  particle  
+  141    2    7   15   -1  0.97941788E+02  particle  
+  142    2    7   15    1  0.93200958E+02  particle  
+  143    2    7   13   -1  0.10937495E+03  particle  
+  144    2    7   13    1  0.10459805E+03  particle  
+  145    3    5   11   -1  0.10832027E+03  particle  
+  146    3    5   11    1  0.10308217E+03  particle  
+  147    3    5    9   -1  0.11575542E+03  particle  
+  148    3    5    9    1  0.11034236E+03  particle  
+  149    4    3    7   -1  0.11575290E+03  particle  
+  150    4    3    7    1  0.10989815E+03  particle  
+  151    4    3    5   -1  0.11997698E+03  particle  
+  152    4    3    5    1  0.11406033E+03  particle  
+  153    5    1    3   -1  0.11979841E+03  particle  
+  154    5    1    3    1  0.11379725E+03  particle  
+  155    5    1    1   -1  0.12248940E+03  particle  
+  156    5    1    1    1  0.11614764E+03  particle  
+  157    0   12   25   -1  0.86751915E+02  particle  
+  158    0   12   25    1  0.82803841E+02  particle  
+  159    0   12   23   -1  0.87400192E+02  particle  
+  160    0   12   23    1  0.83835815E+02  particle  
+  161    1   10   21   -1  0.99845741E+02  particle  
+  162    1   10   21    1  0.95100273E+02  particle  
+  163    1   10   19   -1  0.10512486E+03  particle  
+  164    1   10   19    1  0.10148178E+03  particle  
+  165    2    8   17   -1  0.10745473E+03  particle  
+  166    2    8   17    1  0.10277385E+03  particle  
+  167    2    8   15   -1  0.11914520E+03  particle  
+  168    2    8   15    1  0.11459036E+03  particle  
+  169    3    6   13   -1  0.11891338E+03  particle  
+  170    3    6   13    1  0.11377373E+03  particle  
+  171    3    6   11   -1  0.12825427E+03  particle  
+  172    3    6   11    1  0.12280691E+03  particle  
+  173    4    4    9   -1  0.12779729E+03  particle  
+  174    4    4    9    1  0.12199414E+03  particle  
+  175    4    4    7   -1  0.13269188E+03  particle  
+  176    4    4    7    1  0.12681921E+03  particle  
+  177    5    2    5   -1  0.13264835E+03  particle  
+  178    5    2    5    1  0.12655237E+03  particle  
+  179    5    2    3   -1  0.13612570E+03  particle  
+  180    5    2    3    1  0.12971675E+03  particle  
+  181    6    0    1   -1  0.13572766E+03  particle  
+  182    6    0    1    1  0.12951294E+03  particle  
+  183    0   13   27   -1  0.11624057E+03  particle  
+  184    0   13   27    1  0.11217368E+03  particle  
+  185    0   13   25   -1  0.11769598E+03  particle  
+  186    0   13   25    1  0.11419411E+03  particle  
+  187    1   11   23   -1  0.13483751E+03  particle  
+  188    1   11   23    1  0.12923529E+03  particle  
+  189    1   11   21   -1  0.14304225E+03  particle  
+  190    1   11   21    1  0.13896916E+03  particle  
+  191    2    9   19   -1  0.14806165E+03  particle  
+  192    2    9   19    1  0.14167535E+03  particle  
+  193    2    9   17   -1  0.16375670E+03  particle  
+  194    2    9   17    1  0.15797372E+03  particle  
+  195    3    7   15   -1  0.16436742E+03  particle  
+  196    3    7   15    1  0.15885376E+03  particle  
+  197    3    7   13   -1  0.17694800E+03  particle  
+  198    3    7   13    1  0.17012283E+03  particle  
+  199    4    5   11   -1  0.17817949E+03  particle  
+  200    4    5   11    1  0.17154555E+03  particle  
+  201    4    5    9   -1  0.18459387E+03  particle  
+  202    4    5    9    1  0.17722713E+03  particle  
+  203    5    3    7   -1  0.18569641E+03  particle  
+  204    5    3    7    1  0.17850322E+03  particle  
+  205    5    3    5   -1  0.19045439E+03  particle  
+  206    5    3    5    1  0.18240895E+03  particle  
+  207    6    1    3   -1  0.19047620E+03  particle  
+  208    6    1    3    1  0.18315532E+03  particle  
+  209    6    1    1   -1  0.19365167E+03  particle  
+  210    6    1    1    1  0.18555949E+03  particle  
+  211    0   14   29   -1  0.12424920E+03  particle  
+  212    0   14   29    1  0.12074255E+03  particle  
+  213    0   14   27   -1  0.12505819E+03  particle  
+  214    0   14   27    1  0.12166940E+03  particle  
+  215    1   12   25   -1  0.14513290E+03  particle  
+  216    1   12   25    1  0.14018185E+03  particle  
+  217    1   12   23   -1  0.15078430E+03  particle  
+  218    1   12   23    1  0.14707994E+03  particle  
+  219    2   10   21   -1  0.15889235E+03  particle  
+  220    2   10   21    1  0.15302383E+03  particle  
+  221    2   10   19   -1  0.17326770E+03  particle  
+  222    2   10   19    1  0.16824525E+03  particle  
+  223    3    8   17   -1  0.17293260E+03  particle  
+  224    3    8   17    1  0.16749240E+03  particle  
+  225    3    8   15   -1  0.18652077E+03  particle  
+  226    3    8   15    1  0.18008089E+03  particle  
+  227    4    6   13   -1  0.18799400E+03  particle  
+  228    4    6   13    1  0.18192928E+03  particle  
+  229    4    6   11   -1  0.19620392E+03  particle  
+  230    4    6   11    1  0.18902792E+03  particle  
+  231    5    4    9   -1  0.19764127E+03  particle  
+  232    5    4    9    1  0.19070798E+03  particle  
+  233    5    4    7   -1  0.20279657E+03  particle  
+  234    5    4    7    1  0.19498497E+03  particle  
+  235    6    2    5   -1  0.20334119E+03  particle  
+  236    6    2    5    1  0.19615973E+03  particle  
+  237    6    2    3   -1  0.20755827E+03  particle  
+  238    6    2    3    1  0.19938359E+03  particle  
+  239    7    0    1   -1  0.20740271E+03  particle  
+  240    7    0    1    1  0.19991225E+03  particle  
+ Occupied j-orbits
+    0    0    1   -1 -0.47172165E+02  hole      
+    0    0    1    1 -0.51204926E+02  hole      
+    0    1    3   -1 -0.32212105E+02  hole      
+    0    1    3    1 -0.35654190E+02  hole      
+    0    1    1   -1 -0.29711748E+02  hole      
+    0    1    1    1 -0.31846708E+02  hole      
+    0    2    5   -1 -0.17417892E+02  hole      
+    0    2    5    1 -0.20088625E+02  hole      
+    1    0    1   -1 -0.11877663E+02  hole      
+    1    0    1    1 -0.14808686E+02  hole      
+    0    2    3   -1 -0.12677032E+02  hole      
+    0    2    3    1 -0.14307141E+02  hole      
+    0    3    7    1 -0.59120722E+01  hole      
+    1    1    3    1 -0.15284742E+01  hole      
+ Fermi level: 2n+l   3.0000000000000000     
+ Number of neutrons          32
+ Number of protons          20
+ Unoccupied j-orbits
+    0    3    7   -1 -0.26431832E+01  particle  
+    1    1    3   -1  0.20102925E+01  particle  
+    1    1    1   -1  0.28513432E+01  particle  
+    1    1    1    1 -0.62071942E-01  particle  
+    0    3    5   -1  0.30759065E+01  particle  
+    0    3    5    1  0.11425549E+01  particle  
+    0    4    9   -1  0.93850813E+01  particle  
+    0    4    9    1  0.63694787E+01  particle  
+    1    2    5   -1  0.98546944E+01  particle  
+    1    2    5    1  0.62312965E+01  particle  
+    2    0    1   -1  0.95592308E+01  particle  
+    2    0    1    1  0.56690955E+01  particle  
+    0    4    7   -1  0.13909654E+02  particle  
+    0    4    7    1  0.11183315E+02  particle  
+    1    2    3   -1  0.10953986E+02  particle  
+    1    2    3    1  0.74926310E+01  particle  
+    0    5   11   -1  0.19388952E+02  particle  
+    0    5   11    1  0.15738830E+02  particle  
+    0    5    9   -1  0.22376972E+02  particle  
+    0    5    9    1  0.19130630E+02  particle  
+    1    3    7   -1  0.17193521E+02  particle  
+    1    3    7    1  0.13157236E+02  particle  
+    1    3    5   -1  0.19318331E+02  particle  
+    1    3    5    1  0.15709299E+02  particle  
+    2    1    3   -1  0.17914047E+02  particle  
+    2    1    3    1  0.13719359E+02  particle  
+    2    1    1   -1  0.18785200E+02  particle  
+    2    1    1    1  0.14938443E+02  particle  
+    0    6   13   -1  0.26839550E+02  particle  
+    0    6   13    1  0.23001740E+02  particle  
+    0    6   11   -1  0.28491383E+02  particle  
+    0    6   11    1  0.24946108E+02  particle  
+    1    4    9   -1  0.23376429E+02  particle  
+    1    4    9    1  0.19442070E+02  particle  
+    1    4    7   -1  0.27309002E+02  particle  
+    1    4    7    1  0.24078053E+02  particle  
+    2    2    5   -1  0.25407303E+02  particle  
+    2    2    5    1  0.21356062E+02  particle  
+    2    2    3   -1  0.26966795E+02  particle  
+    2    2    3    1  0.23334204E+02  particle  
+    3    0    1   -1  0.26240976E+02  particle  
+    3    0    1    1  0.22116110E+02  particle  
+    0    7   15   -1  0.36021835E+02  particle  
+    0    7   15    1  0.32063171E+02  particle  
+    0    7   13   -1  0.37511326E+02  particle  
+    0    7   13    1  0.33852093E+02  particle  
+    1    5   11   -1  0.34502708E+02  particle  
+    1    5   11    1  0.30558752E+02  particle  
+    1    5    9   -1  0.40305332E+02  particle  
+    1    5    9    1  0.37063328E+02  particle  
+    2    3    7   -1  0.38080151E+02  particle  
+    2    3    7    1  0.33798565E+02  particle  
+    2    3    5   -1  0.40924992E+02  particle  
+    2    3    5    1  0.37049618E+02  particle  
+    3    1    3   -1  0.40518284E+02  particle  
+    3    1    3    1  0.35967846E+02  particle  
+    3    1    1   -1  0.41940083E+02  particle  
+    3    1    1    1  0.37566616E+02  particle  
+    0    8   17   -1  0.42356602E+02  particle  
+    0    8   17    1  0.38401089E+02  particle  
+    0    8   15   -1  0.43317326E+02  particle  
+    0    8   15    1  0.39591602E+02  particle  
+    1    6   13   -1  0.43204727E+02  particle  
+    1    6   13    1  0.39307590E+02  particle  
+    1    6   11   -1  0.48883656E+02  particle  
+    1    6   11    1  0.45560661E+02  particle  
+    2    4    9   -1  0.46483765E+02  particle  
+    2    4    9    1  0.42226299E+02  particle  
+    2    4    7   -1  0.50903931E+02  particle  
+    2    4    7    1  0.46942982E+02  particle  
+    3    2    5   -1  0.50286819E+02  particle  
+    3    2    5    1  0.45623501E+02  particle  
+    3    2    3   -1  0.52258495E+02  particle  
+    3    2    3    1  0.47918472E+02  particle  
+    4    0    1   -1  0.51776306E+02  particle  
+    4    0    1    1  0.47098137E+02  particle  
+    0    9   19   -1  0.54761738E+02  particle  
+    0    9   19    1  0.50465858E+02  particle  
+    0    9   17   -1  0.55921253E+02  particle  
+    0    9   17    1  0.52077480E+02  particle  
+    1    7   15   -1  0.58694660E+02  particle  
+    1    7   15    1  0.54574173E+02  particle  
+    1    7   13   -1  0.65152412E+02  particle  
+    1    7   13    1  0.61614361E+02  particle  
+    2    5   11   -1  0.63781265E+02  particle  
+    2    5   11    1  0.59338375E+02  particle  
+    2    5    9   -1  0.71028908E+02  particle  
+    2    5    9    1  0.66803452E+02  particle  
+    3    3    7   -1  0.70378044E+02  particle  
+    3    3    7    1  0.65417564E+02  particle  
+    3    3    5   -1  0.73935799E+02  particle  
+    3    3    5    1  0.69262360E+02  particle  
+    4    1    3   -1  0.73749428E+02  particle  
+    4    1    3    1  0.68577095E+02  particle  
+    4    1    1   -1  0.75919655E+02  particle  
+    4    1    1    1  0.70693680E+02  particle  
+    0   10   21   -1  0.61438614E+02  particle  
+    0   10   21    1  0.57423454E+02  particle  
+    0   10   19   -1  0.62125736E+02  particle  
+    0   10   19    1  0.58402267E+02  particle  
+    1    8   17   -1  0.67953453E+02  particle  
+    1    8   17    1  0.63772823E+02  particle  
+    1    8   15   -1  0.73126945E+02  particle  
+    1    8   15    1  0.69511818E+02  particle  
+    2    6   13   -1  0.72863075E+02  particle  
+    2    6   13    1  0.68463387E+02  particle  
+    2    6   11   -1  0.81015648E+02  particle  
+    2    6   11    1  0.76870338E+02  particle  
+    3    4    9   -1  0.79980331E+02  particle  
+    3    4    9    1  0.75141953E+02  particle  
+    3    4    7   -1  0.85162888E+02  particle  
+    3    4    7    1  0.80484352E+02  particle  
+    4    2    5   -1  0.85183006E+02  particle  
+    4    2    5    1  0.79923546E+02  particle  
+    4    2    3   -1  0.88131142E+02  particle  
+    4    2    3    1  0.82927231E+02  particle  
+    5    0    1   -1  0.87796677E+02  particle  
+    5    0    1    1  0.82495377E+02  particle  
+    0   11   23   -1  0.79488358E+02  particle  
+    0   11   23    1  0.75030624E+02  particle  
+    0   11   21   -1  0.80617142E+02  particle  
+    0   11   21    1  0.76828354E+02  particle  
+    1    9   19   -1  0.89878540E+02  particle  
+    1    9   19    1  0.84493019E+02  particle  
+    1    9   17   -1  0.97165245E+02  particle  
+    1    9   17    1  0.93151314E+02  particle  
+    2    7   15   -1  0.97941788E+02  particle  
+    2    7   15    1  0.93200958E+02  particle  
+    2    7   13   -1  0.10937495E+03  particle  
+    2    7   13    1  0.10459805E+03  particle  
+    3    5   11   -1  0.10832027E+03  particle  
+    3    5   11    1  0.10308217E+03  particle  
+    3    5    9   -1  0.11575542E+03  particle  
+    3    5    9    1  0.11034236E+03  particle  
+    4    3    7   -1  0.11575290E+03  particle  
+    4    3    7    1  0.10989815E+03  particle  
+    4    3    5   -1  0.11997698E+03  particle  
+    4    3    5    1  0.11406033E+03  particle  
+    5    1    3   -1  0.11979841E+03  particle  
+    5    1    3    1  0.11379725E+03  particle  
+    5    1    1   -1  0.12248940E+03  particle  
+    5    1    1    1  0.11614764E+03  particle  
+    0   12   25   -1  0.86751915E+02  particle  
+    0   12   25    1  0.82803841E+02  particle  
+    0   12   23   -1  0.87400192E+02  particle  
+    0   12   23    1  0.83835815E+02  particle  
+    1   10   21   -1  0.99845741E+02  particle  
+    1   10   21    1  0.95100273E+02  particle  
+    1   10   19   -1  0.10512486E+03  particle  
+    1   10   19    1  0.10148178E+03  particle  
+    2    8   17   -1  0.10745473E+03  particle  
+    2    8   17    1  0.10277385E+03  particle  
+    2    8   15   -1  0.11914520E+03  particle  
+    2    8   15    1  0.11459036E+03  particle  
+    3    6   13   -1  0.11891338E+03  particle  
+    3    6   13    1  0.11377373E+03  particle  
+    3    6   11   -1  0.12825427E+03  particle  
+    3    6   11    1  0.12280691E+03  particle  
+    4    4    9   -1  0.12779729E+03  particle  
+    4    4    9    1  0.12199414E+03  particle  
+    4    4    7   -1  0.13269188E+03  particle  
+    4    4    7    1  0.12681921E+03  particle  
+    5    2    5   -1  0.13264835E+03  particle  
+    5    2    5    1  0.12655237E+03  particle  
+    5    2    3   -1  0.13612570E+03  particle  
+    5    2    3    1  0.12971675E+03  particle  
+    6    0    1   -1  0.13572766E+03  particle  
+    6    0    1    1  0.12951294E+03  particle  
+    0   13   27   -1  0.11624057E+03  particle  
+    0   13   27    1  0.11217368E+03  particle  
+    0   13   25   -1  0.11769598E+03  particle  
+    0   13   25    1  0.11419411E+03  particle  
+    1   11   23   -1  0.13483751E+03  particle  
+    1   11   23    1  0.12923529E+03  particle  
+    1   11   21   -1  0.14304225E+03  particle  
+    1   11   21    1  0.13896916E+03  particle  
+    2    9   19   -1  0.14806165E+03  particle  
+    2    9   19    1  0.14167535E+03  particle  
+    2    9   17   -1  0.16375670E+03  particle  
+    2    9   17    1  0.15797372E+03  particle  
+    3    7   15   -1  0.16436742E+03  particle  
+    3    7   15    1  0.15885376E+03  particle  
+    3    7   13   -1  0.17694800E+03  particle  
+    3    7   13    1  0.17012283E+03  particle  
+    4    5   11   -1  0.17817949E+03  particle  
+    4    5   11    1  0.17154555E+03  particle  
+    4    5    9   -1  0.18459387E+03  particle  
+    4    5    9    1  0.17722713E+03  particle  
+    5    3    7   -1  0.18569641E+03  particle  
+    5    3    7    1  0.17850322E+03  particle  
+    5    3    5   -1  0.19045439E+03  particle  
+    5    3    5    1  0.18240895E+03  particle  
+    6    1    3   -1  0.19047620E+03  particle  
+    6    1    3    1  0.18315532E+03  particle  
+    6    1    1   -1  0.19365167E+03  particle  
+    6    1    1    1  0.18555949E+03  particle  
+    0   14   29   -1  0.12424920E+03  particle  
+    0   14   29    1  0.12074255E+03  particle  
+    0   14   27   -1  0.12505819E+03  particle  
+    0   14   27    1  0.12166940E+03  particle  
+    1   12   25   -1  0.14513290E+03  particle  
+    1   12   25    1  0.14018185E+03  particle  
+    1   12   23   -1  0.15078430E+03  particle  
+    1   12   23    1  0.14707994E+03  particle  
+    2   10   21   -1  0.15889235E+03  particle  
+    2   10   21    1  0.15302383E+03  particle  
+    2   10   19   -1  0.17326770E+03  particle  
+    2   10   19    1  0.16824525E+03  particle  
+    3    8   17   -1  0.17293260E+03  particle  
+    3    8   17    1  0.16749240E+03  particle  
+    3    8   15   -1  0.18652077E+03  particle  
+    3    8   15    1  0.18008089E+03  particle  
+    4    6   13   -1  0.18799400E+03  particle  
+    4    6   13    1  0.18192928E+03  particle  
+    4    6   11   -1  0.19620392E+03  particle  
+    4    6   11    1  0.18902792E+03  particle  
+    5    4    9   -1  0.19764127E+03  particle  
+    5    4    9    1  0.19070798E+03  particle  
+    5    4    7   -1  0.20279657E+03  particle  
+    5    4    7    1  0.19498497E+03  particle  
+    6    2    5   -1  0.20334119E+03  particle  
+    6    2    5    1  0.19615973E+03  particle  
+    6    2    3   -1  0.20755827E+03  particle  
+    6    2    3    1  0.19938359E+03  particle  
+    7    0    1   -1  0.20740271E+03  particle  
+    7    0    1    1  0.19991225E+03  particle  
+ Charge Z, and Mass number A          20          52
+ Jab-max          29
+   14.000000000000000        0.0000000000000000     
+ number of included states         224
+ total number of states         240
+ umat_nnlo450_delta_N10E16_hw16_Ca52A52.dat                                                          fock_nnlo450_delta_N10E16_hw16_Ca52A52.dat                                                          
+ vnnlo450_delta1_pppp_nnlo450_delta_N10E16_hw16_Ca52A52.dat                                          
+ vnnlo450_delta1_rest_nnlo450_delta_N10E16_hw16_Ca52A52.dat                                          
+ Memory for lookup ab configs  0.78988550400000035      GByte
+ setting up interaction
+ Memory of hppp matrix  0.20378697600000001      Gb
+ read in g-matrix
+ Amount of G-matrix elements    27949545
+ setting up interaction done!
+ Time setting up interaction in pp-coupling   41.6501465     seconds
+ Vacuum energy e0   183.35882283094662     
+ Vacuum energy e0  -175.04398168798940     
+ Vacuum energy e0  -175.04398168798940     
+   183.35882283094645     
+ number of  cross coupled channels         177
+ Memory for lookup ph configs   1.0876852479999997      GByte
+ Number of hhpp channels          37
+ Number of cross-coupled hhpp channels         107
+ Time setting up interaction in cross-coupling   8.65014648     seconds
+ e3max,l3max           0          -1
+Ground-state calculation: ccsd                                                                                                
+ setup t amps done
+  -2.2876192542424961E-021  -1.2499752238339130E-022  -263.38963820932702       -263.38963820929905     
+ CCSD energy  -438.43361989731642     
+ single particle ii        3164
+ diis space     1676259
+ Storage of diis vectors  0.29502158400000000      Gb
+ t1 eqn
+ Total execution time T1 eqn  0.59086918830871582     
+ t2 eqn
+ Total execution time T2 eqn   4.1566848754882812     
+  -1.4426661219047867E-011   2.5320146841825871E-004  -242.43395749055176       -263.38963820929905     
+ CCSD energy  -417.47768597708716     
+dener    0    1  0.20955935E+02
+ t1 eqn
+ Total execution time T1 eqn  0.58194589614868164     
+ t2 eqn
+ Total execution time T2 eqn   4.1555421352386475     
+  -2.2366893538041932E-011  -1.1465036086945688E-003  -236.37041151797592       -242.43395749057493     
+ CCSD energy  -411.41553970959637     
+dener    0    2  0.60621462E+01
+ t1 eqn
+ Total execution time T1 eqn  0.58103799819946289     
+ t2 eqn
+ Total execution time T2 eqn   4.2645740509033203     
+  -2.7739716699992808E-011  -2.3294006079346082E-003  -234.94435877549256       -236.37041151797681     
+ CCSD energy  -409.99066986411765     
+dener    0    3  0.14248699E+01
+ t1 eqn
+ Total execution time T1 eqn  0.58091998100280762     
+ t2 eqn
+ Total execution time T2 eqn   4.2228381633758545     
+  -3.1764718734935587E-011  -3.2204947441418991E-003  -234.87931331929565       -234.94435877546485     
+ CCSD energy  -409.92651550206097     
+dener    0    4  0.64154364E-01
+ t1 eqn
+ Total execution time T1 eqn  0.58133006095886230     
+ t2 eqn
+ Total execution time T2 eqn   4.2810881137847900     
+  -3.4893475658863114E-011  -4.0196955486049794E-003  -235.14355191334482       -234.87931331930210     
+ CCSD energy  -410.19155329691773     
+dener    0    5 -0.26503780E+00
+ t1 eqn
+ Total execution time T1 eqn  0.58281016349792480     
+ t2 eqn
+ Total execution time T2 eqn   4.2691588401794434     
+  -3.7353831930087607E-011  -4.8036161085280105E-003  -235.42910020343518       -235.14355191336051     
+ CCSD energy  -410.47788550757048     
+dener    0    6 -0.28633222E+00
+ t1 eqn
+ Total execution time T1 eqn  0.58165001869201660     
+ t2 eqn
+ Total execution time T2 eqn   4.4422800540924072     
+  -3.9295809028914111E-011  -5.5764864165636432E-003  -235.65954566075368       -235.42910020343157     
+ CCSD energy  -410.70910383519890     
+dener    0    7 -0.23121832E+00
+ t1 eqn
+ Total execution time T1 eqn  0.58172297477722168     
+ t2 eqn
+ Total execution time T2 eqn   4.3266601562500000     
+  -4.0831282632998471E-011  -6.3211200071351895E-003  -235.82871430646065       -235.65954566076181     
+ CCSD energy  -410.87901711449803     
+dener    0    8 -0.16991328E+00
+ t1 eqn
+ Total execution time T1 eqn  0.58178687095642090     
+ t2 eqn
+ Total execution time T2 eqn   4.4459760189056396     
+  -4.2046983367945688E-011  -7.0196198827116758E-003  -235.94824739606230       -235.82871430645645     
+ CCSD energy  -410.99924870397649     
+dener    0    9 -0.12023159E+00
+ t1 eqn
+ Total execution time T1 eqn  0.58137488365173340     
+ t2 eqn
+ Total execution time T2 eqn   4.2770569324493408     
+diis_mat    1    1  0.2462E-01
+diis_mat    1    2  0.1116E-01
+diis_mat    1    3  0.5598E-02
+diis_mat    1    4  0.3061E-02
+diis_mat    1    5  0.1789E-02
+diis_mat    1    6  0.1102E-02
+diis_mat    1    7  0.7057E-03
+diis_mat    1    8  0.4666E-03
+diis_mat    1    9  0.3166E-03
+diis_mat    1   10 -0.1000E+01
+diis_mat    2    1  0.1116E-01
+diis_mat    2    2  0.5400E-02
+diis_mat    2    3  0.2871E-02
+diis_mat    2    4  0.1647E-02
+diis_mat    2    5  0.1002E-02
+diis_mat    2    6  0.6383E-03
+diis_mat    2    7  0.4209E-03
+diis_mat    2    8  0.2855E-03
+diis_mat    2    9  0.1981E-03
+diis_mat    2   10 -0.1000E+01
+diis_mat    3    1  0.5598E-02
+diis_mat    3    2  0.2871E-02
+diis_mat    3    3  0.1605E-02
+diis_mat    3    4  0.9606E-03
+diis_mat    3    5  0.6058E-03
+diis_mat    3    6  0.3975E-03
+diis_mat    3    7  0.2690E-03
+diis_mat    3    8  0.1867E-03
+diis_mat    3    9  0.1322E-03
+diis_mat    3   10 -0.1000E+01
+diis_mat    4    1  0.3061E-02
+diis_mat    4    2  0.1647E-02
+diis_mat    4    3  0.9606E-03
+diis_mat    4    4  0.5961E-03
+diis_mat    4    5  0.3876E-03
+diis_mat    4    6  0.2611E-03
+diis_mat    4    7  0.1808E-03
+diis_mat    4    8  0.1280E-03
+diis_mat    4    9  0.9223E-04
+diis_mat    4   10 -0.1000E+01
+diis_mat    5    1  0.1789E-02
+diis_mat    5    2  0.1002E-02
+diis_mat    5    3  0.6058E-03
+diis_mat    5    4  0.3876E-03
+diis_mat    5    5  0.2587E-03
+diis_mat    5    6  0.1783E-03
+diis_mat    5    7  0.1259E-03
+diis_mat    5    8  0.9072E-04
+diis_mat    5    9  0.6639E-04
+diis_mat    5   10 -0.1000E+01
+diis_mat    6    1  0.1102E-02
+diis_mat    6    2  0.6383E-03
+diis_mat    6    3  0.3975E-03
+diis_mat    6    4  0.2611E-03
+diis_mat    6    5  0.1783E-03
+diis_mat    6    6  0.1253E-03
+diis_mat    6    7  0.9007E-04
+diis_mat    6    8  0.6587E-04
+diis_mat    6    9  0.4885E-04
+diis_mat    6   10 -0.1000E+01
+diis_mat    7    1  0.7057E-03
+diis_mat    7    2  0.4209E-03
+diis_mat    7    3  0.2690E-03
+diis_mat    7    4  0.1808E-03
+diis_mat    7    5  0.1259E-03
+diis_mat    7    6  0.9007E-04
+diis_mat    7    7  0.6571E-04
+diis_mat    7    8  0.4869E-04
+diis_mat    7    9  0.3653E-04
+diis_mat    7   10 -0.1000E+01
+diis_mat    8    1  0.4666E-03
+diis_mat    8    2  0.2855E-03
+diis_mat    8    3  0.1867E-03
+diis_mat    8    4  0.1280E-03
+diis_mat    8    5  0.9072E-04
+diis_mat    8    6  0.6587E-04
+diis_mat    8    7  0.4869E-04
+diis_mat    8    8  0.3650E-04
+diis_mat    8    9  0.2766E-04
+diis_mat    8   10 -0.1000E+01
+diis_mat    9    1  0.3166E-03
+diis_mat    9    2  0.1981E-03
+diis_mat    9    3  0.1322E-03
+diis_mat    9    4  0.9223E-04
+diis_mat    9    5  0.6639E-04
+diis_mat    9    6  0.4885E-04
+diis_mat    9    7  0.3653E-04
+diis_mat    9    8  0.2766E-04
+diis_mat    9    9  0.2114E-04
+diis_mat    9   10 -0.1000E+01
+diis_mat   10    1 -0.1000E+01
+diis_mat   10    2 -0.1000E+01
+diis_mat   10    3 -0.1000E+01
+diis_mat   10    4 -0.1000E+01
+diis_mat   10    5 -0.1000E+01
+diis_mat   10    6 -0.1000E+01
+diis_mat   10    7 -0.1000E+01
+diis_mat   10    8 -0.1000E+01
+diis_mat   10    9 -0.1000E+01
+diis_mat   10   10  0.0000E+00
+ dsysv info           0
+sol_vec    1  0.2077E+00
+sol_vec    2 -0.5083E+01
+sol_vec    3  0.5203E+02
+sol_vec    4 -0.2878E+03
+sol_vec    5  0.9400E+03
+sol_vec    6 -0.1863E+04
+sol_vec    7  0.2196E+04
+sol_vec    8 -0.1415E+04
+sol_vec    9  0.3835E+03
+sol_vec   10  0.2920E-08
+  -4.6801350057761098E-011  -1.1532858745236461E-002  -236.23491117433778       -235.94824739606321     
+ CCSD energy  -411.29042572111922     
+dener    0   10 -0.29117700E+00
+ t1 eqn
+ Total execution time T1 eqn  0.60524797439575195     
+ t2 eqn
+ Total execution time T2 eqn   4.2597150802612305     
+  -4.6799939057869290E-011  -1.1521775216012492E-002  -236.23251429945608       -236.23491117430805     
+ CCSD energy  -411.28801776270831     
+dener    0   11  0.24079585E-02
+ t1 eqn
+ Total execution time T1 eqn  0.58143401145935059     
+ t2 eqn
+ Total execution time T2 eqn   4.3946669101715088     
+  -4.6798017307414684E-011  -1.1512393123291166E-002  -236.23156863525202       -236.23251429944975     
+ CCSD energy  -411.28706271641147     
+dener    0   12  0.95504627E-03
+ t1 eqn
+ Total execution time T1 eqn  0.58431696891784668     
+ t2 eqn
+ Total execution time T2 eqn   4.3499650955200195     
+  -4.6796261270274489E-011  -1.1505492372439854E-002  -236.23119312069511       -236.23156863526467     
+ CCSD energy  -411.28668030110373     
+dener    0   13  0.38241531E-03
+ t1 eqn
+ Total execution time T1 eqn  0.58232808113098145     
+ t2 eqn
+ Total execution time T2 eqn   4.3271040916442871     
+  -4.6794796845354976E-011  -1.1500563860627592E-002  -236.23104977533924       -236.23119312067885     
+ CCSD energy  -411.28653202723603     
+dener    0   14  0.14827387E-03
+ t1 eqn
+ Total execution time T1 eqn  0.58505606651306152     
+ t2 eqn
+ Total execution time T2 eqn   4.3980379104614258     
+  -4.6793612367024657E-011  -1.1497066646370112E-002  -236.23100154666145       -236.23104977529979     
+ CCSD energy  -411.28648030134400     
+dener    0   15  0.51725892E-04
+ t1 eqn
+ Total execution time T1 eqn  0.58265519142150879     
+ t2 eqn
+ Total execution time T2 eqn   4.3456749916076660     
+  -4.6792666204433347E-011  -1.1494588804833308E-002  -236.23099116827356       -236.23100154664999     
+ CCSD energy  -411.28646744511457     
+dener    0   16  0.12856230E-04
+ t1 eqn
+ Total execution time T1 eqn  0.58257412910461426     
+ t2 eqn
+ Total execution time T2 eqn   4.4054191112518311     
+  -4.6791915140604317E-011  -1.1492835003171109E-002  -236.23099457711990       -236.23099116826728     
+ CCSD energy  -411.28646910015925     
+dener    0   17 -0.16550447E-05
+ t1 eqn
+ Total execution time T1 eqn  0.58186292648315430     
+ t2 eqn
+ Total execution time T2 eqn   4.3331270217895508     
+  -4.6791321301191416E-011  -1.1491595892501736E-002  -236.23100187617658       -236.23099457711186     
+ CCSD energy  -411.28647516010528     
+dener    0   18 -0.60599459E-05
+ t1 eqn
+ Total execution time T1 eqn  0.58261203765869141     
+ t2 eqn
+ Total execution time T2 eqn   4.5605080127716064     
+  -4.6790853185001641E-011  -1.1490723061524316E-002  -236.23100924546068       -236.23100187616862     
+ CCSD energy  -411.28648165655841     
+dener    0   19 -0.64964534E-05
+ t1 eqn
+ Total execution time T1 eqn  0.58244395256042480     
+ t2 eqn
+ Total execution time T2 eqn   4.3851039409637451     
+diis_mat    1    1  0.1260E-08
+diis_mat    1    2  0.9329E-09
+diis_mat    1    3  0.7094E-09
+diis_mat    1    4  0.5482E-09
+diis_mat    1    5  0.4282E-09
+diis_mat    1    6  0.3369E-09
+diis_mat    1    7  0.2666E-09
+diis_mat    1    8  0.2118E-09
+diis_mat    1    9  0.1689E-09
+diis_mat    1   10 -0.1000E+01
+diis_mat    2    1  0.9329E-09
+diis_mat    2    2  0.7155E-09
+diis_mat    2    3  0.5548E-09
+diis_mat    2    4  0.4339E-09
+diis_mat    2    5  0.3416E-09
+diis_mat    2    6  0.2704E-09
+diis_mat    2    7  0.2149E-09
+diis_mat    2    8  0.1714E-09
+diis_mat    2    9  0.1371E-09
+diis_mat    2   10 -0.1000E+01
+diis_mat    3    1  0.7094E-09
+diis_mat    3    2  0.5548E-09
+diis_mat    3    3  0.4354E-09
+diis_mat    3    4  0.3433E-09
+diis_mat    3    5  0.2719E-09
+diis_mat    3    6  0.2162E-09
+diis_mat    3    7  0.1725E-09
+diis_mat    3    8  0.1380E-09
+diis_mat    3    9  0.1107E-09
+diis_mat    3   10 -0.1000E+01
+diis_mat    4    1  0.5482E-09
+diis_mat    4    2  0.4339E-09
+diis_mat    4    3  0.3433E-09
+diis_mat    4    4  0.2724E-09
+diis_mat    4    5  0.2168E-09
+diis_mat    4    6  0.1730E-09
+diis_mat    4    7  0.1385E-09
+diis_mat    4    8  0.1111E-09
+diis_mat    4    9  0.8934E-10
+diis_mat    4   10 -0.1000E+01
+diis_mat    5    1  0.4282E-09
+diis_mat    5    2  0.3416E-09
+diis_mat    5    3  0.2719E-09
+diis_mat    5    4  0.2168E-09
+diis_mat    5    5  0.1732E-09
+diis_mat    5    6  0.1387E-09
+diis_mat    5    7  0.1114E-09
+diis_mat    5    8  0.8956E-10
+diis_mat    5    9  0.7217E-10
+diis_mat    5   10 -0.1000E+01
+diis_mat    6    1  0.3369E-09
+diis_mat    6    2  0.2704E-09
+diis_mat    6    3  0.2162E-09
+diis_mat    6    4  0.1730E-09
+diis_mat    6    5  0.1387E-09
+diis_mat    6    6  0.1114E-09
+diis_mat    6    7  0.8967E-10
+diis_mat    6    8  0.7228E-10
+diis_mat    6    9  0.5836E-10
+diis_mat    6   10 -0.1000E+01
+diis_mat    7    1  0.2666E-09
+diis_mat    7    2  0.2149E-09
+diis_mat    7    3  0.1725E-09
+diis_mat    7    4  0.1385E-09
+diis_mat    7    5  0.1114E-09
+diis_mat    7    6  0.8967E-10
+diis_mat    7    7  0.7232E-10
+diis_mat    7    8  0.5841E-10
+diis_mat    7    9  0.4724E-10
+diis_mat    7   10 -0.1000E+01
+diis_mat    8    1  0.2118E-09
+diis_mat    8    2  0.1714E-09
+diis_mat    8    3  0.1380E-09
+diis_mat    8    4  0.1111E-09
+diis_mat    8    5  0.8956E-10
+diis_mat    8    6  0.7228E-10
+diis_mat    8    7  0.5841E-10
+diis_mat    8    8  0.4726E-10
+diis_mat    8    9  0.3829E-10
+diis_mat    8   10 -0.1000E+01
+diis_mat    9    1  0.1689E-09
+diis_mat    9    2  0.1371E-09
+diis_mat    9    3  0.1107E-09
+diis_mat    9    4  0.8934E-10
+diis_mat    9    5  0.7217E-10
+diis_mat    9    6  0.5836E-10
+diis_mat    9    7  0.4724E-10
+diis_mat    9    8  0.3829E-10
+diis_mat    9    9  0.3106E-10
+diis_mat    9   10 -0.1000E+01
+diis_mat   10    1 -0.1000E+01
+diis_mat   10    2 -0.1000E+01
+diis_mat   10    3 -0.1000E+01
+diis_mat   10    4 -0.1000E+01
+diis_mat   10    5 -0.1000E+01
+diis_mat   10    6 -0.1000E+01
+diis_mat   10    7 -0.1000E+01
+diis_mat   10    8 -0.1000E+01
+diis_mat   10    9 -0.1000E+01
+diis_mat   10   10  0.0000E+00
+ dsysv info           0
+sol_vec    1 -0.8175E+01
+sol_vec    2  0.1424E+03
+sol_vec    3 -0.1032E+04
+sol_vec    4  0.4076E+04
+sol_vec    5 -0.9601E+04
+sol_vec    6  0.1384E+05
+sol_vec    7 -0.1193E+05
+sol_vec    8  0.5621E+04
+sol_vec    9 -0.1106E+04
+sol_vec   10  0.3544E-14
+  -4.6789164590578642E-011  -1.1488994737707358E-002  -236.23102804416732       -236.23100924545983     
+ CCSD energy  -411.28649872694120     
+dener    0   20 -0.17070382E-04
+ t1 eqn
+ Total execution time T1 eqn  0.58402299880981445     
+ t2 eqn
+ Total execution time T2 eqn   4.2548768520355225     
+  -4.6789166869722658E-011  -1.1488940331556620E-002  -236.23102943119673       -236.23102804415706     
+ CCSD energy  -411.28650005956445     
+dener    0   21 -0.13326232E-05
+ t1 eqn
+ Total execution time T1 eqn  0.58232808113098145     
+ t2 eqn
+ Total execution time T2 eqn   4.5503768920898438     
+  -4.6789172494300097E-011  -1.1488934638277812E-002  -236.23103064486347       -236.23102943116587     
+ CCSD energy  -411.28650126753791     
+dener    0   22 -0.12079735E-05
+ t1 eqn
+ Total execution time T1 eqn  0.58276891708374023     
+ t2 eqn
+ Total execution time T2 eqn   4.3959960937500000     
+  -4.6789177651088714E-011  -1.1488935909337541E-002  -236.23103150258575       -236.23103064483388     
+ CCSD energy  -411.28650212653127     
+dener    0   23 -0.85899336E-06
+ Jab-max          29
+ Number of ijk configurations in t3                    0
+ Number of abc configurations in t3                    0
+ Totan dimension of t3                    0
+ Memory allocated for t3 amps   0.00000000     Gbyte
+ number of channels           0
+ Total memory for lookup t3 configs   0.0000000000000000     
+ Total memory for storage of t3 amps   0.0000000000000000     
+ setup t3 amps doneccsd                                                                                                
+ exciting setup t3 routine
+ setup t3 amps done
+ E(CCSD)  -411.28650212653127     
+ Setting up I2 intermediate
+ Setting up I3 intermediate
+ Setting up I4 intermediate
+ Setting up I5 intermediate
+ Setting up I6 intermediate
+ Setting up I7 intermediate
+ Setting up I8 intermediate
+ Setting up I9 intermediate
+ Setting up I10 intermediate
+ Setting up I10b intermediate
+ Setting up I10c intermediate
+ Setting up I10f intermediate
+ Setting up I10g intermediate
+ Setting up I10h intermediate
+ Setting up I10i intermediate
+ Setting up I10j intermediate
+ Setting up I10i intermediate
+ Setting up I11 intermediate
+ EOM starting...
+ starting lambda-equations
+ Starting EOM-CCSD...
+ number of channels          37
+ number of cross-coupled channels         107
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.4809112548828125E-005
+dener    0    1  0.12146805E+06  0.41392901E+06  0.18879875E+03
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.8862228393554688E-005
+dener    0    2  0.29506223E+04  0.42090136E+06  0.45480314E+01
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.8146972656250000E-005
+dener    0    3  0.12684489E+04  0.42188707E+06  0.19528769E+01
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   4.0054321289062500E-005
+dener    0    4  0.70965125E+03  0.42130136E+06  0.10933232E+01
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.6001205444335938E-005
+dener    0    5  0.47159479E+03  0.42046425E+06  0.72728472E+00
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.5047531127929688E-005
+dener    0    6  0.33855618E+03  0.41972557E+06  0.52257426E+00
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.6001205444335938E-005
+dener    0    7  0.25231085E+03  0.41914624E+06  0.38972040E+00
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.5047531127929688E-005
+dener    0    8  0.19224318E+03  0.41870927E+06  0.29709453E+00
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.4093856811523438E-005
+dener    0    9  0.14864430E+03  0.41838332E+06  0.22980585E+00
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.6954879760742188E-005
+diis_mat    1    1  0.2725E-02
+diis_mat    1    2  0.1362E-02
+diis_mat    1    3  0.7266E-03
+diis_mat    1    4  0.4099E-03
+diis_mat    1    5  0.2425E-03
+diis_mat    1    6  0.1492E-03
+diis_mat    1    7  0.9494E-04
+diis_mat    1    8  0.6210E-04
+diis_mat    1    9  0.4159E-04
+diis_mat    1   10 -0.1000E+01
+diis_mat    2    1  0.1362E-02
+diis_mat    2    2  0.7350E-03
+diis_mat    2    3  0.4195E-03
+diis_mat    2    4  0.2511E-03
+diis_mat    2    5  0.1565E-03
+diis_mat    2    6  0.1008E-03
+diis_mat    2    7  0.6679E-04
+diis_mat    2    8  0.4530E-04
+diis_mat    2    9  0.3135E-04
+diis_mat    2   10 -0.1000E+01
+diis_mat    3    1  0.7266E-03
+diis_mat    3    2  0.4195E-03
+diis_mat    3    3  0.2539E-03
+diis_mat    3    4  0.1598E-03
+diis_mat    3    5  0.1040E-03
+diis_mat    3    6  0.6963E-04
+diis_mat    3    7  0.4770E-04
+diis_mat    3    8  0.3334E-04
+diis_mat    3    9  0.2370E-04
+diis_mat    3   10 -0.1000E+01
+diis_mat    4    1  0.4099E-03
+diis_mat    4    2  0.2511E-03
+diis_mat    4    3  0.1598E-03
+diis_mat    4    4  0.1051E-03
+diis_mat    4    5  0.7096E-04
+diis_mat    4    6  0.4904E-04
+diis_mat    4    7  0.3456E-04
+diis_mat    4    8  0.2477E-04
+diis_mat    4    9  0.1801E-04
+diis_mat    4   10 -0.1000E+01
+diis_mat    5    1  0.2425E-03
+diis_mat    5    2  0.1565E-03
+diis_mat    5    3  0.1040E-03
+diis_mat    5    4  0.7096E-04
+diis_mat    5    5  0.4947E-04
+diis_mat    5    6  0.3514E-04
+diis_mat    5    7  0.2537E-04
+diis_mat    5    8  0.1858E-04
+diis_mat    5    9  0.1377E-04
+diis_mat    5   10 -0.1000E+01
+diis_mat    6    1  0.1492E-03
+diis_mat    6    2  0.1008E-03
+diis_mat    6    3  0.6963E-04
+diis_mat    6    4  0.4904E-04
+diis_mat    6    5  0.3514E-04
+diis_mat    6    6  0.2557E-04
+diis_mat    6    7  0.1885E-04
+diis_mat    6    8  0.1405E-04
+diis_mat    6    9  0.1059E-04
+diis_mat    6   10 -0.1000E+01
+diis_mat    7    1  0.9494E-04
+diis_mat    7    2  0.6679E-04
+diis_mat    7    3  0.4770E-04
+diis_mat    7    4  0.3456E-04
+diis_mat    7    5  0.2537E-04
+diis_mat    7    6  0.1885E-04
+diis_mat    7    7  0.1415E-04
+diis_mat    7    8  0.1072E-04
+diis_mat    7    9  0.8188E-05
+diis_mat    7   10 -0.1000E+01
+diis_mat    8    1  0.6210E-04
+diis_mat    8    2  0.4530E-04
+diis_mat    8    3  0.3334E-04
+diis_mat    8    4  0.2477E-04
+diis_mat    8    5  0.1858E-04
+diis_mat    8    6  0.1405E-04
+diis_mat    8    7  0.1072E-04
+diis_mat    8    8  0.8234E-05
+diis_mat    8    9  0.6366E-05
+diis_mat    8   10 -0.1000E+01
+diis_mat    9    1  0.4159E-04
+diis_mat    9    2  0.3135E-04
+diis_mat    9    3  0.2370E-04
+diis_mat    9    4  0.1801E-04
+diis_mat    9    5  0.1377E-04
+diis_mat    9    6  0.1059E-04
+diis_mat    9    7  0.8188E-05
+diis_mat    9    8  0.6366E-05
+diis_mat    9    9  0.4974E-05
+diis_mat    9   10 -0.1000E+01
+diis_mat   10    1 -0.1000E+01
+diis_mat   10    2 -0.1000E+01
+diis_mat   10    3 -0.1000E+01
+diis_mat   10    4 -0.1000E+01
+diis_mat   10    5 -0.1000E+01
+diis_mat   10    6 -0.1000E+01
+diis_mat   10    7 -0.1000E+01
+diis_mat   10    8 -0.1000E+01
+diis_mat   10    9 -0.1000E+01
+diis_mat   10   10  0.0000E+00
+ dsysv info           0
+sol_vec    1  0.8451E+00
+sol_vec    2 -0.1772E+02
+sol_vec    3  0.1550E+03
+sol_vec    4 -0.7417E+03
+sol_vec    5  0.2131E+04
+sol_vec    6 -0.3779E+04
+sol_vec    7  0.4048E+04
+sol_vec    8 -0.2402E+04
+sol_vec    9  0.6059E+03
+sol_vec   10  0.7005E-09
+dener    0   10  0.11610594E+03  0.41814006E+06  0.17955337E+00
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.8862228393554688E-005
+dener    0   11  0.45180386E+03  0.41734245E+06  0.69936464E+00
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.7193298339843750E-005
+dener    0   12  0.66502011E+00  0.41734301E+06  0.10294095E-02
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.4093856811523438E-005
+dener    0   13  0.42901257E+00  0.41734344E+06  0.66408431E-03
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.7908554077148438E-005
+dener    0   14  0.31368291E+00  0.41734375E+06  0.48556110E-03
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.6001205444335938E-005
+dener    0   15  0.23899239E+00  0.41734399E+06  0.36994487E-03
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.6001205444335938E-005
+dener    0   16  0.18541794E+00  0.41734418E+06  0.28701497E-03
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.7908554077148438E-005
+dener    0   17  0.14536233E+00  0.41734432E+06  0.22501145E-03
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.3855438232421875E-005
+dener    0   18  0.11478144E+00  0.41734443E+06  0.17767419E-03
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.4093856811523438E-005
+dener    0   19  0.91133170E-01  0.41734452E+06  0.14106820E-03
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.7908554077148438E-005
+diis_mat    1    1  0.2569E-09
+diis_mat    1    2  0.1910E-09
+diis_mat    1    3  0.1449E-09
+diis_mat    1    4  0.1115E-09
+diis_mat    1    5  0.8659E-10
+diis_mat    1    6  0.6776E-10
+diis_mat    1    7  0.5333E-10
+diis_mat    1    8  0.4217E-10
+diis_mat    1    9  0.3347E-10
+diis_mat    1   10 -0.1000E+01
+diis_mat    2    1  0.1910E-09
+diis_mat    2    2  0.1454E-09
+diis_mat    2    3  0.1119E-09
+diis_mat    2    4  0.8700E-10
+diis_mat    2    5  0.6811E-10
+diis_mat    2    6  0.5363E-10
+diis_mat    2    7  0.4242E-10
+diis_mat    2    8  0.3369E-10
+diis_mat    2    9  0.2684E-10
+diis_mat    2   10 -0.1000E+01
+diis_mat    3    1  0.1449E-09
+diis_mat    3    2  0.1119E-09
+diis_mat    3    3  0.8709E-10
+diis_mat    3    4  0.6822E-10
+diis_mat    3    5  0.5373E-10
+diis_mat    3    6  0.4252E-10
+diis_mat    3    7  0.3378E-10
+diis_mat    3    8  0.2692E-10
+diis_mat    3    9  0.2151E-10
+diis_mat    3   10 -0.1000E+01
+diis_mat    4    1  0.1115E-09
+diis_mat    4    2  0.8700E-10
+diis_mat    4    3  0.6822E-10
+diis_mat    4    4  0.5376E-10
+diis_mat    4    5  0.4256E-10
+diis_mat    4    6  0.3382E-10
+diis_mat    4    7  0.2696E-10
+diis_mat    4    8  0.2155E-10
+diis_mat    4    9  0.1726E-10
+diis_mat    4   10 -0.1000E+01
+diis_mat    5    1  0.8659E-10
+diis_mat    5    2  0.6811E-10
+diis_mat    5    3  0.5373E-10
+diis_mat    5    4  0.4256E-10
+diis_mat    5    5  0.3383E-10
+diis_mat    5    6  0.2697E-10
+diis_mat    5    7  0.2157E-10
+diis_mat    5    8  0.1728E-10
+diis_mat    5    9  0.1388E-10
+diis_mat    5   10 -0.1000E+01
+diis_mat    6    1  0.6776E-10
+diis_mat    6    2  0.5363E-10
+diis_mat    6    3  0.4252E-10
+diis_mat    6    4  0.3382E-10
+diis_mat    6    5  0.2697E-10
+diis_mat    6    6  0.2157E-10
+diis_mat    6    7  0.1729E-10
+diis_mat    6    8  0.1389E-10
+diis_mat    6    9  0.1117E-10
+diis_mat    6   10 -0.1000E+01
+diis_mat    7    1  0.5333E-10
+diis_mat    7    2  0.4242E-10
+diis_mat    7    3  0.3378E-10
+diis_mat    7    4  0.2696E-10
+diis_mat    7    5  0.2157E-10
+diis_mat    7    6  0.1729E-10
+diis_mat    7    7  0.1389E-10
+diis_mat    7    8  0.1118E-10
+diis_mat    7    9  0.9008E-11
+diis_mat    7   10 -0.1000E+01
+diis_mat    8    1  0.4217E-10
+diis_mat    8    2  0.3369E-10
+diis_mat    8    3  0.2692E-10
+diis_mat    8    4  0.2155E-10
+diis_mat    8    5  0.1728E-10
+diis_mat    8    6  0.1389E-10
+diis_mat    8    7  0.1118E-10
+diis_mat    8    8  0.9010E-11
+diis_mat    8    9  0.7273E-11
+diis_mat    8   10 -0.1000E+01
+diis_mat    9    1  0.3347E-10
+diis_mat    9    2  0.2684E-10
+diis_mat    9    3  0.2151E-10
+diis_mat    9    4  0.1726E-10
+diis_mat    9    5  0.1388E-10
+diis_mat    9    6  0.1117E-10
+diis_mat    9    7  0.9008E-11
+diis_mat    9    8  0.7273E-11
+diis_mat    9    9  0.5878E-11
+diis_mat    9   10 -0.1000E+01
+diis_mat   10    1 -0.1000E+01
+diis_mat   10    2 -0.1000E+01
+diis_mat   10    3 -0.1000E+01
+diis_mat   10    4 -0.1000E+01
+diis_mat   10    5 -0.1000E+01
+diis_mat   10    6 -0.1000E+01
+diis_mat   10    7 -0.1000E+01
+diis_mat   10    8 -0.1000E+01
+diis_mat   10    9 -0.1000E+01
+diis_mat   10   10  0.0000E+00
+ dsysv info           0
+sol_vec    1  0.1861E+01
+sol_vec    2 -0.3860E+02
+sol_vec    3  0.3310E+03
+sol_vec    4 -0.1541E+04
+sol_vec    5  0.4281E+04
+sol_vec    6 -0.7305E+04
+sol_vec    7  0.7508E+04
+sol_vec    8 -0.4267E+04
+sol_vec    9  0.1030E+04
+sol_vec   10  0.2149E-16
+dener    0   20  0.72685666E-01  0.41734458E+06  0.11251266E-03
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.2901763916015625E-005
+dener    0   21  0.30329192E+00  0.41734484E+06  0.46947589E-03
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.8146972656250000E-005
+dener    0   22  0.22435961E-02  0.41734484E+06  0.34729389E-05
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.9815902709960938E-005
+dener    0   23  0.11621363E-02  0.41734484E+06  0.17989105E-05
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.7908554077148438E-005
+dener    0   24  0.68119628E-03  0.41734484E+06  0.10544470E-05
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.4093856811523438E-005
+dener    0   25  0.42609713E-03  0.41734484E+06  0.65957028E-06
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.8862228393554688E-005
+dener    0   26  0.27775348E-03  0.41734484E+06  0.42994411E-06
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   4.0054321289062500E-005
+dener    0   27  0.19641098E-03  0.41734484E+06  0.30403127E-06
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.6001205444335938E-005
+dener    0   28  0.14827908E-03  0.41734484E+06  0.22952625E-06
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.7193298339843750E-005
+dener    0   29  0.11601306E-03  0.41734484E+06  0.17958058E-06
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.6001205444335938E-005
+diis_mat    1    1  0.7664E-15
+diis_mat    1    2 -0.3131E-15
+diis_mat    1    3 -0.6657E-15
+diis_mat    1    4 -0.6932E-15
+diis_mat    1    5 -0.5975E-15
+diis_mat    1    6 -0.4723E-15
+diis_mat    1    7 -0.3558E-15
+diis_mat    1    8 -0.2606E-15
+diis_mat    1    9 -0.1876E-15
+diis_mat    1   10 -0.1000E+01
+diis_mat    2    1 -0.3131E-15
+diis_mat    2    2  0.7021E-15
+diis_mat    2    3  0.8614E-15
+diis_mat    2    4  0.7356E-15
+diis_mat    2    5  0.5500E-15
+diis_mat    2    6  0.3834E-15
+diis_mat    2    7  0.2558E-15
+diis_mat    2    8  0.1654E-15
+diis_mat    2    9  0.1042E-15
+diis_mat    2   10 -0.1000E+01
+diis_mat    3    1 -0.6657E-15
+diis_mat    3    2  0.8614E-15
+diis_mat    3    3  0.1184E-14
+diis_mat    3    4  0.1068E-14
+diis_mat    3    5  0.8343E-15
+diis_mat    3    6  0.6067E-15
+diis_mat    3    7  0.4229E-15
+diis_mat    3    8  0.2869E-15
+diis_mat    3    9  0.1911E-15
+diis_mat    3   10 -0.1000E+01
+diis_mat    4    1 -0.6932E-15
+diis_mat    4    2  0.7356E-15
+diis_mat    4    3  0.1068E-14
+diis_mat    4    4  0.9857E-15
+diis_mat    4    5  0.7837E-15
+diis_mat    4    6  0.5791E-15
+diis_mat    4    7  0.4102E-15
+diis_mat    4    8  0.2829E-15
+diis_mat    4    9  0.1918E-15
+diis_mat    4   10 -0.1000E+01
+diis_mat    5    1 -0.5975E-15
+diis_mat    5    2  0.5500E-15
+diis_mat    5    3  0.8343E-15
+diis_mat    5    4  0.7837E-15
+diis_mat    5    5  0.6314E-15
+diis_mat    5    6  0.4721E-15
+diis_mat    5    7  0.3383E-15
+diis_mat    5    8  0.2361E-15
+diis_mat    5    9  0.1621E-15
+diis_mat    5   10 -0.1000E+01
+diis_mat    6    1 -0.4723E-15
+diis_mat    6    2  0.3834E-15
+diis_mat    6    3  0.6067E-15
+diis_mat    6    4  0.5791E-15
+diis_mat    6    5  0.4721E-15
+diis_mat    6    6  0.3568E-15
+diis_mat    6    7  0.2583E-15
+diis_mat    6    8  0.1823E-15
+diis_mat    6    9  0.1265E-15
+diis_mat    6   10 -0.1000E+01
+diis_mat    7    1 -0.3558E-15
+diis_mat    7    2  0.2558E-15
+diis_mat    7    3  0.4229E-15
+diis_mat    7    4  0.4102E-15
+diis_mat    7    5  0.3383E-15
+diis_mat    7    6  0.2583E-15
+diis_mat    7    7  0.1890E-15
+diis_mat    7    8  0.1347E-15
+diis_mat    7    9  0.9456E-16
+diis_mat    7   10 -0.1000E+01
+diis_mat    8    1 -0.2606E-15
+diis_mat    8    2  0.1654E-15
+diis_mat    8    3  0.2869E-15
+diis_mat    8    4  0.2829E-15
+diis_mat    8    5  0.2361E-15
+diis_mat    8    6  0.1823E-15
+diis_mat    8    7  0.1347E-15
+diis_mat    8    8  0.9705E-16
+diis_mat    8    9  0.6888E-16
+diis_mat    8   10 -0.1000E+01
+diis_mat    9    1 -0.1876E-15
+diis_mat    9    2  0.1042E-15
+diis_mat    9    3  0.1911E-15
+diis_mat    9    4  0.1918E-15
+diis_mat    9    5  0.1621E-15
+diis_mat    9    6  0.1265E-15
+diis_mat    9    7  0.9456E-16
+diis_mat    9    8  0.6888E-16
+diis_mat    9    9  0.4944E-16
+diis_mat    9   10 -0.1000E+01
+diis_mat   10    1 -0.1000E+01
+diis_mat   10    2 -0.1000E+01
+diis_mat   10    3 -0.1000E+01
+diis_mat   10    4 -0.1000E+01
+diis_mat   10    5 -0.1000E+01
+diis_mat   10    6 -0.1000E+01
+diis_mat   10    7 -0.1000E+01
+diis_mat   10    8 -0.1000E+01
+diis_mat   10    9 -0.1000E+01
+diis_mat   10   10  0.0000E+00
+ dsysv info           0
+sol_vec    1  0.2074E+01
+sol_vec    2 -0.3816E+02
+sol_vec    3  0.2955E+03
+sol_vec    4 -0.1267E+04
+sol_vec    5  0.3305E+04
+sol_vec    6 -0.5387E+04
+sol_vec    7  0.5370E+04
+sol_vec    8 -0.2999E+04
+sol_vec    9  0.7196E+03
+sol_vec   10  0.2630E-20
+dener    0   30  0.92557486E-04  0.41734484E+06  0.14327289E-06
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   4.3153762817382812E-005
+dener    0   31  0.38294261E-03  0.41734484E+06  0.59276992E-06
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.5047531127929688E-005
+dener    0   32  0.22447280E-05  0.41734484E+06  0.34746912E-08
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.4809112548828125E-005
+dener    0   33  0.12434086E-05  0.41734484E+06  0.19247147E-08
+ lambda eqns
+ Setting up I10 intermediate
+ Setting up I11 intermediate
+ Setting up I2 intermediate
+ Setting up I10 intermediate
+ Total execution time L3 eqn   3.6001205444335938E-005
+dener    0   34  0.88174193E-06  0.41734484E+06  0.13648784E-08
+   1  17   0   1  -3   3
+  -3     0     1    31      118016
+  -3     0     3    41      230796
+  -3     0     5    39      334161
+  -3     0     7    20      424520
+  -3     0     9    12      499484
+  -3     0    11     1      557213
+  -3     1     1    29      118166
+  -3     1     3    42      231053
+  -3     1     5    33      334416
+  -3     1     7    21      424786
+  -3     1     9    10      499601
+  -3     1    11     3      557373
+  -1     0     1    97      343799
+  -1     0     3   139      673050
+  -1     0     5   136      975352
+  -1     0     7    90     1240365
+  -1     0     9    51     1460687
+  -1     0    11    19     1631271
+  -1     0    13     6     1750324
+  -1     0    15     1     1817849
+  -1     1     1    94      343597
+  -1     1     3   146      672607
+  -1     1     5   130      974693
+  -1     1     7    98     1239490
+  -1     1     9    50     1459597
+  -1     1    11    24     1630129
+  -1     1    13     6     1748967
+  -1     1    15     2     1816505
+   1     0     1   137      338717
+   1     0     3   202      663205
+   1     0     5   211      961357
+   1     0     7   155     1223020
+   1     0     9   101     1440882
+   1     0    11    52     1609920
+   1     0    13    25     1728258
+   1     0    15     8     1795825
+   1     0    17     2     1815356
+   1     1     1   129      338672
+   1     1     3   201      663075
+   1     1     5   197      961044
+   1     1     7   153     1222546
+   1     1     9    94     1440106
+   1     1    11    49     1609049
+   1     1    13    21     1727095
+   1     1    15     6     1794641
+   1     1    17     1     1813908
+   3     0     1    67      112874
+   3     0     3   100      220843
+   3     0     5   109      320010
+   3     0     7    81      406983
+   3     0     9    60      479463
+   3     0    11    32      535622
+   3     0    13    18      575069
+   3     0    15     7      597576
+   3     0    17     2      604252
+   3     1     1    61      112784
+   3     1     3   103      220619
+   3     1     5    95      319682
+   3     1     7    85      406535
+   3     1     9    53      478901
+   3     1    11    35      535088
+   3     1    13    14      574405
+   3     1    15     7      596982
+ CCSD, Lambda-CCSD(T)  -411.28650212653127       -438.16040631518717     
+ CCSD, CCSD(T)  -411.28650212653127       -443.12336083643339     
+ Total execution time for Lambda-Triples   462.67653489112854     
+ Total execution time for CCSD(T) code   2528.4848890304565     
+Application 19700262 resources: utime ~1608082s, stime ~7889s, Rss ~2273620, inblocks ~813066423, outblocks ~60975881
