@@ -30,6 +30,27 @@ def input_residual_data(file_path,raw_data):
 #        print ('vec_input='+str(vec_input))
         print ('raw_data='+str(raw_data))
 
+def input_NNLOsat_phase_data(file_path,raw_data,pw):
+    with open(file_path,'r') as f_2:
+        count = len(open(file_path,'rU').readlines())
+        data = f_2.readlines()
+        loop2 = 0
+        loop1 = 0
+        wtf = re.match('#', 'abc',flags=0)
+        while loop1 < count:
+            if ( re.search(pw, data[loop1],flags=0) != wtf):
+                while loop2< len(raw_data):
+                    temp_1 = re.findall(r"[-+]?\d+\.?\d*",data[loop1+8+loop2])
+                    raw_data[loop2][0] = temp_1[0]
+                    raw_data[loop2][1] = temp_1[2]
+                    loop2 = loop2 + 1
+            loop1 = loop1 + 1
+#        print ('vec_input='+str(vec_input))
+#        print ('raw_data='+str(raw_data))
+
+
+
+
 
 def plot_phase_shift(file_path1,file_path2):
     with open(file_path1,'r') as f:
@@ -56,6 +77,11 @@ def plot_phase_shift(file_path1,file_path2):
     tol_loss = np.sum(loss)/ len(loss)
     print ('loss='+str(tol_loss))
 
+    file_path = 'NNLOsat_phase.txt'
+    
+    NNLOsat_data = np.zeros((8,2))
+
+
 
     fig_2 = plt.figure('fig_2')
     plt.subplots_adjust(wspace =0.3, hspace =0)
@@ -70,19 +96,26 @@ def plot_phase_shift(file_path1,file_path2):
     y_list_1   = raw_data_1[start_line:start_line+data_points ,1]  # exp
     y_list_2   = raw_data_1[start_line:start_line+data_points ,0]  # theo 450
     y_list_3   = raw_data_2[start_line:start_line+data_points ,0]  # theo 394
+
+    input_NNLOsat_phase_data(file_path,NNLOsat_data,'3D1')
+    y_list_4    = NNLOsat_data[:,1]
+
+
     x_list_new = np.linspace(np.min(x_list),np.max(x_list),num=plot_interpol_count)
     func_1       = interpolate.interp1d(x_list,y_list_2,kind=kind)
     y_list_2_new = func_1(x_list_new) 
     func_2       = interpolate.interp1d(x_list,y_list_3,kind=kind)
     y_list_3_new = func_2(x_list_new) 
+    func_3       = interpolate.interp1d(x_list,y_list_4,kind=kind)
+    y_list_4_new = func_3(x_list_new) 
  
 
     #print('y_list='+str(y_list_2))
     #print('y_list_2_new='+str(y_list_2_new))
     l_exp      = plt.plot(x_list,y_list_1,color = 'k',linestyle='',markersize=4, marker ='s',zorder=4,label='Granada PWA')
-    l_theo_450 = plt.plot   (x_list_new,y_list_2_new,color = 'g',linestyle = '--',zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)') 
+    l_theo_450 = plt.plot   (x_list_new,y_list_2_new,color = 'g',linewidth=lw,linestyle = '--',zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)') 
 #    l_theo_394 = plt.plot   (x_list_new,y_list_3_new,color = 'b',linestyle = '-.',zorder=2,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
-
+    l_nnlosat  = plt.plot   (x_list_new,y_list_4_new,color = 'b',linewidth=lw,linestyle = '-.',zorder=4,label=r'NNLO$_{\rm{sat}}$') 
     #plt.xlabel(fontsize = x_fontsize)
     plt.ylabel('$\delta(^3D_1)$(deg)')
     plt.yticks(np.arange(-30,0,5),fontsize = y_fontsize)
@@ -102,12 +135,9 @@ def plot_phase_shift(file_path1,file_path2):
     y_list_1   = raw_data_1[start_line:start_line+data_points,1]  # exp
     y_list_2   = raw_data_1[start_line:start_line+data_points,0]  # theo
     y_list_3   = raw_data_2[start_line:start_line+data_points ,0]  # theo 394
-    func_1       = interpolate.interp1d(x_list,y_list_2,kind=kind)
-    y_list_2_new = func_1(x_list_new) 
-    func_2       = interpolate.interp1d(x_list,y_list_3,kind=kind)
-    y_list_3_new = func_2(x_list_new) 
- 
 
+    input_NNLOsat_phase_data(file_path,NNLOsat_data,'3S1')
+    y_list_4    = NNLOsat_data[:,1]
 
 
     for loop1 in range(len(y_list_1)):
@@ -119,18 +149,23 @@ def plot_phase_shift(file_path1,file_path2):
     for loop3 in range(len(y_list_3)):
         if y_list_3[loop3] < 0:
             y_list_3[loop3] = y_list_3[loop3]+180
+    for loop4 in range(len(y_list_4)):
+        if y_list_4[loop4] < 0:
+            y_list_4[loop4] = y_list_4[loop4]+180
  
     x_list_new = np.linspace(np.min(x_list),np.max(x_list),num=plot_interpol_count)
     func_1       = interpolate.interp1d(x_list,y_list_2,kind=kind)
     y_list_2_new = func_1(x_list_new) 
     func_2       = interpolate.interp1d(x_list,y_list_3,kind=kind)
     y_list_3_new = func_2(x_list_new) 
- 
+    func_3       = interpolate.interp1d(x_list,y_list_4,kind=kind)
+    y_list_4_new = func_3(x_list_new) 
+    
 
     l_exp      = plt.plot(x_list,y_list_1,color = 'k',linestyle='',markersize=4, marker ='s',zorder=4,label='Granada PWA')
-    l_theo_450 = plt.plot   (x_list_new,y_list_2_new,color = 'g',linestyle = '--',zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)') 
+    l_theo_450 = plt.plot   (x_list_new,y_list_2_new,color = 'g',linewidth=lw,linestyle = '--',zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)') 
 #    l_theo_394 = plt.plot   (x_list_new,y_list_3_new,color = 'b',linestyle = '-.',zorder=2,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
-
+    l_nnlosat = plt.plot(x_list_new,y_list_4_new,color = 'b',linewidth=lw,linestyle = '-.',zorder=3,label=r'NNLO$_{\rm{sat}}$') 
 
 
     plt.ylabel('$\delta(^3S_1)$(deg)')
@@ -151,22 +186,29 @@ def plot_phase_shift(file_path1,file_path2):
     y_list_1   = raw_data_1[start_line:start_line+data_points,1]  # exp
     y_list_2   = raw_data_1[start_line:start_line+data_points,0]  # theo
     y_list_3   = raw_data_2[start_line:start_line+data_points ,0]  # theo 394
+    input_NNLOsat_phase_data(file_path,NNLOsat_data,'np1S0')
+    y_list_4    = NNLOsat_data[:,1]
+
+
     x_list_new = np.linspace(np.min(x_list),np.max(x_list),num=plot_interpol_count)
     func_1       = interpolate.interp1d(x_list,y_list_2,kind=kind)
     y_list_2_new = func_1(x_list_new) 
     func_2       = interpolate.interp1d(x_list,y_list_3,kind=kind)
     y_list_3_new = func_2(x_list_new) 
+    func_3       = interpolate.interp1d(x_list,y_list_4,kind=kind)
+    y_list_4_new = func_3(x_list_new) 
+
  
     #print('y_list='+str(y_list_2))
     #print('y_list_2_new='+str(y_list_2_new))
     l_exp      = plt.plot(x_list,y_list_1,color = 'k',linestyle='',markersize=4, marker ='s',zorder=4,label='Granada PWA')
-    l_theo_450 = plt.plot   (x_list_new,y_list_2_new,color = 'g',linestyle = '--',zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)') 
+    l_theo_450 = plt.plot   (x_list_new,y_list_2_new,color = 'g',linewidth=lw,linestyle = '--',zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)') 
 #    l_theo_394 = plt.plot   (x_list_new,y_list_3_new,color = 'b',linestyle = '-.',zorder=2,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
-
+    l_nnlosat  = plt.plot(x_list_new,y_list_4_new,color = 'b',linewidth=lw,linestyle = '-.',zorder=4,label=r'NNLO$_{\rm{sat}}$') 
 
 
     
-    plt.legend(loc=4,bbox_to_anchor=(1,-0.15) ,fontsize=9)
+    plt.legend(loc=4,bbox_to_anchor=(1,-0.15) ,fontsize=9,fancybox=True,facecolor='w',framealpha=1)
     #plt.xlabel(fontsize = x_fontsize)
     plt.ylabel('$\delta(^1S_0)$(deg)')
     plt.yticks(np.arange(-40,81,20),fontsize = y_fontsize)
@@ -182,28 +224,33 @@ def plot_phase_shift(file_path1,file_path2):
     y_list_1   = raw_data_1[start_line:start_line+data_points,1]  # exp
     y_list_2   = raw_data_1[start_line:start_line+data_points,0]  # theo
     y_list_3   = raw_data_2[start_line:start_line+data_points ,0]  # theo 394
+    input_NNLOsat_phase_data(file_path,NNLOsat_data,'np3P0')
+    y_list_4    = NNLOsat_data[:,1]
+
     x_list_new = np.linspace(np.min(x_list),np.max(x_list),num=plot_interpol_count)
     func_1       = interpolate.interp1d(x_list,y_list_2,kind=kind)
     y_list_2_new = func_1(x_list_new) 
     func_2       = interpolate.interp1d(x_list,y_list_3,kind=kind)
     y_list_3_new = func_2(x_list_new) 
- 
+    func_3       = interpolate.interp1d(x_list,y_list_4,kind=kind)
+    y_list_4_new = func_3(x_list_new) 
+
 
     l_exp      = plt.plot(x_list,y_list_1,color = 'k',linestyle='',markersize=4, marker ='s',zorder=4,label='Granada PWA')
-    l_theo_450 = plt.plot   (x_list_new,y_list_2_new,color = 'g',linestyle = '--',zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)') 
-#    l_theo_394 = plt.plot   (x_list_new,y_list_3_new,color = 'b',linestyle = '-.',zorder=2,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
-
+    l_theo_450 = plt.plot(x_list_new,y_list_2_new,color = 'g',linewidth=lw,linestyle = '--',zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)') 
+#    l_theo_394 = plt.plot(x_list_new,y_list_3_new,color = 'b',linestyle = '-.',zorder=2,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
+    l_nnlosat  = plt.plot(x_list_new,y_list_4_new,color = 'b',linewidth=lw,linestyle = '-.',zorder=3,label=r'NNLO$_{\rm{sat}}$') 
 
 
     plt.ylabel('$\delta(^3P_0)$(deg)')
     plt.yticks(np.arange(-60,21,10),fontsize = y_fontsize)
     plt.xticks(np.arange(0,201,50),[])
-    plt.legend(loc=4,bbox_to_anchor=(1,-0.15) ,fontsize=9)
+    plt.legend(loc=4,bbox_to_anchor=(1,-0.15) ,fontsize=9,fancybox=True,facecolor='w',framealpha=1)
    # plt.legend(loc=2, bbox_to_anchor=(1.63,0.5),borderaxespad = 0.)
 #    plt.suptitle('Neutron-proton scattering phase shifts (1).')
 
 #    fig_2.tight_layout()
-    plot_path = 'np_phase_shift_new.eps'
+    plot_path = 'np_phase_shift_new.pdf'
     plt.savefig(plot_path)
 #    plt.show()
     plt.close("all")
@@ -228,6 +275,7 @@ plot_interpol_count= 1000
 point_size         = 50
 x_fontsize         = 8
 y_fontsize         = 8
+lw                 = 3   #linewidth
 kind               = 'cubic' 
 input_file_path1 = "./residual_data_450.txt"
 input_file_path2 = "./residual_data_394.txt"
