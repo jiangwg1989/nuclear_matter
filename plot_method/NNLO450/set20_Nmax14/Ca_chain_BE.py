@@ -46,7 +46,7 @@ def input_file_1(file_path,raw_data):
 
 
 file_path    = "Ca_chain.txt"
-data_num     =  7
+data_num     =  8
 O_chain_data = np.zeros((data_num,5),dtype = np.float)
 input_file_2(file_path,O_chain_data)
 
@@ -102,7 +102,7 @@ plt.legend(loc=3)
 plt.title('Ground-state energies of calcium')
 
 
-left, bottom, width,height = 0.6,0.5,0.35,0.35
+left, bottom, width,height = 0.55,0.5,0.38,0.35
 ax1 = fig_1.add_axes([left,bottom,width,height])
 ax1.plot(x_list_exp,y_list_exp,color='k', linestyle = '',linewidth=0.5,marker='x', markersize=5,alpha=0.7,zorder=4,label='Expt.')
 ax1.plot(x_list_DNNLO450,y_list_DNNLO450,color='g', linestyle = '',linewidth=0.5,marker='D', markersize=5,alpha=0.7,zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}} $(450)')
@@ -110,14 +110,14 @@ ax1.plot(x_list_DNNLO450,y_list_DNNLO450,color='g', linestyle = '',linewidth=0.5
 ax1.plot(x_list_magic,y_list_magic,color='red', linestyle = '',linewidth=0.5,marker='p', markersize=5,alpha=0.7,zorder=1,label='1.8/2.0(EM)')
 ax1.plot(x_list_exp_new,y_list_exp_new,color='k', linestyle = '',linewidth=0.5,marker='x', markersize=5,alpha=0.7,zorder=5)
 ax1.set_xlim(51,56)
-ax1.set_ylim(-450,-435)
-ax1.set_xticks(np.arange(51,56.1,1))
-ax1.set_yticks(np.arange(-450,-430,5))
+ax1.set_ylim(-450,-436)
+ax1.set_xticks(np.arange(51,57.1,1))
+ax1.set_yticks(np.arange(-452,-435.9,4))
 
 
 
 fig_1.tight_layout()
-plot_path = 'Ca_chain.eps'
+plot_path = 'Ca_chain.pdf'
 plt.savefig(plot_path)
 #plt.show()
 plt.close("all")
