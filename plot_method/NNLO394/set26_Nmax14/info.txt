@@ -1,0 +1,56 @@
+[-0.74       -0.49       -0.65        0.96       -0.34056186 -0.34022749
+ -0.33949044 -0.2574884   2.53822237  0.63987849 -0.97086783 -0.87645695
+ -0.40773049  0.96832145  0.44681416  0.19400401  0.02908525]
+nucleon_scattering_total_loss = 942316.7068637764    nucleon_scattering_average_residual = 58.22051564488269
+pnm = 18.3094944735  snm_dens = 0.1870870870870871  snm = -16.698442940704787
+
+
+                    H2 BINDING ENERGY        =     -2.230210468 MeV
+                               target        =     -2.224575000 MeV
+                                error        =      2.224575000 MeV
+                              residual       =     -0.002533278
+                    H2 STRUCT RADIUS         =      1.982968341 fm
+                               target        =      1.975350000 fm
+                                error        =      1.975350000 fm
+                              residual       =      0.003856704
+                    H2 QUADRUPOLE MOMENT     =      0.267462658 fm2
+                               target        =      0.270000000 fm2
+                                error        =      0.270000000 fm2
+                              residual       =     -0.009397563
+                    H2 D-STATE PROBABILITY   =      3.007210735 %
+                    H3 BINDING ENERGY        =     -8.480528172 MeV
+                               target        =     -8.481795000 MeV
+                                error        =      0.050890770 MeV
+                              residual       =      0.024893086
+                    H3 POINT-P RADIUS        =      1.612958508  fm
+                               target        =      1.587000000  fm
+                                error        =      0.009522000  fm
+                              residual       =      2.726161317
+                    He3 BINDING ENERGY       =     -7.716394965 MeV
+                               target        =     -7.718040000 MeV
+                                error        =      0.046308240 MeV
+                              residual       =      0.035523599
+                    He3 POINT-P RADIUS       =      1.800515103  fm
+                               target        =      1.770000000  fm
+                                error        =      0.010620000  fm
+                              residual       =      2.873361851
+                    He4 BINDING ENERGY       =    -28.298211069 MeV
+                               target        =    -28.295660000 MeV
+                                error        =      0.169773960 MeV
+                              residual       =     -0.015026270
+                    He4 POINT-P RADIUS       =      1.475929223 fm
+                               target        =      1.455000000 fm
+                                error        =      0.008730000 fm
+                              residual       =      2.397390947
+
+ CCSD, Lambda-CCSD(T)  -121.84227968034344       -127.09492411504701
+ CCSD, Lambda-CCSD(T)  -160.31481374543182       -167.93615600342974
+ CCSD, Lambda-CCSD(T)  -327.42016134808813       -344.58916468616070
+ CCSD, Lambda-CCSD(T)  -400.80479596728730       -420.29153898590675
+
+Full expectation value <0|(1+Lambda)Obar|0>:      6.557623863
+Full expectation value <0|(1+Lambda)Obar|0>:      11.24140263
+
+           2 +   3.87014627       3.86846948
+           2 +   4.91647339       4.91603708
+
