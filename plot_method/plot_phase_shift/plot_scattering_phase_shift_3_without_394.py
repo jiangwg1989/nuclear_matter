@@ -84,7 +84,7 @@ def plot_phase_shift(file_path1,file_path2):
 
 
     fig_2 = plt.figure('fig_2')
-    plt.subplots_adjust(wspace =0.3, hspace =0)
+    plt.subplots_adjust(wspace =0.4, hspace =0)
 
     ## np 3D1
     matplotlib.rcParams['xtick.direction'] = 'in' 
@@ -113,15 +113,18 @@ def plot_phase_shift(file_path1,file_path2):
     #print('y_list='+str(y_list_2))
     #print('y_list_2_new='+str(y_list_2_new))
     l_exp      = plt.plot(x_list,y_list_1,color = 'k',linestyle='',markersize=4, marker ='s',zorder=4,label='Granada PWA')
-    l_theo_450 = plt.plot   (x_list_new,y_list_2_new,color = 'g',linewidth=lw,linestyle = '--',zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)') 
+    l_theo_450 = plt.plot(x_list_new,y_list_2_new,color = 'g',linewidth=lw,linestyle = '--',zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)') 
+    l_theo_394 = plt.plot(x_list_new,y_list_3_new,color = 'b',linewidth=lw,linestyle = '-.',zorder=2.5,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
 #    l_theo_394 = plt.plot   (x_list_new,y_list_3_new,color = 'b',linestyle = '-.',zorder=2,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
-    l_nnlosat  = plt.plot   (x_list_new,y_list_4_new,color = 'b',linewidth=lw,linestyle = '-.',zorder=4,label=r'NNLO$_{\rm{sat}}$') 
+    l_nnlosat  = plt.plot   (x_list_new,y_list_4_new,color = 'r',linewidth=lw,linestyle = ':',zorder=2,label=r'NNLO$_{\rm{sat}}$') 
     #plt.xlabel(fontsize = x_fontsize)
-    plt.ylabel('$\delta(^3D_1)$(deg)')
-    plt.yticks(np.arange(-30,0,5),fontsize = y_fontsize)
+    plt.ylabel('$\delta(^3D_1)$(deg)',fontsize=ylabel_f)
+    plt.xlabel(r'$T_{\rm{Lab}}$(MeV)',fontsize=xlabel_f)
+    plt.yticks(np.arange(-30,11,10),fontsize = y_fontsize)
     plt.xticks(np.arange(0,201,50),fontsize = y_fontsize)
+    plt.ylim((-30,9))
+    #plt.ylim()
 
-    plt.xlabel(r'$T_{\rm{Lab}}$(MeV)')
     #plt.legend(loc=2, bbox_to_anchor=(1.63,0.5),borderaxespad = 0.)
 
 
@@ -163,16 +166,18 @@ def plot_phase_shift(file_path1,file_path2):
     
 
     l_exp      = plt.plot(x_list,y_list_1,color = 'k',linestyle='',markersize=4, marker ='s',zorder=4,label='Granada PWA')
-    l_theo_450 = plt.plot   (x_list_new,y_list_2_new,color = 'g',linewidth=lw,linestyle = '--',zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)') 
+    l_theo_450 = plt.plot(x_list_new,y_list_2_new,color = 'g',linewidth=lw,linestyle = '--',zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)') 
+    l_theo_394 = plt.plot(x_list_new,y_list_3_new,color = 'b',linewidth=lw,linestyle = '-.',zorder=2.5,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
 #    l_theo_394 = plt.plot   (x_list_new,y_list_3_new,color = 'b',linestyle = '-.',zorder=2,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
-    l_nnlosat = plt.plot(x_list_new,y_list_4_new,color = 'b',linewidth=lw,linestyle = '-.',zorder=3,label=r'NNLO$_{\rm{sat}}$') 
+    l_nnlosat = plt.plot(x_list_new,y_list_4_new,color = 'r',linewidth=lw,linestyle = ':',zorder=2,label=r'NNLO$_{\rm{sat}}$') 
 
 
-    plt.ylabel('$\delta(^3S_1)$(deg)')
+    plt.ylabel('$\delta(^3S_1)$(deg)',fontsize=ylabel_f)
+    plt.xlabel(r'$T_{\rm{Lab}}$(MeV)',fontsize=xlabel_f)
     plt.yticks(np.arange(-50,201,50),fontsize = y_fontsize)
     plt.xticks(np.arange(0,201,50),fontsize = y_fontsize)
-    plt.xlabel(r'$T_{\rm{Lab}}$(MeV)')
-
+    plt.ylim((-50,199))
+   
 
 
 
@@ -202,15 +207,16 @@ def plot_phase_shift(file_path1,file_path2):
     #print('y_list='+str(y_list_2))
     #print('y_list_2_new='+str(y_list_2_new))
     l_exp      = plt.plot(x_list,y_list_1,color = 'k',linestyle='',markersize=4, marker ='s',zorder=4,label='Granada PWA')
-    l_theo_450 = plt.plot   (x_list_new,y_list_2_new,color = 'g',linewidth=lw,linestyle = '--',zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)') 
+    l_theo_450 = plt.plot(x_list_new,y_list_2_new,color = 'g',linewidth=lw,linestyle = '--',zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)') 
+    l_theo_394 = plt.plot(x_list_new,y_list_3_new,color = 'b',linewidth=lw,linestyle = '-.',zorder=2.5,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
 #    l_theo_394 = plt.plot   (x_list_new,y_list_3_new,color = 'b',linestyle = '-.',zorder=2,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
-    l_nnlosat  = plt.plot(x_list_new,y_list_4_new,color = 'b',linewidth=lw,linestyle = '-.',zorder=4,label=r'NNLO$_{\rm{sat}}$') 
+    l_nnlosat  = plt.plot(x_list_new,y_list_4_new,color = 'r',linewidth=lw,linestyle = ':',zorder=2,label=r'NNLO$_{\rm{sat}}$') 
 
 
     
-    plt.legend(loc=4,bbox_to_anchor=(1,-0.15) ,fontsize=9,fancybox=True,facecolor='w',framealpha=1)
+    plt.legend(loc=4,bbox_to_anchor=(1,-0.22) ,fontsize=9,fancybox=True,facecolor='w',framealpha=1)
     #plt.xlabel(fontsize = x_fontsize)
-    plt.ylabel('$\delta(^1S_0)$(deg)')
+    plt.ylabel('$\delta(^1S_0)$(deg)',fontsize=ylabel_f)
     plt.yticks(np.arange(-40,81,20),fontsize = y_fontsize)
     plt.xticks(np.arange(0,201,50),[])
 
@@ -238,14 +244,14 @@ def plot_phase_shift(file_path1,file_path2):
 
     l_exp      = plt.plot(x_list,y_list_1,color = 'k',linestyle='',markersize=4, marker ='s',zorder=4,label='Granada PWA')
     l_theo_450 = plt.plot(x_list_new,y_list_2_new,color = 'g',linewidth=lw,linestyle = '--',zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)') 
-#    l_theo_394 = plt.plot(x_list_new,y_list_3_new,color = 'b',linestyle = '-.',zorder=2,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
-    l_nnlosat  = plt.plot(x_list_new,y_list_4_new,color = 'b',linewidth=lw,linestyle = '-.',zorder=3,label=r'NNLO$_{\rm{sat}}$') 
+    l_theo_394 = plt.plot(x_list_new,y_list_3_new,color = 'b',linewidth=lw,linestyle = '-.',zorder=2.5,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
+    l_nnlosat  = plt.plot(x_list_new,y_list_4_new,color = 'r',linewidth=lw,linestyle = ':',zorder=2,label=r'NNLO$_{\rm{sat}}$') 
 
 
-    plt.ylabel('$\delta(^3P_0)$(deg)')
-    plt.yticks(np.arange(-60,21,10),fontsize = y_fontsize)
+    plt.ylabel('$\delta(^3P_0)$(deg)',fontsize=ylabel_f)
+    plt.yticks(np.arange(-40,21,10),fontsize = y_fontsize)
     plt.xticks(np.arange(0,201,50),[])
-    plt.legend(loc=4,bbox_to_anchor=(1,-0.15) ,fontsize=9,fancybox=True,facecolor='w',framealpha=1)
+    plt.legend(loc=4,bbox_to_anchor=(1,-0.22) ,fontsize=9,fancybox=True,facecolor='w',framealpha=1)
    # plt.legend(loc=2, bbox_to_anchor=(1.63,0.5),borderaxespad = 0.)
 #    plt.suptitle('Neutron-proton scattering phase shifts (1).')
 
@@ -273,8 +279,10 @@ E_max              = 200
 data_points        = 8
 plot_interpol_count= 1000
 point_size         = 50
-x_fontsize         = 8
-y_fontsize         = 8
+ylabel_f           = 14
+xlabel_f           = 14
+x_fontsize         = 10
+y_fontsize         = 10
 lw                 = 3   #linewidth
 kind               = 'cubic' 
 input_file_path1 = "./residual_data_450.txt"
