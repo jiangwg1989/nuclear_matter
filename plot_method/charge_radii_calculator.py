@@ -8,7 +8,7 @@ def charge_radii_calculator(r_point_square,Z,N):
     return np.power(r_charge_square,0.5)
 
 
-r_c = charge_radii_calculator(6.584636688 ,8,8)
+r_c = charge_radii_calculator(11.90643787 ,20,34)
 
 print ('r_c='+str(r_c))
 

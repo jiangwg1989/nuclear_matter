@@ -303,8 +303,8 @@ plt.subplot(122)
 l2 = plt.plot(x_list_2,y_list_2,color = 'g',linestyle='--',linewidth=2,alpha=0.7,  label=r'$\Delta$NNLO$_{\rm{GO}}$(450)',zorder=1)
 l22 = plt.scatter(x_list_2_p,y_list_2_p,color = 'k',marker = 'o',zorder=2)
 
-#l2_394  = plt.plot(x_list_2_394,y_list_2_394,color = 'b',linestyle='--',linewidth=2,alpha=0.7,  label=r'$\Delta$NNLO$_{\rm{GO}}$(394)',zorder=1)
-#l22_394 = plt.scatter(x_list_2_p_394,y_list_2_p_394,color = 'k',marker = 'o',zorder=2)
+l2_394  = plt.plot(x_list_2_394,y_list_2_394,color = 'b',linestyle='--',linewidth=2,alpha=0.7,  label=r'$\Delta$NNLO$_{\rm{GO}}$(394)',zorder=1)
+l22_394 = plt.scatter(x_list_2_p_394,y_list_2_p_394,color = 'k',marker = 'o',zorder=2)
 
 
 
@@ -335,8 +335,8 @@ x_list_4_394   = N_132_interpolation_394[:,0]
 y_list_4_394   = N_132_interpolation_394[:,1]
 x_list_4_p_394 = N_132_data_nnlo394[:,0]
 y_list_4_p_394 = N_132_data_nnlo394[:,1]
-x_list_5_p_394   = [0.1663]
-y_list_5_p_394   = [-15.53]
+x_list_5_p_394   = [0.1629]
+y_list_5_p_394   = [-15.39]
 
 
 
@@ -349,8 +349,8 @@ plt.subplot(121)
 l4 = plt.plot(x_list_4,y_list_4,color = 'g',linestyle='--',label=r'$\Delta$NNLO$_{\rm{GO}}$(450)',linewidth=2,alpha=0.5, zorder=1)
 l44 = plt.scatter(x_list_4_p,y_list_4_p,color = 'k', marker = 'o',zorder=2)
 
-#l4_394  = plt.plot(x_list_4_394,y_list_4_394,color = 'b',linestyle='--',label=r'$\Delta$NNLO$_{\rm{GO}}$(394)',linewidth=2,alpha=0.5, zorder=1)
-#l44_394 = plt.scatter(x_list_4_p_394,y_list_4_p_394,color = 'k', marker = 'o',zorder=2)
+l4_394  = plt.plot(x_list_4_394,y_list_4_394,color = 'b',linestyle='--',label=r'$\Delta$NNLO$_{\rm{GO}}$(394)',linewidth=2,alpha=0.5, zorder=1)
+l44_394 = plt.scatter(x_list_4_p_394,y_list_4_p_394,color = 'k', marker = 'o',zorder=2)
 
 
 rect = plt.Rectangle((0.15,-16.5), 0.02, 1, fill=False, edgecolor = 'k',linewidth=3,zorder=0)
@@ -359,7 +359,7 @@ ax.add_patch(rect)
 
 
 l_saturation = plt.scatter(x_list_5_p,y_list_5_p,s=70, marker = 'D', linewidths=2, c='w',edgecolors='g',zorder=3)
-#l_saturation_394 = plt.scatter(x_list_5_p_394,y_list_5_p_394,s=70, marker = 'D', linewidths=2, c='w',edgecolors='b',zorder=3)
+l_saturation_394 = plt.scatter(x_list_5_p_394,y_list_5_p_394,s=70, marker = 'D', linewidths=2, c='w',edgecolors='b',zorder=3)
 plt.yticks(np.arange(-20,-9,2),fontsize = 13)
 plt.xticks(np.arange(0.12,0.205,0.01),fontsize = 13)
 
@@ -369,7 +369,7 @@ plt.ylabel('$E/A$ [MeV]',fontsize=18)
 plt.xlabel(r"$\rho$ [fm$^{-3}$]",fontsize=18)
 
 
-plot_path = 'nuclear_matter.eps'
+plot_path = 'nuclear_matter.pdf'
 plt.savefig(plot_path)
 plt.show()
 

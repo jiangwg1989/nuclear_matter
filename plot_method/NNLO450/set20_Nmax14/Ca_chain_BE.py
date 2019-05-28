@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib
-matplotlib.use('PS')
+#matplotlib.use('PS')
 import matplotlib.pyplot as plt 
 
 import re
@@ -88,13 +88,15 @@ y_list_exp_new  = O_chain_data_exp[:,1]  # experiment binding energy
 
 l_exp           = plt.plot(x_list_exp,y_list_exp,color='k', linestyle = '',linewidth=0.5,marker='x', markersize=5,alpha=0.7,zorder=4,label='Expt.')
 l_DNNLO450      = plt.plot(x_list_DNNLO450,y_list_DNNLO450,color='g', linestyle = '--',linewidth=0.5,marker='D', markersize=5,alpha=0.7,zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}} $(450)')
-l_DNNLO394      = plt.plot(x_list_DNNLO394,y_list_DNNLO394,color='b', linestyle = '--',linewidth=0.5,marker='D', markersize=5,alpha=0.7,zorder=2,label=r'$\Delta$NNLO$_{\rm{GO}} $(394)')
+l_DNNLO394      = plt.plot(x_list_DNNLO394,y_list_DNNLO394,color='b', linestyle = '',linewidth=0.5,marker='D', markersize=5,alpha=0.7,zorder=2,label=r'$\Delta$NNLO$_{\rm{GO}} $(394)')
 l_magic         = plt.plot(x_list_magic,y_list_magic,color='red', linestyle = '--',linewidth=0.5,marker='p', markersize=5,alpha=0.7,zorder=1,label='1.8/2.0(EM)')
 l_exp_new       = plt.plot(x_list_exp_new,y_list_exp_new,color='k', linestyle = '',linewidth=0.5,marker='x', markersize=5,alpha=0.7,zorder=5)
 
 
 plt.ylabel(r'$E_{\rm{g.s.}}$(MeV)',fontsize=16)
 plt.xlabel('$A$',fontsize=16)
+#plt.xlim(())
+plt.ylim((-460,-335))
 plt.yticks(np.arange(-460,-339,20),fontsize = 12)
 plt.xticks(np.arange(40,61.5,2),fontsize = 13)
 #plt.legend(loc=2, bbox_to_anchor=(1.63,0.5),borderaxespad = 0.)

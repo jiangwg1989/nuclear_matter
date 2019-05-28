@@ -84,7 +84,7 @@ y_list_DNNLO394 = Ca_chain_r_data[:,5]  # delta nnlo 394 calculation
 
 l_exp         = plt.plot(x_list_exp,y_list_exp,color = 'k',linestyle = ':',linewidth=0.7, marker = 'x',markersize=5,label='Expt.',zorder=5) 
 l_DNNLO450    = plt.scatter(x_list_DNNLO450,y_list_DNNLO450,color = 'g',s=30,marker = 'D',label=r'$\Delta$NNLO$_{\rm{GO}}$(450)',zorder=4)
-#l_DNNLO394    = plt.scatter(x_list_DNNLO394,y_list_DNNLO394,color = 'b',s=30,marker = 'D',label=r'$\Delta$NNLO$_{\rm{GO}}$(394)',zorder=3)
+l_DNNLO394    = plt.scatter(x_list_DNNLO394,y_list_DNNLO394,color = 'b',s=30,marker = 'D',label=r'$\Delta$NNLO$_{\rm{GO}}$(394)',zorder=3)
 l_NNLOsat     = plt.scatter(x_list_NNLOsat,y_list_NNLOsat,color = 'gold',s=30,marker = '^',label=r'NNLO$_{\rm{sat}}$',zorder=2)
 l_magic       = plt.scatter(x_list_magic,y_list_magic,color = 'r',s=30,marker = 'p',label='1.8/2.0(EM)',zorder=1)
 
@@ -96,7 +96,7 @@ plt.xticks(np.arange(40,55,2),fontsize = 14)
 plt.legend(loc=2,bbox_to_anchor=(0,1))
 
 plt.title('Charge radii of calcium isotopes')
-plot_path = 'Ca_chain_Rch.eps'
+plot_path = 'Ca_chain_Rch.pdf'
 plt.savefig(plot_path)
 plt.show()
 plt.close("all")

@@ -53,10 +53,12 @@ y_list_exp      = O_chain_data[0:3,1]  # experiment binding energy
 
 l_exp           = plt.plot(x_list_exp,y_list_exp,color='k', linestyle = '-.',linewidth=1,marker='o', markersize=5,zorder=3,label='Expt.')
 l_DNNLO450      = plt.plot(x_list_DNNLO450,y_list_DNNLO450,color='g', linestyle = '--',linewidth=1,marker='D', markersize=5,alpha=0.7,zorder = 1 ,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)')
-#l_DNNLO394      = plt.plot(x_list_DNNLO394,y_list_DNNLO394,color='b', linestyle = ':',linewidth=1,marker='D', markersize=5,alpha=0.7,zorder = 2 ,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)')
+l_DNNLO394      = plt.plot(x_list_DNNLO394,y_list_DNNLO394,color='b', linestyle = '',linewidth=1,marker='D', markersize=5,alpha=0.7,zorder = 2 ,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)')
 
 plt.ylabel(r'$E_{\rm{g.s.}}$(MeV)',fontsize=16)
 plt.xlabel('$A$',fontsize=16)
+plt.ylim((-185,-115))
+plt.xlim((15.5,28.5))
 plt.yticks(np.arange(-185,-110,10),fontsize = 12)
 plt.xticks(np.arange(16,28.5,2),fontsize = 13)
 plt.legend(loc=3)
