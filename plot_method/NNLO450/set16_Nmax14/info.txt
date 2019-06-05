@@ -4,6 +4,43 @@
 nucleon_scattering_total_loss = 633323.3517195906    nucleon_scattering_average_residual = 47.72988113276806
 pnm = 17.0019240171  snm_dens = 0.1910910910910911  snm = -16.548343225754987
 
+                    H2 BINDING ENERGY        =     -2.223221825 MeV
+                               target        =     -2.224575000 MeV
+                                error        =      2.224575000 MeV
+                              residual       =      0.000608285
+                    H2 STRUCT RADIUS         =      1.978302938 fm
+                               target        =      1.975350000 fm
+                                error        =      1.975350000 fm
+                              residual       =      0.001494893
+                    H2 QUADRUPOLE MOMENT     =      0.269119088 fm2
+                               target        =      0.270000000 fm2
+                                error        =      0.270000000 fm2
+                              residual       =     -0.003262638
+                    H2 D-STATE PROBABILITY   =      3.272988948 %
+                    H3 BINDING ENERGY        =     -8.482269074 MeV
+                               target        =     -8.481795000 MeV
+                                error        =      0.050890770 MeV
+                              residual       =     -0.009315513
+                    H3 POINT-P RADIUS        =      1.598031949  fm
+                               target        =      1.587000000  fm
+                                error        =      0.009522000  fm
+                              residual       =      1.158574821
+                    He3 BINDING ENERGY       =     -7.719455293 MeV
+                               target        =     -7.718040000 MeV
+                                error        =      0.046308240 MeV
+                              residual       =     -0.030562446
+                    He3 POINT-P RADIUS       =      1.781399025  fm
+                               target        =      1.770000000  fm
+                                error        =      0.010620000  fm
+                              residual       =      1.073354563
+                    He4 BINDING ENERGY       =    -28.296201046 MeV
+                               target        =    -28.295660000 MeV
+                                error        =      0.169773960 MeV
+                              residual       =     -0.003186859
+                    He4 POINT-P RADIUS       =      1.467849718 fm
+                               target        =      1.455000000 fm
+                                error        =      0.008730000 fm
+                              residual       =      1.471903581
 
 
 

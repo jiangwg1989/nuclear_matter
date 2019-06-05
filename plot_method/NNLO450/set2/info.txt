@@ -44,7 +44,7 @@ He4 POINT-P RADIUS       =      1.501780259 fm
           residual       =      5.358563453
 
 
-He4_ccsdt_nnlo450_delta_N10E14_hw16.out: CCSD, Lambda-CCSD(T)   -27.97485493498792        -28.22947297690865     
+#He4_ccsdt_nnlo450_delta_N10E14_hw16.out: CCSD, Lambda-CCSD(T)   -27.97485493498792        -28.22947297690865     
 O16_ccsdt_nnlo450_delta_N10E14_hw16.out: CCSD, Lambda-CCSD(T)   -122.4630208207443        -127.1073760911273     
 O24_ccsdt_nnlo450_delta_N10E14_hw16.out: CCSD, Lambda-CCSD(T)   -157.8144444360211        -164.9147533505110   
 Ca40_ccsdt_nnlo450_delta_N10E16_hw16.out: CCSD, Lambda-CCSD(T)   -326.9390967771974        -342.5747370059855     
