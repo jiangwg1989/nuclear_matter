@@ -64,7 +64,6 @@ def read_write_file(input_path,output_path):
             if ( (re.search('Full expectation value', data[loop],flags=0) != wtf) & (radii_flag==0)):
                 temp_1 = re.findall(r"[-+]?\d+\.?\d*",data[loop])
                 radii[0] = temp_1[3]
-                print(data[loop])
                 temp_2 = re.findall(r"[-+]?\d+\.?\d*",data[loop+1])
                 radii[1] = temp_2[3]
                 radii_flag = 1
@@ -75,7 +74,7 @@ def read_write_file(input_path,output_path):
 #                temp_2 = re.findall(r"[-+]?\d+\.?\d*",data[loop+1])
 #                two_plus[1] = temp_2[2]
 #                two_plus_flag = 1
-    with open(output_path,'w') as f_2:
+    with open(output_path,'a') as f_2:
         for loop1 in range(len(LECs)):
             f_2.write(str(LECs[loop1])+'  ')
         for loop1 in range(len(few_body)):
@@ -84,12 +83,13 @@ def read_write_file(input_path,output_path):
             f_2.write(str(BE[loop1])+'  ')
         for loop1 in range(len(radii)):
             f_2.write(str(radii[loop1])+'  ')
+        f_2.write('\n')
 #        for loop1 in range(len(two_plus)):
 #            f_2.write(str(two_plus[loop1])+'  ')
 
 
 
-input_path = './set20_Nmax14/info.txt'
+input_path = './set22_Nmax14/info.txt'
 output_path= './summary.txt'
 
 read_write_file(input_path,output_path)
