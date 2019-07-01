@@ -46,11 +46,10 @@ He4 POINT-P RADIUS       =      1.474806138 fm
 
 
  CCSD, Lambda-CCSD(T)  -120.83639411731630       -126.77368670293744
- CR-A   -0.6945     -0.7805         -159.9475
  CCSD, Lambda-CCSD(T)  -159.16697957333838       -167.93875848796318
  CCSD, Lambda-CCSD(T)  -323.15955698207051       -342.68408635128884
  CCSD, Lambda-CCSD(T)  -394.10934098053946       -416.48085845452204
-
+#CR-A   -0.6945     -0.7805         -159.9475
 
 Full expectation value <0|(1+Lambda)Obar|0>:      6.534551144
 Full expectation value <0|(1+Lambda)Obar|0>:      11.36133575
