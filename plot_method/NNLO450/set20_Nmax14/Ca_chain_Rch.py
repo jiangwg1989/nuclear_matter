@@ -95,7 +95,7 @@ plt.xticks(np.arange(40,55,2),fontsize = 14)
 #plt.legend(loc=2, bbox_to_anchor=(1.63,0.5),borderaxespad = 0.)
 plt.legend(loc=2,bbox_to_anchor=(0,1))
 
-plt.title('Charge radii of calcium isotopes')
+#plt.title('Charge radii of calcium isotopes')
 plot_path = 'Ca_chain_Rch.pdf'
 plt.savefig(plot_path)
 plt.show()

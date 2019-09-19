@@ -101,7 +101,7 @@ plt.yticks(np.arange(-460,-339,20),fontsize = 12)
 plt.xticks(np.arange(40,61.5,2),fontsize = 13)
 #plt.legend(loc=2, bbox_to_anchor=(1.63,0.5),borderaxespad = 0.)
 plt.legend(loc=3)
-plt.title('Ground-state energies of calcium')
+#plt.title('Ground-state energies of calcium')
 
 
 left, bottom, width,height = 0.55,0.5,0.38,0.35

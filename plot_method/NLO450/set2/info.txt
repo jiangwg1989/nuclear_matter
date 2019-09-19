@@ -7,7 +7,7 @@ H2 BINDING ENERGY        =     -2.258631117 MeV
            target        =     -2.224575000 MeV
             error        =      2.224575000 MeV
           residual       =     -0.015309044
-H2 STRUCT RADIUS         =      1.984761755 fm
+H2 STRUCT RADIUS         =      1.984761755 fm  Rch = 2.151135856730272
            target        =      1.975350000 fm
             error        =      1.975350000 fm
           residual       =      0.004764601
@@ -16,11 +16,11 @@ H2 QUADRUPOLE MOMENT     =      0.267958937 fm2
             error        =      0.270000000 fm2
           residual       =     -0.007559494
 H2 D-STATE PROBABILITY   =      3.063115886 %
-H3 BINDING ENERGY        =     -8.480340362 MeV
+H3 BINDING ENERGY        =     -8.480340362 MeV 
            target        =     -8.481795000 MeV
             error        =      0.050890770 MeV
           residual       =      0.028583529
-H3 POINT-P RADIUS        =      1.625076983  fm
+H3 POINT-P RADIUS        =      1.625076983  fm  Rch = 1.7927859466975922   
            target        =      1.587000000  fm
             error        =      0.009522000  fm
           residual       =      3.998842956
@@ -28,7 +28,7 @@ He3 BINDING ENERGY       =     -7.749478135 MeV
            target        =     -7.718040000 MeV
             error        =      0.046308240 MeV
           residual       =     -0.678888564
-He3 POINT-P RADIUS       =      1.798877877  fm
+He3 POINT-P RADIUS       =      1.798877877  fm  Rch = 1.995374116891373 
            target        =      1.770000000  fm
             error        =      0.010620000  fm
           residual       =      2.719197501
@@ -36,12 +36,21 @@ He4 BINDING ENERGY       =    -28.394493824 MeV
            target        =    -28.295660000 MeV
             error        =      0.169773960 MeV
           residual       =     -0.582149487
-He4 POINT-P RADIUS       =      1.495152640 fm
+He4 POINT-P RADIUS       =      1.495152640 fm   Rch = 1.7098501884372705 
            target        =      1.455000000 fm
             error        =      0.008730000 fm
           residual       =      4.599385997
 
 
+CCSD, Lambda-CCSD(T)  -122.60469607948988       -128.21557031349863
+CCSD, Lambda-CCSD(T)  -156.68715386827415       -165.27624291111664
+CCSD, Lambda-CCSD(T)  -326.16826606384507       -344.60264811390402
+CCSD, Lambda-CCSD(T)  -388.56451689250758       -410.08563676783592
+
+Full expectation value <0|(1+Lambda)Obar|0>:      11.59094334
+Full expectation value <0|(1+Lambda)Obar|0>:      24.99696541
 
 
+          2 +   2.96342254       2.96086407
+          2 +   3.60502696       3.60448480
 

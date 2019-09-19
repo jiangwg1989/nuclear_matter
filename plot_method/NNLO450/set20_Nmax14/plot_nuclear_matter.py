@@ -60,6 +60,11 @@ input_file_2(file_path,N_132_data_nnlo394)
 #input_file_2(file_path,N_28_data_nnlo394)
 #interpol_count = 1000
 
+file_path  = "N_132_NLO450.txt"
+data_num   = input_file_count(file_path)
+N_132_data_nlo450 = np.zeros((data_num,3),dtype = np.float)
+input_file_2(file_path,N_132_data_nlo450)
+
 
 
 
@@ -69,15 +74,21 @@ Y1 = []
 Y2 = []
 Y3 = []
 Y4 = []
+Y5 = []
+Y6 = []
 for i in range(0,N_132_data_nnlo450.shape[0],5):
     dens = N_132_data_nnlo450[i:i+5,0]
     temp_snm_450 = N_132_data_nnlo450[i:i+5,1]
     temp_pnm_450 = N_132_data_nnlo450[i:i+5,2]
     temp_snm_394 = N_132_data_nnlo394[i:i+5,1]
     temp_pnm_394 = N_132_data_nnlo394[i:i+5,2]
+    temp_snm_nlo450 = N_132_data_nlo450[i:i+5,1]
+    temp_pnm_nlo450 = N_132_data_nlo450[i:i+5,2]
     
     spl_ccdt_snm_450 = interpolate.UnivariateSpline(dens,temp_snm_450,k=4)
     spl_ccdt_pnm_450 = interpolate.UnivariateSpline(dens,temp_pnm_450,k=4)
+    spl_ccdt_snm_nlo450 = interpolate.UnivariateSpline(dens,temp_snm_nlo450,k=4)
+    spl_ccdt_pnm_nlo450 = interpolate.UnivariateSpline(dens,temp_pnm_nlo450,k=4)
     spl_ccdt_snm_394 = interpolate.UnivariateSpline(dens,temp_snm_394,k=4)
     spl_ccdt_pnm_394 = interpolate.UnivariateSpline(dens,temp_pnm_394,k=4)
  
@@ -86,6 +97,8 @@ for i in range(0,N_132_data_nnlo450.shape[0],5):
     spldens = np.linspace(dens[0],dens[len(dens)-1],num=interpol_count)
     interp_snm     = spl_ccdt_snm_450(spldens)
     interp_pnm     = spl_ccdt_pnm_450(spldens)
+    interp_snm_nlo450= spl_ccdt_snm_nlo450(spldens)
+    interp_pnm_nlo450= spl_ccdt_pnm_nlo450(spldens)
     interp_snm_394 = spl_ccdt_snm_394(spldens)
     interp_pnm_394 = spl_ccdt_pnm_394(spldens)
  
@@ -94,6 +107,8 @@ for i in range(0,N_132_data_nnlo450.shape[0],5):
             X.append(spldens[j])
             Y1.append(interp_snm[j])
             Y2.append(interp_pnm[j])
+            Y5.append(interp_snm_nlo450[j])
+            Y6.append(interp_pnm_nlo450[j])
             Y3.append(interp_snm_394[j])
             Y4.append(interp_pnm_394[j])
 
@@ -104,11 +119,17 @@ npY1 = np.array(Y1)
 npY2 = np.array(Y2)
 npY3 = np.array(Y3)
 npY4 = np.array(Y4)
-
+npY5 = np.array(Y5)
+npY6 = np.array(Y6)
 
 
 N_132_interpolation_450 = np.append(np.transpose([npX]),np.transpose([npY1]),1)
 N_132_interpolation_450 = np.append(N_132_interpolation_450,np.transpose([npY2]),1)
+N_132_interpolation_nlo450 = np.append(np.transpose([npX]),np.transpose([npY5]),1)
+N_132_interpolation_nlo450 = np.append(N_132_interpolation_nlo450,np.transpose([npY6]),1)
+
+
+
 #print ("npY1"+str(npY1))
 N_132_interpolation_394 = np.append(np.transpose([npX]),np.transpose([npY3]),1)
 N_132_interpolation_394 = np.append(N_132_interpolation_394,np.transpose([npY4]),1)
@@ -274,6 +295,13 @@ def cD_cE_area():
 
 # start plotting!
 
+
+
+
+#y_list_2   = N_132_data_nnlo450[:,2]
+fig1 = plt.figure('fig1',figsize=(7,12))
+plt.subplot(212)
+
 x_list_1   = N_28_interpolation[:,0]
 y_list_1   = N_28_interpolation[:,2]
 
@@ -293,18 +321,22 @@ y_list_2_394   = N_132_interpolation_394[:,2]
 x_list_2_p_394 = N_132_data_nnlo394[:,0]
 y_list_2_p_394 = N_132_data_nnlo394[:,2]
 
+x_list_3   = N_132_interpolation_nlo450[:,0]
+y_list_3   = N_132_interpolation_nlo450[:,2]
+
+x_list_3_p_nlo450 = N_132_data_nlo450[:,0]
+y_list_3_p_nlo450 = N_132_data_nlo450[:,2]
 
 
-
-
-#y_list_2   = N_132_data_nnlo450[:,2]
-fig1 = plt.figure('fig1',figsize=(15,6))
-plt.subplot(122)
-l2 = plt.plot(x_list_2,y_list_2,color = 'g',linestyle='--',linewidth=2,alpha=0.7,  label=r'$\Delta$NNLO$_{\rm{GO}}$(450)',zorder=1)
+l2 = plt.plot(x_list_2,y_list_2,color = 'g',linestyle='--',linewidth=2,alpha=0.9,  label=r'$\Delta$NNLO$_{\rm{GO}}$(450)',zorder=1)
 l22 = plt.scatter(x_list_2_p,y_list_2_p,color = 'k',marker = 'o',zorder=2)
 
-l2_394  = plt.plot(x_list_2_394,y_list_2_394,color = 'b',linestyle='--',linewidth=2,alpha=0.7,  label=r'$\Delta$NNLO$_{\rm{GO}}$(394)',zorder=1)
+l2_394  = plt.plot(x_list_2_394,y_list_2_394,color = 'b',linestyle='-.',linewidth=2,alpha=0.9,  label=r'$\Delta$NNLO$_{\rm{GO}}$(394)',zorder=1)
 l22_394 = plt.scatter(x_list_2_p_394,y_list_2_p_394,color = 'k',marker = 'o',zorder=2)
+
+l2_nlo450  = plt.plot(x_list_3,y_list_3,color = 'turquoise',linestyle=':',linewidth=2,alpha=0.9,  label=r'$\Delta$NLO$_{\rm{GO}}$(450)',zorder=0.5)
+l22_nlo450 = plt.scatter(x_list_3_p_nlo450,y_list_3_p_nlo450,color = 'k',marker = 'o',zorder=2.5)
+
 
 
 
@@ -331,6 +363,16 @@ y_list_4_p = N_132_data_nnlo450[:,1]
 x_list_5_p   = [0.1687]
 y_list_5_p   = [-15.82]
 
+x_list_6   = N_132_interpolation_nlo450[:,0]
+y_list_6   = N_132_interpolation_nlo450[:,1]
+x_list_6_p   = [0.1715]
+y_list_6_p   = [-15.66]
+x_list_6_p_nlo450 = N_132_data_nlo450[:,0]
+y_list_6_p_nlo450 = N_132_data_nlo450[:,1]
+
+
+
+
 x_list_4_394   = N_132_interpolation_394[:,0]
 y_list_4_394   = N_132_interpolation_394[:,1]
 x_list_4_p_394 = N_132_data_nnlo394[:,0]
@@ -341,16 +383,20 @@ y_list_5_p_394   = [-15.39]
 
 
 
-plt.subplot(121)
+plt.subplot(211)
 
 
 
 
-l4 = plt.plot(x_list_4,y_list_4,color = 'g',linestyle='--',label=r'$\Delta$NNLO$_{\rm{GO}}$(450)',linewidth=2,alpha=0.5, zorder=1)
+l4 = plt.plot(x_list_4,y_list_4,color = 'g',linestyle='--',label=r'$\Delta$NNLO$_{\rm{GO}}$(450)',linewidth=2,alpha=0.9, zorder=1)
 l44 = plt.scatter(x_list_4_p,y_list_4_p,color = 'k', marker = 'o',zorder=2)
 
-l4_394  = plt.plot(x_list_4_394,y_list_4_394,color = 'b',linestyle='--',label=r'$\Delta$NNLO$_{\rm{GO}}$(394)',linewidth=2,alpha=0.5, zorder=1)
+l4_394  = plt.plot(x_list_4_394,y_list_4_394,color = 'b',linestyle='-.',label=r'$\Delta$NNLO$_{\rm{GO}}$(394)',linewidth=2,alpha=0.9, zorder=1)
 l44_394 = plt.scatter(x_list_4_p_394,y_list_4_p_394,color = 'k', marker = 'o',zorder=2)
+
+l4_nlo450 = plt.plot(x_list_6,y_list_6,color = 'turquoise',linestyle=':',label=r'$\Delta$NLO$_{\rm{GO}}$(450)',linewidth=2,alpha=0.9, zorder=0.5)
+l44 = plt.scatter(x_list_6_p_nlo450,y_list_6_p_nlo450,color = 'k', marker = 'o',zorder=1.5)
+
 
 
 rect = plt.Rectangle((0.15,-16.5), 0.02, 1, fill=False, edgecolor = 'k',linewidth=3,zorder=0)
@@ -360,6 +406,9 @@ ax.add_patch(rect)
 
 l_saturation = plt.scatter(x_list_5_p,y_list_5_p,s=70, marker = 'D', linewidths=2, c='w',edgecolors='g',zorder=3)
 l_saturation_394 = plt.scatter(x_list_5_p_394,y_list_5_p_394,s=70, marker = 'D', linewidths=2, c='w',edgecolors='b',zorder=3)
+l_saturation_nlo450 = plt.scatter(x_list_6_p,y_list_6_p,s=70, marker = 'D', linewidths=2, c='w',edgecolors='turquoise',zorder=2.5)
+
+
 plt.yticks(np.arange(-20,-9,2),fontsize = 13)
 plt.xticks(np.arange(0.12,0.205,0.01),fontsize = 13)
 
@@ -370,7 +419,7 @@ plt.xlabel(r"$\rho$ [fm$^{-3}$]",fontsize=18)
 
 
 plot_path = 'nuclear_matter.pdf'
-plt.savefig(plot_path)
+plt.savefig(plot_path,bbox_inches='tight')
 plt.show()
 
 
