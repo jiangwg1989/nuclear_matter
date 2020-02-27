@@ -40,13 +40,13 @@ def input_file_count(file_path):
        # print ('data_num='+str(loop2))
         return loop2
 
-file_path  = "N_132_NNLO450.txt"
+file_path  = "N_132_NLO450.txt"
 data_num   = input_file_count(file_path)
 N_132_data = np.zeros((data_num,3),dtype = np.float)
 N_28_data  = np.zeros((data_num,3),dtype = np.float)
 input_file_2(file_path,N_132_data)
 
-file_path  = "N_28_NNLO450.txt"
+file_path  = "N_28_NLO450.txt"
 input_file_2(file_path,N_28_data)
 interpol_count = 1000
 
@@ -305,7 +305,7 @@ plt.ylabel('snm E/A (MeV)',fontsize=14)
 plt.xlabel(r"$\rho$ (fm$^{-3}$)",fontsize=14)
 
 
-plot_path = 'n_28vsn_132_.eps'
+plot_path = 'n_28vsn_132.pdf'
 plt.savefig(plot_path)
 plt.show()
 

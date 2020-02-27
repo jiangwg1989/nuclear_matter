@@ -328,14 +328,15 @@ x_list_3_p_nlo450 = N_132_data_nlo450[:,0]
 y_list_3_p_nlo450 = N_132_data_nlo450[:,2]
 
 
-l2 = plt.plot(x_list_2,y_list_2,color = 'g',linestyle='--',linewidth=2,alpha=0.9,  label=r'$\Delta$NNLO$_{\rm{GO}}$(450)',zorder=1)
+l2_nlo450  = plt.plot(x_list_3,y_list_3,color = 'lightgreen',linestyle='-.',linewidth=2,alpha=0.9,  label=r'$\Delta$NLO$_{\rm{GO}}$(450)',zorder=0.5)
+l22_nlo450 = plt.scatter(x_list_3_p_nlo450,y_list_3_p_nlo450,color = 'k',marker = 'o',zorder=2.5)
+
+
+l2 = plt.plot(x_list_2,y_list_2,color = 'g',linestyle='-.',linewidth=2,alpha=0.9,  label=r'$\Delta$NNLO$_{\rm{GO}}$(450)',zorder=1)
 l22 = plt.scatter(x_list_2_p,y_list_2_p,color = 'k',marker = 'o',zorder=2)
 
-l2_394  = plt.plot(x_list_2_394,y_list_2_394,color = 'b',linestyle='-.',linewidth=2,alpha=0.9,  label=r'$\Delta$NNLO$_{\rm{GO}}$(394)',zorder=1)
+l2_394  = plt.plot(x_list_2_394,y_list_2_394,color = 'b',linestyle='--',linewidth=2,alpha=0.9,  label=r'$\Delta$NNLO$_{\rm{GO}}$(394)',zorder=1.5)
 l22_394 = plt.scatter(x_list_2_p_394,y_list_2_p_394,color = 'k',marker = 'o',zorder=2)
-
-l2_nlo450  = plt.plot(x_list_3,y_list_3,color = 'turquoise',linestyle=':',linewidth=2,alpha=0.9,  label=r'$\Delta$NLO$_{\rm{GO}}$(450)',zorder=0.5)
-l22_nlo450 = plt.scatter(x_list_3_p_nlo450,y_list_3_p_nlo450,color = 'k',marker = 'o',zorder=2.5)
 
 
 
@@ -386,16 +387,14 @@ y_list_5_p_394   = [-15.39]
 plt.subplot(211)
 
 
+l4_nlo450 = plt.plot(x_list_6,y_list_6,color = 'lightgreen',linestyle='-.',label=r'$\Delta$NLO$_{\rm{GO}}$(450)',linewidth=2,alpha=0.9, zorder=0.5)
+l44 = plt.scatter(x_list_6_p_nlo450,y_list_6_p_nlo450,color = 'k', marker = 'o',zorder=1.5)
 
-
-l4 = plt.plot(x_list_4,y_list_4,color = 'g',linestyle='--',label=r'$\Delta$NNLO$_{\rm{GO}}$(450)',linewidth=2,alpha=0.9, zorder=1)
+l4 = plt.plot(x_list_4,y_list_4,color = 'g',linestyle='-.',label=r'$\Delta$NNLO$_{\rm{GO}}$(450)',linewidth=2,alpha=0.9, zorder=1)
 l44 = plt.scatter(x_list_4_p,y_list_4_p,color = 'k', marker = 'o',zorder=2)
 
-l4_394  = plt.plot(x_list_4_394,y_list_4_394,color = 'b',linestyle='-.',label=r'$\Delta$NNLO$_{\rm{GO}}$(394)',linewidth=2,alpha=0.9, zorder=1)
+l4_394  = plt.plot(x_list_4_394,y_list_4_394,color = 'b',linestyle='--',label=r'$\Delta$NNLO$_{\rm{GO}}$(394)',linewidth=2,alpha=0.9, zorder=1.5)
 l44_394 = plt.scatter(x_list_4_p_394,y_list_4_p_394,color = 'k', marker = 'o',zorder=2)
-
-l4_nlo450 = plt.plot(x_list_6,y_list_6,color = 'turquoise',linestyle=':',label=r'$\Delta$NLO$_{\rm{GO}}$(450)',linewidth=2,alpha=0.9, zorder=0.5)
-l44 = plt.scatter(x_list_6_p_nlo450,y_list_6_p_nlo450,color = 'k', marker = 'o',zorder=1.5)
 
 
 
@@ -406,7 +405,7 @@ ax.add_patch(rect)
 
 l_saturation = plt.scatter(x_list_5_p,y_list_5_p,s=70, marker = 'D', linewidths=2, c='w',edgecolors='g',zorder=3)
 l_saturation_394 = plt.scatter(x_list_5_p_394,y_list_5_p_394,s=70, marker = 'D', linewidths=2, c='w',edgecolors='b',zorder=3)
-l_saturation_nlo450 = plt.scatter(x_list_6_p,y_list_6_p,s=70, marker = 'D', linewidths=2, c='w',edgecolors='turquoise',zorder=2.5)
+l_saturation_nlo450 = plt.scatter(x_list_6_p,y_list_6_p,s=70, marker = 'D', linewidths=2, c='w',edgecolors='lightgreen',zorder=2.5)
 
 
 plt.yticks(np.arange(-20,-9,2),fontsize = 13)

@@ -117,11 +117,11 @@ def plot_phase_shift(file_path1,file_path2,file_path3):
     #print('y_list='+str(y_list_2))
     #print('y_list_2_new='+str(y_list_2_new))
     l_exp      = plt.plot(x_list,y_list_1,color = 'k',linestyle='',markersize=4, marker ='s',zorder=4,label='Granada PWA')
-    l_theo_450 = plt.plot(x_list_new,y_list_2_new,color = 'g',linewidth=lw,linestyle = '--',zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)') 
     l_theo_nlo450= plt.plot(x_list_new,y_list_5_new,color = 'lightgreen',linewidth=lw,linestyle = '-.',zorder=2,label=r'$\Delta$NLO$_{\rm{GO}}$(450)') 
-    l_theo_394 = plt.plot(x_list_new,y_list_3_new,color = 'b',linewidth=lw,linestyle = '-.',zorder=2.5,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
+    l_theo_450 = plt.plot(x_list_new,y_list_2_new,color = 'g',linewidth=lw,linestyle = '-.',zorder=2.5,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)') 
+    l_theo_394 = plt.plot(x_list_new,y_list_3_new,color = 'b',linewidth=lw,linestyle = '--',zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
 #    l_theo_394 = plt.plot   (x_list_new,y_list_3_new,color = 'b',linestyle = '-.',zorder=2,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
-    l_nnlosat  = plt.plot   (x_list_new,y_list_4_new,color = 'r',linewidth=lw,linestyle = ':',zorder=2,label=r'NNLO$_{\rm{sat}}$') 
+    l_nnlosat  = plt.plot   (x_list_new,y_list_4_new,color = 'orange',linewidth=lw,linestyle = ':',zorder=2,label=r'NNLO$_{\rm{sat}}$') 
     #plt.xlabel(fontsize = x_fontsize)
     plt.ylabel('$\delta(^3D_1)$(deg)',fontsize=ylabel_f)
     plt.xlabel(r'$T_{\rm{Lab}}$(MeV)',fontsize=xlabel_f)
@@ -175,11 +175,11 @@ def plot_phase_shift(file_path1,file_path2,file_path3):
     
 
     l_exp      = plt.plot(x_list,y_list_1,color = 'k',linestyle='',markersize=4, marker ='s',zorder=4,label='Granada PWA')
-    l_theo_450 = plt.plot(x_list_new,y_list_2_new,color = 'g',linewidth=lw,linestyle = '--',zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)') 
     l_theo_nlo450= plt.plot(x_list_new,y_list_5_new,color = 'lightgreen',linewidth=lw,linestyle = '-.',zorder=2,label=r'$\Delta$NLO$_{\rm{GO}}$(450)') 
-    l_theo_394 = plt.plot(x_list_new,y_list_3_new,color = 'b',linewidth=lw,linestyle = '-.',zorder=2.5,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
+    l_theo_450 = plt.plot(x_list_new,y_list_2_new,color = 'g',linewidth=lw,linestyle = '-.',zorder=2.5,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)') 
+    l_theo_394 = plt.plot(x_list_new,y_list_3_new,color = 'b',linewidth=lw,linestyle = '--',zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
 #    l_theo_394 = plt.plot   (x_list_new,y_list_3_new,color = 'b',linestyle = '-.',zorder=2,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
-    l_nnlosat = plt.plot(x_list_new,y_list_4_new,color = 'r',linewidth=lw,linestyle = ':',zorder=2,label=r'NNLO$_{\rm{sat}}$') 
+    l_nnlosat = plt.plot(x_list_new,y_list_4_new,color = 'orange',linewidth=lw,linestyle = ':',zorder=2,label=r'NNLO$_{\rm{sat}}$') 
 
 
     plt.ylabel('$\delta(^3S_1)$(deg)',fontsize=ylabel_f)
@@ -220,11 +220,11 @@ def plot_phase_shift(file_path1,file_path2,file_path3):
     #print('y_list='+str(y_list_2))
     #print('y_list_2_new='+str(y_list_2_new))
     l_exp      = plt.plot(x_list,y_list_1,color = 'k',linestyle='',markersize=4, marker ='s',zorder=4,label='Granada PWA')
-    l_theo_450 = plt.plot(x_list_new,y_list_2_new,color = 'g',linewidth=lw,linestyle = '--',zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)') 
     l_theo_nlo450= plt.plot(x_list_new,y_list_5_new,color = 'lightgreen',linewidth=lw,linestyle = '-.',zorder=2,label=r'$\Delta$NLO$_{\rm{GO}}$(450)') 
-    l_theo_394 = plt.plot(x_list_new,y_list_3_new,color = 'b',linewidth=lw,linestyle = '-.',zorder=2.5,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
+    l_theo_450 = plt.plot(x_list_new,y_list_2_new,color = 'g',linewidth=lw,linestyle = '-.',zorder=2.5,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)') 
+    l_theo_394 = plt.plot(x_list_new,y_list_3_new,color = 'b',linewidth=lw,linestyle = '--',zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
 #    l_theo_394 = plt.plot   (x_list_new,y_list_3_new,color = 'b',linestyle = '-.',zorder=2,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
-    l_nnlosat  = plt.plot(x_list_new,y_list_4_new,color = 'r',linewidth=lw,linestyle = ':',zorder=2,label=r'NNLO$_{\rm{sat}}$') 
+    l_nnlosat  = plt.plot(x_list_new,y_list_4_new,color = 'orange',linewidth=lw,linestyle = ':',zorder=2,label=r'NNLO$_{\rm{sat}}$') 
 
 
     
@@ -261,10 +261,10 @@ def plot_phase_shift(file_path1,file_path2,file_path3):
 
 
     l_exp      = plt.plot(x_list,y_list_1,color = 'k',linestyle='',markersize=4, marker ='s',zorder=4,label='Granada PWA')
-    l_theo_450 = plt.plot(x_list_new,y_list_2_new,color = 'g',linewidth=lw,linestyle = '--',zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)') 
     l_theo_nlo450= plt.plot(x_list_new,y_list_5_new,color = 'lightgreen',linewidth=lw,linestyle = '-.',zorder=2,label=r'$\Delta$NLO$_{\rm{GO}}$(450)') 
-    l_theo_394 = plt.plot(x_list_new,y_list_3_new,color = 'b',linewidth=lw,linestyle = '-.',zorder=2.5,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
-    l_nnlosat  = plt.plot(x_list_new,y_list_4_new,color = 'r',linewidth=lw,linestyle = ':',zorder=2,label=r'NNLO$_{\rm{sat}}$') 
+    l_theo_450 = plt.plot(x_list_new,y_list_2_new,color = 'g',linewidth=lw,linestyle = '-.',zorder=3,label=r'$\Delta$NNLO$_{\rm{GO}}$(450)') 
+    l_theo_394 = plt.plot(x_list_new,y_list_3_new,color = 'b',linewidth=lw,linestyle = '--',zorder=2.5,label=r'$\Delta$NNLO$_{\rm{GO}}$(394)') 
+    l_nnlosat  = plt.plot(x_list_new,y_list_4_new,color = 'orange',linewidth=lw,linestyle = ':',zorder=2,label=r'NNLO$_{\rm{sat}}$') 
 
 
     plt.ylabel('$\delta(^3P_0)$(deg)',fontsize=ylabel_f)
